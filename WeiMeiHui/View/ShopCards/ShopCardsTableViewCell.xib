@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ShopCardsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="214.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mWn-pD-5B3">
+                        <rect key="frame" x="10" y="0.0" width="355" height="215"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微美惠" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YR-qL-Eii">
+                        <rect key="frame" x="30" y="64.5" width="52" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩余次数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGt-5E-oz4">
+                        <rect key="frame" x="30" y="105" width="61.5" height="15"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwR-cy-rs3">
+                        <rect key="frame" x="30" y="181" width="24" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有效期：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8O-Ha-dLn">
+                        <rect key="frame" x="30" y="130" width="50" height="15"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aim-Gd-jb5">
+                        <rect key="frame" x="235" y="164" width="120" height="40"/>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.2627450980392157" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="7JT-GX-qr1"/>
+                            <constraint firstAttribute="height" constant="40" id="MsB-88-WKD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="再次购买">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mWn-pD-5B3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="2uA-8m-7vb"/>
+                    <constraint firstAttribute="trailing" secondItem="mWn-pD-5B3" secondAttribute="trailing" constant="10" id="5jy-g1-Ily"/>
+                    <constraint firstItem="g8O-Ha-dLn" firstAttribute="top" secondItem="LGt-5E-oz4" secondAttribute="bottom" constant="10" id="C1Y-wk-7YI"/>
+                    <constraint firstItem="zwR-cy-rs3" firstAttribute="top" secondItem="g8O-Ha-dLn" secondAttribute="bottom" constant="36" id="KTH-xM-dZm"/>
+                    <constraint firstItem="9YR-qL-Eii" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="XYM-Y8-bs0"/>
+                    <constraint firstItem="LGt-5E-oz4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="XfE-Jg-JuP"/>
+                    <constraint firstItem="zwR-cy-rs3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="eka-m9-K7H"/>
+                    <constraint firstAttribute="bottom" secondItem="zwR-cy-rs3" secondAttribute="bottom" constant="15.5" id="exC-mb-8YI"/>
+                    <constraint firstAttribute="bottom" secondItem="aim-Gd-jb5" secondAttribute="bottom" constant="10.5" id="f6I-sL-jks"/>
+                    <constraint firstAttribute="bottom" secondItem="mWn-pD-5B3" secondAttribute="bottom" constant="-0.5" id="lDj-WP-FAQ"/>
+                    <constraint firstAttribute="trailing" secondItem="aim-Gd-jb5" secondAttribute="trailing" constant="20" id="nyF-IK-Wsg"/>
+                    <constraint firstItem="g8O-Ha-dLn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="ubT-sM-Xy4"/>
+                    <constraint firstItem="LGt-5E-oz4" firstAttribute="top" secondItem="9YR-qL-Eii" secondAttribute="bottom" constant="20" id="vUC-7Y-EhY"/>
+                    <constraint firstItem="mWn-pD-5B3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vVI-Ln-Yw0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <connections>
+                <outlet property="backImg" destination="mWn-pD-5B3" id="u1e-RL-B0n"/>
+                <outlet property="buyBtn" destination="aim-Gd-jb5" id="l2E-Xe-rGh"/>
+                <outlet property="countLab" destination="LGt-5E-oz4" id="k7s-cd-wM9"/>
+                <outlet property="nameLab" destination="9YR-qL-Eii" id="P76-gT-J7Y"/>
+                <outlet property="numberLab" destination="zwR-cy-rs3" id="qVn-Ay-Irv"/>
+                <outlet property="timeLab" destination="g8O-Ha-dLn" id="nty-D9-jcE"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="two" id="fCJ-GA-U8V" customClass="ShopCardsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fCJ-GA-U8V" id="HAl-5q-f7G">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="214.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dzv-H2-Plv">
+                        <rect key="frame" x="10" y="0.0" width="355" height="215"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dzv-H2-Plv" firstAttribute="top" secondItem="HAl-5q-f7G" secondAttribute="top" id="1Pg-rT-H5u"/>
+                    <constraint firstAttribute="trailing" secondItem="dzv-H2-Plv" secondAttribute="trailing" constant="10" id="Stx-uF-5PM"/>
+                    <constraint firstItem="dzv-H2-Plv" firstAttribute="leading" secondItem="HAl-5q-f7G" secondAttribute="leading" constant="10" id="Zew-Z1-01s"/>
+                    <constraint firstAttribute="bottom" secondItem="dzv-H2-Plv" secondAttribute="bottom" constant="-0.5" id="u24-mS-ode"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <connections>
+                <outlet property="backImg" destination="dzv-H2-Plv" id="h6k-JF-GYq"/>
+                <outlet property="singleImg" destination="dzv-H2-Plv" id="DkV-WL-1fn"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="382"/>
+        </tableViewCell>
+    </objects>
+</document>

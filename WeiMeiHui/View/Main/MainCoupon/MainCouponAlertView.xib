@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="WNU-tE-zFp" customClass="MainCouponAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="488"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bQ7-4G-bKU">
+                    <rect key="frame" x="0.0" y="0.0" width="315" height="197"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bQ7-4G-bKU" secondAttribute="height" multiplier="315:197" id="Xpc-Ys-wfs"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaC-bb-Zmb">
+                    <rect key="frame" x="16" y="433" width="283" height="40"/>
+                    <color key="backgroundColor" red="0.87373793129999999" green="0.2635353506" blue="0.27456256750000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="aN1-x2-JKM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="立即领取"/>
+                    <connections>
+                        <action selector="recieveAction:" destination="WNU-tE-zFp" eventType="touchUpInside" id="T8C-eb-u8A"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="vVQ-YL-6QD">
+                    <rect key="frame" x="0.0" y="212" width="315" height="211"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zs-ed-pGk">
+                    <rect key="frame" x="283" y="10" width="22" height="22"/>
+                    <state key="normal" image="关闭白"/>
+                    <connections>
+                        <action selector="closeAction:" destination="WNU-tE-zFp" eventType="touchUpInside" id="B7Q-yt-wCa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="bQ7-4G-bKU" firstAttribute="top" secondItem="WNU-tE-zFp" secondAttribute="top" id="2xu-CP-8ZF"/>
+                <constraint firstItem="CaC-bb-Zmb" firstAttribute="top" secondItem="vVQ-YL-6QD" secondAttribute="bottom" constant="10" id="OWp-id-c4b"/>
+                <constraint firstAttribute="bottom" secondItem="CaC-bb-Zmb" secondAttribute="bottom" constant="15" id="Pin-XB-FKG"/>
+                <constraint firstItem="CaC-bb-Zmb" firstAttribute="leading" secondItem="WNU-tE-zFp" secondAttribute="leading" constant="16" id="Rhx-2V-tCd"/>
+                <constraint firstAttribute="trailing" secondItem="vVQ-YL-6QD" secondAttribute="trailing" id="SjF-o4-176"/>
+                <constraint firstItem="vVQ-YL-6QD" firstAttribute="top" secondItem="bQ7-4G-bKU" secondAttribute="bottom" constant="15" id="T8h-88-eDE"/>
+                <constraint firstItem="bQ7-4G-bKU" firstAttribute="leading" secondItem="WNU-tE-zFp" secondAttribute="leading" id="Y8U-bG-t3s"/>
+                <constraint firstItem="6zs-ed-pGk" firstAttribute="top" secondItem="WNU-tE-zFp" secondAttribute="top" constant="10" id="lbh-Au-Edw"/>
+                <constraint firstAttribute="trailing" secondItem="CaC-bb-Zmb" secondAttribute="trailing" constant="16" id="qix-21-wvd"/>
+                <constraint firstItem="vVQ-YL-6QD" firstAttribute="leading" secondItem="WNU-tE-zFp" secondAttribute="leading" id="vhc-YT-sRe"/>
+                <constraint firstAttribute="trailing" secondItem="bQ7-4G-bKU" secondAttribute="trailing" id="wGp-4A-xsq"/>
+                <constraint firstAttribute="trailing" secondItem="6zs-ed-pGk" secondAttribute="trailing" constant="10" id="zOD-ER-IMg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainTableView" destination="vVQ-YL-6QD" id="2DK-Ko-ImO"/>
+                <outlet property="recieveBtn" destination="CaC-bb-Zmb" id="Bm4-aC-Aic"/>
+                <outlet property="titleImg" destination="bQ7-4G-bKU" id="H3f-U2-IKc"/>
+            </connections>
+            <point key="canvasLocation" x="1.5" y="-53"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="关闭白" width="22" height="22"/>
+    </resources>
+</document>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="CouponslistTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gK1-Zd-Tog">
+                        <rect key="frame" x="10" y="0.0" width="355" height="75"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQo-X1-nuX">
+                        <rect key="frame" x="102" y="32" width="72" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.80767321586608887" green="0.22541459976688624" blue="0.22042277460335463" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="立即使用"/>
+                        <connections>
+                            <action selector="useAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GxT-2y-dAo"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aj7-0h-cKg">
+                        <rect key="frame" x="139" y="24" width="97" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="35" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="61" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="详细信息" image="向下2">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="inforAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Phq-Hf-9GM"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PVm-Sh-ER5">
+                        <rect key="frame" x="218" y="17" width="1" height="39"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSg-kT-I0v">
+                        <rect key="frame" x="295" y="10" width="60" height="60"/>
+                        <state key="normal" image="已使用"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="MSg-kT-I0v" secondAttribute="trailing" constant="20" id="ccy-ns-dbl"/>
+                    <constraint firstAttribute="trailing" secondItem="gK1-Zd-Tog" secondAttribute="trailing" constant="10" id="dj2-Mk-9Yq"/>
+                    <constraint firstItem="MSg-kT-I0v" firstAttribute="bottom" secondItem="gK1-Zd-Tog" secondAttribute="bottom" constant="-5" id="hPU-xS-jrY"/>
+                    <constraint firstItem="gK1-Zd-Tog" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="iu2-Va-uVU"/>
+                    <constraint firstAttribute="bottom" secondItem="gK1-Zd-Tog" secondAttribute="bottom" constant="-0.5" id="qSA-oo-saJ"/>
+                    <constraint firstItem="gK1-Zd-Tog" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="w2Z-lF-t7H"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <connections>
+                <outlet property="bgView" destination="gK1-Zd-Tog" id="5HN-TO-qxR"/>
+                <outlet property="detailBtn" destination="Aj7-0h-cKg" id="nWf-dK-oUe"/>
+                <outlet property="lineView" destination="PVm-Sh-ER5" id="rVq-tA-RPs"/>
+                <outlet property="useBtn" destination="pQo-X1-nuX" id="HKM-UP-iMA"/>
+                <outlet property="useIconBtn" destination="MSg-kT-I0v" id="YH0-pV-FoK"/>
+            </connections>
+            <point key="canvasLocation" x="78.5" y="38.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="向下2" width="12" height="6"/>
+        <image name="已使用" width="60" height="60"/>
+    </resources>
+</document>

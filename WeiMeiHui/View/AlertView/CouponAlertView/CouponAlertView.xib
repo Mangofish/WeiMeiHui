@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZNq-GD-6Qh" customClass="CouponAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="363"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFw-7G-nvv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="优惠券" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ff-yg-CkD">
+                            <rect key="frame" x="10" y="13" width="43" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ema-7K-q1b">
+                            <rect key="frame" x="353" y="11" width="12" height="22"/>
+                            <state key="normal" image="关闭"/>
+                            <connections>
+                                <action selector="dismiss:" destination="ZNq-GD-6Qh" eventType="touchUpInside" id="iKO-jj-lZ2"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ema-7K-q1b" firstAttribute="centerY" secondItem="NFw-7G-nvv" secondAttribute="centerY" id="1Il-Yr-lh5"/>
+                        <constraint firstItem="4ff-yg-CkD" firstAttribute="leading" secondItem="NFw-7G-nvv" secondAttribute="leading" constant="10" id="Ov9-sx-Gif"/>
+                        <constraint firstAttribute="height" constant="44" id="Vz1-Rl-PLd"/>
+                        <constraint firstItem="4ff-yg-CkD" firstAttribute="centerY" secondItem="NFw-7G-nvv" secondAttribute="centerY" id="sa0-Fu-e4d"/>
+                        <constraint firstAttribute="trailing" secondItem="ema-7K-q1b" secondAttribute="trailing" constant="10" id="xOG-q7-fBP"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MCY-4N-rgW">
+                    <rect key="frame" x="0.0" y="54" width="375" height="309"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="MCY-4N-rgW" firstAttribute="leading" secondItem="ZNq-GD-6Qh" secondAttribute="leading" id="9Tg-B5-v2d"/>
+                <constraint firstAttribute="trailing" secondItem="MCY-4N-rgW" secondAttribute="trailing" id="DHa-zc-xeb"/>
+                <constraint firstItem="NFw-7G-nvv" firstAttribute="top" secondItem="ZNq-GD-6Qh" secondAttribute="top" id="JE2-dg-reZ"/>
+                <constraint firstItem="NFw-7G-nvv" firstAttribute="leading" secondItem="ZNq-GD-6Qh" secondAttribute="leading" id="RE1-h8-fI7"/>
+                <constraint firstAttribute="bottom" secondItem="MCY-4N-rgW" secondAttribute="bottom" id="Vnd-la-nzT"/>
+                <constraint firstItem="MCY-4N-rgW" firstAttribute="top" secondItem="NFw-7G-nvv" secondAttribute="bottom" constant="10" id="fK9-Ri-cKz"/>
+                <constraint firstAttribute="trailing" secondItem="NFw-7G-nvv" secondAttribute="trailing" id="tcD-ja-E6W"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="mainTableView" destination="MCY-4N-rgW" id="k9n-ZQ-MiK"/>
+            </connections>
+            <point key="canvasLocation" x="13.5" y="-93.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="关闭" width="12" height="12"/>
+    </resources>
+</document>

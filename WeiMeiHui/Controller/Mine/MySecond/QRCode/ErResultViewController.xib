@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErResultViewController">
+            <connections>
+                <outlet property="backTop" destination="Fbz-vK-JPy" id="owc-a5-swn"/>
+                <outlet property="titleTop" destination="jiG-nl-5eH" id="8Hs-i1-rBj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webTop" destination="50Q-TC-gXo" id="eyP-M0-A77"/>
+                <outlet property="webView" destination="jWo-fl-CG4" id="jhG-eJ-Ulq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jWo-fl-CG4">
+                    <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eH4-mT-cWJ">
+                    <rect key="frame" x="0.0" y="10" width="38" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="brl-J0-gH2"/>
+                        <constraint firstAttribute="height" constant="42" id="ctG-9A-JT2"/>
+                    </constraints>
+                    <state key="normal" image="返回"/>
+                    <connections>
+                        <action selector="popAction:" destination="-1" eventType="touchUpInside" id="k1r-vr-67n"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫描结果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVM-kT-J1n">
+                    <rect key="frame" x="16" y="21" width="343" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="6A0-LV-jJR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VVM-kT-J1n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="14M-kW-aCq"/>
+                <constraint firstItem="jWo-fl-CG4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="50Q-TC-gXo"/>
+                <constraint firstItem="eH4-mT-cWJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="Fbz-vK-JPy"/>
+                <constraint firstAttribute="trailing" secondItem="VVM-kT-J1n" secondAttribute="trailing" constant="16" id="Gzl-oH-63J"/>
+                <constraint firstItem="eH4-mT-cWJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aYd-ed-S9C"/>
+                <constraint firstAttribute="bottom" secondItem="jWo-fl-CG4" secondAttribute="bottom" id="bhz-jn-3C0"/>
+                <constraint firstItem="jWo-fl-CG4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f39-Di-21S"/>
+                <constraint firstItem="VVM-kT-J1n" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="jiG-nl-5eH"/>
+                <constraint firstAttribute="trailing" secondItem="jWo-fl-CG4" secondAttribute="trailing" id="zKQ-DZ-ViN"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="返回" width="9" height="20"/>
+    </resources>
+</document>

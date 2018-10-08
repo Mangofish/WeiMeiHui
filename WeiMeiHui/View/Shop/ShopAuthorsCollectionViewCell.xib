@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShopAuthorsCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="86"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="60" height="86"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="jFY-BG-Ce5">
+                        <rect key="frame" x="6" y="0.0" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="jFY-BG-Ce5" secondAttribute="height" multiplier="1:1" id="lcO-95-309"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpd-vV-HfO">
+                        <rect key="frame" x="0.0" y="53" width="60" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="TEV-XT-ld7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剪发价格" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0i-nk-dQ8">
+                        <rect key="frame" x="0.0" y="72" width="60" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="z4O-vv-30D"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.80767321589999996" green="0.2254145998" blue="0.22042277460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="t0i-nk-dQ8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2FU-Th-AKc"/>
+                <constraint firstItem="jFY-BG-Ce5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="EJu-Kt-Irn"/>
+                <constraint firstItem="jFY-BG-Ce5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="H7n-fn-qiY"/>
+                <constraint firstItem="Rpd-vV-HfO" firstAttribute="top" secondItem="jFY-BG-Ce5" secondAttribute="bottom" constant="5" id="c9M-uB-8TL"/>
+                <constraint firstItem="t0i-nk-dQ8" firstAttribute="top" secondItem="Rpd-vV-HfO" secondAttribute="bottom" constant="5" id="coW-Op-erc"/>
+                <constraint firstAttribute="trailing" secondItem="jFY-BG-Ce5" secondAttribute="trailing" constant="6" id="cqa-NN-Y94"/>
+                <constraint firstAttribute="trailing" secondItem="Rpd-vV-HfO" secondAttribute="trailing" id="mp4-XM-ds1"/>
+                <constraint firstAttribute="trailing" secondItem="t0i-nk-dQ8" secondAttribute="trailing" id="mqH-Q1-3kY"/>
+                <constraint firstItem="Rpd-vV-HfO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wsE-UC-Meq"/>
+            </constraints>
+            <size key="customSize" width="48" height="84"/>
+            <connections>
+                <outlet property="iconImg" destination="jFY-BG-Ce5" id="O4t-2I-uOx"/>
+                <outlet property="nameLab" destination="Rpd-vV-HfO" id="6xt-vd-FpS"/>
+                <outlet property="priceLab" destination="t0i-nk-dQ8" id="AEd-FP-Uj4"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="70"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="test" width="200" height="200"/>
+    </resources>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="F7a-zd-aEE" customClass="PopView">
+            <rect key="frame" x="0.0" y="0.0" width="255" height="89"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01H-4c-jwB">
+                    <rect key="frame" x="0.0" y="44" width="255" height="1"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="dsC-R6-b2D"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbd-Cn-j0t">
+                    <rect key="frame" x="20" y="7" width="227" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="227" id="qUG-Wn-Ewg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="拍照">
+                        <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="cameraAction:" destination="F7a-zd-aEE" eventType="touchUpInside" id="Iju-pU-YrY"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpW-V6-6Rq">
+                    <rect key="frame" x="20" y="52" width="227" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="227" id="7uO-nE-EHy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="从相册选择">
+                        <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="photoAction:" destination="F7a-zd-aEE" eventType="touchUpInside" id="SS0-ou-MPA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Nbd-Cn-j0t" firstAttribute="top" secondItem="F7a-zd-aEE" secondAttribute="top" constant="7" id="2A2-M6-MSg"/>
+                <constraint firstItem="bpW-V6-6Rq" firstAttribute="leading" secondItem="F7a-zd-aEE" secondAttribute="leading" constant="20" id="MLx-VW-ybE"/>
+                <constraint firstItem="Nbd-Cn-j0t" firstAttribute="leading" secondItem="F7a-zd-aEE" secondAttribute="leading" constant="20" id="NIB-ya-d8K"/>
+                <constraint firstItem="01H-4c-jwB" firstAttribute="top" secondItem="Nbd-Cn-j0t" secondAttribute="bottom" constant="8" id="RlV-8K-hXe"/>
+                <constraint firstItem="01H-4c-jwB" firstAttribute="leading" secondItem="F7a-zd-aEE" secondAttribute="leading" id="U03-dv-Vo9"/>
+                <constraint firstAttribute="trailing" secondItem="01H-4c-jwB" secondAttribute="trailing" id="rZ0-TW-Abq"/>
+                <constraint firstItem="bpW-V6-6Rq" firstAttribute="top" secondItem="01H-4c-jwB" secondAttribute="bottom" constant="7" id="tTQ-j4-xdK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

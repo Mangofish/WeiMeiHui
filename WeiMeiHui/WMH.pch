@@ -1,0 +1,331 @@
+//
+//  WMH.pch
+//  WeiMeiHui
+//
+//  Created by Mac on 17/4/19.
+//  Copyright © 2017年 Mac. All rights reserved.
+//
+
+#ifndef WMH_pch
+#define WMH_pch
+
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
+#define FMLEditCommandCompletionNotification @"FMLEditCommandCompletionNotification"
+#define FMLExportCommandCompletionNotification @"FMLExportCommandCompletionNotification"
+
+
+
+// 屏幕高度
+#define kHeight         [[UIScreen mainScreen] bounds].size.height
+// 屏幕宽度
+#define kWidth         [[UIScreen mainScreen] bounds].size.width
+// Cell布局相关
+#define CELL_PADDING_8 15    //距离上面
+#define CELL_PADDING_6 5    //距离左边
+#define CELL_SIDEMARGIN 10  //侧边缘
+
+//适配iPhoneX
+#define SafeAreaTopHeight (kHeight == 812 ? 50 : 28)
+#define SafeAreaHeadHeight (kHeight == 812 ? 10 : 0)
+#define SafeAreaHeight (kHeight == 812 ? 88 : 64)
+#define SafeAreaBottomHeight (kHeight == 812.0 ? 34 : 0)
+
+#define k_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define COUNTS  90
+
+//分享微美惠
+#define ShareAppUrl  @"ShareAppUrl"
+#define ShareAppContent  @"ShareAppContent"
+#define ShareAppTitle  @"ShareAppTitle"
+#define ShareAppPic  @"ShareAppPic"
+#define PlusAppPic  @"plusPic"
+#define OpenInstallStr  @"OpenInstallStrs"
+#import "OpenInstallSDK.h"
+
+//关于微美惠
+#define AboutAppUrl  @"AboutAppUrl"
+#define ChangeCITY  @"ChangeCITY"
+
+//当前位置经纬度
+#define WEILat  @"WEILATITUDE"
+#define WEIlngi  @"WEILONG"
+
+//当前定位城市
+#define WEILOCATION  @"WEILOCATION"
+#define WEILocationCITYID  @"WEILocationCITYID"
+
+//当前选择城市
+#define WEICurrentCity  @"WEICurrentCity"
+#define WEICITYID  @"WEICITYID"
+
+#define WEICITYALL  @"WEICITYALL"
+#define WEIPUBLISH  @"WEIPUBLISH"
+#define WEIHISTORY  @"WEIHISTORY"
+#define SHOULDREFRESH  @"SHOULDREFRESH"
+
+
+//是否能录视频
+#define WEIVIDEO  @"VIDEOORNOT"
+//是否能拍照
+#define WEIPhoto  @"PHOTOORNOT"
+
+//是否能领取优惠券
+#define WEICoupon  @"CouponORNOT"
+
+//是否添加提醒
+#define WEIRemind  @"RemindORNOT"
+
+//推送
+//#define UMAPPID 2200254352
+#define UMAPPKEY  @"59c4a5ddcae7e7616d000044"
+
+#define UNREAD  @"UNREADORNOT"
+
+#define SELECTLOCATION  @"SELECTLOCATION"
+#define SELECTLOCATIONCODE  @"SELECTLOCATIONCODE"
+#define SECRETCODE  @"!@#%weimeihui!#$%^&"
+
+//返回按钮
+#define buttonWidth 40
+#define buttonHeight 40
+//所有按钮字体大小
+#define ButtonFontSize 16
+#define LabelFontSize 14
+//板块宽高比
+#define Scale 0.628
+
+//底部高度
+#define BannerHeight 50
+//边距
+#define Space 10
+#define BigSpace 12
+
+//所有按钮的圆角值。
+#define CornerSize 4
+//所有按钮的高度
+#define ButtonHeight kHeight/16
+#define LabelHeight kHeight/20
+
+//颜色
+#define MainColor [UIColor colorWithRed:242/255.0 green:46/255.0 blue:62/255.0 alpha:1]
+#define FontColor [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1]
+#define LightFontColor [UIColor colorWithRed:162/255.0 green:157/255.0 blue:166/255.0 alpha:1]
+#define OrderColor [UIColor colorWithRed:242/255.0 green:177/255.0 blue:46/255.0 alpha:1]
+
+//#define TEST_Title @"https://try.wmh1181.com/index.php?s=/NWMobile/"
+#define TEST_Title2 @"http://try.wmh1181.com/index.php?s=/WMobile/"
+
+#define TEST_Title @"http://try.wmh1181.com/index.php?s=/WMHFriend/"
+
+
+//高三岁
+//#define TEST_Title2 @"http://192.168.1.237/wmh_weiphp/trunk/index.php?s=/NWMobile/"
+#define ST_PULLTOREFRESH_HEADER_HEIGHT MJRefreshHeaderHeight
+
+#define ChooseSHOP [NSString stringWithFormat:@"%@FriendGroup/chooseShop",TEST_Title]
+#define SENDGroup [NSString stringWithFormat:@"%@FriendGroup/sendFriendGroup",TEST_Title]
+#define INDEXList [NSString stringWithFormat:@"%@Index/mainPage",TEST_Title]
+#define ProofCode [NSString stringWithFormat:@"%@Register/proofCodeTwo",TEST_Title]
+#define SendPhoneCode [NSString stringWithFormat:@"%@Register/sendCode",TEST_Title]
+#define FriendDetails [NSString stringWithFormat:@"%@FriendGroup/friendDetails",TEST_Title]
+#define FriendPraise [NSString stringWithFormat:@"%@Currency/praise",TEST_Title]
+#define FriendCollect [NSString stringWithFormat:@"%@Currency/collect",TEST_Title]
+#define FriendPraise [NSString stringWithFormat:@"%@Currency/praise",TEST_Title]
+
+#define SendComment [NSString stringWithFormat:@"%@FriendGroup/sendComment",TEST_Title]
+#define FriendFollow [NSString stringWithFormat:@"%@Currency/follow",TEST_Title]
+#define HotCityList [NSString stringWithFormat:@"%@FriendGroup/hotCity",TEST_Title]
+#define ChangeCity [NSString stringWithFormat:@"%@FriendGroup/changeCity",TEST_Title]
+
+#define UserDetail [NSString stringWithFormat:@"%@FriendGroup/userDetail",TEST_Title]
+#define AuthorUserDetail [NSString stringWithFormat:@"%@Index/authorDetail",TEST_Title]
+#define PrefectureList [NSString stringWithFormat:@"%@Index/prefectureList",TEST_Title]
+#define CardShop [NSString stringWithFormat:@"%@Card/couponShop",TEST_Title]
+#define SecondKillList [NSString stringWithFormat:@"%@SecondKill/index",TEST_Title]
+#define AuthorConfirmOrder [NSString stringWithFormat:@"%@Customization/authorTakeOrder",TEST_Title]
+#define GetServiceType [NSString stringWithFormat:@"%@Customization/getServiceType",TEST_Title]
+#define SendCustomization [NSString stringWithFormat:@"%@Customization/sendCustomization",TEST_Title]
+#define ShopDetail [NSString stringWithFormat:@"%@Index/shopDetail",TEST_Title]
+#define ShopGoodsDetail [NSString stringWithFormat:@"%@FriendGroup/shopAuthorGroup",TEST_Title]
+#define MyWaitOrder [NSString stringWithFormat:@"%@Customization/myOrderStay",TEST_Title]
+#define MyPayOrder [NSString stringWithFormat:@"%@Customization/myOrderAccomplish",TEST_Title]
+#define MyYetOrder [NSString stringWithFormat:@"%@Customization/myOrderYet",TEST_Title]
+#define MineOrder [NSString stringWithFormat:@"%@Customization/myOrderList",TEST_Title]
+#define MineAutorOrder [NSString stringWithFormat:@"%@Customization/authorOrderList",TEST_Title]
+#define WaitComments [NSString stringWithFormat:@"%@Customization/myOrderEvaluate",TEST_Title]
+#define SendOrderComments [NSString stringWithFormat:@"%@Customization/orderEvaluate",TEST_Title]
+#define SendGroupComments [NSString stringWithFormat:@"%@OrderDetail/orderEvaluate",TEST_Title]
+#define ALLCom [NSString stringWithFormat:@"%@Index/userEvaluate",TEST_Title]
+#define killReminds [NSString stringWithFormat:@"%@SecondKill/setRemind",TEST_Title]
+#define cancelKillReminds [NSString stringWithFormat:@"%@SecondKill/cancelRemind",TEST_Title]
+#define MINE [NSString stringWithFormat:@"%@UserCenter/userCenterT",TEST_Title]
+#define CancelOrder [NSString stringWithFormat:@"%@Customization/userCancelOrder",TEST_Title]
+
+#define LogIn [NSString stringWithFormat:@"%@Register/login",TEST_Title]
+#define SignIn [NSString stringWithFormat:@"%@Register/register",TEST_Title]
+#define ChangePassword [NSString stringWithFormat:@"%@Register/alterPwd",TEST_Title]
+#define FindPasswd [NSString stringWithFormat:@"%@Register/findPwd",TEST_Title]
+#define Report [NSString stringWithFormat:@"%@Currency/report",TEST_Title]
+#define MineComments [NSString stringWithFormat:@"%@UserCenter/commentList",TEST_Title]
+#define MineAuthorLIST [NSString stringWithFormat:@"%@FriendGroup/famousAuthor",TEST_Title]
+#define MineShopLIST [NSString stringWithFormat:@"%@OrderDetail/famousShop",TEST_Title]
+#define MineFollows [NSString stringWithFormat:@"%@UserCenter/followListsNew",TEST_Title]
+#define MineFans [NSString stringWithFormat:@"%@UserCenter/fansListsNew",TEST_Title]
+#define MinePublished [NSString stringWithFormat:@"%@Customization/issueProduct",TEST_Title]
+#define AuthorPublished [NSString stringWithFormat:@"%@Customization/authorProduct",TEST_Title]
+#define MineCollected [NSString stringWithFormat:@"%@Customization/collectProduct",TEST_Title]
+#define SavePersonalData [NSString stringWithFormat:@"%@UserCenter/saveUser",TEST_Title]
+#define AuthorOrdersDetail [NSString stringWithFormat:@"%@Customization/authorOrderDetail",TEST_Title]
+#define AuthorRefuse [NSString stringWithFormat:@"%@Customization/authorRefuseRefund",TEST_Title]
+#define AuthorAllow [NSString stringWithFormat:@"%@Customization/authorAgreeRefund",TEST_Title]
+#define AuthorDelOrder [NSString stringWithFormat:@"%@Customization/authorDelOrder",TEST_Title]
+#define AuthorCancelsOrder [NSString stringWithFormat:@"%@Customization/authorCancelOrder",TEST_Title]
+#define AuthorCancelsPayOrder [NSString stringWithFormat:@"%@Customization/authorCancelPayorder",TEST_Title]
+
+#define UserApply [NSString stringWithFormat:@"%@Customization/userReimburse",TEST_Title]
+#define UserRCloud [NSString stringWithFormat:@"%@UserCenter/getRongData",TEST_Title]
+#define SearchHot [NSString stringWithFormat:@"%@Index/hotSearch",TEST_Title]
+#define SearchREsults [NSString stringWithFormat:@"%@FriendGroup/searchList",TEST_Title]
+#define SearchREsultsN [NSString stringWithFormat:@"%@Index/searchList",TEST_Title]
+
+#define MineNOTICE [NSString stringWithFormat:@"%@FriendGroup/inform",TEST_Title]
+#define MineFeedback [NSString stringWithFormat:@"%@UserCenter/feedback",TEST_Title]
+#define WeiUserApply [NSString stringWithFormat:@"%@Activity/weiAppRefund",TEST_Title]
+#define GroupUserApply [NSString stringWithFormat:@"%@FriendGroup/groupRefund",TEST_Title]
+
+#define GoodsDetailNEW [NSString stringWithFormat:@"%@Index/goodsDetail",TEST_Title]
+#define GoodsGroupPay [NSString stringWithFormat:@"%@FriendGroup/goodsBooking",TEST_Title]
+#define GoodsGroupTOPay [NSString stringWithFormat:@"%@FriendGroup/initiateAddOrder",TEST_Title]
+#define GoodsSingleTOPay [NSString stringWithFormat:@"%@FriendGroup/OfferedAddOrder",TEST_Title]
+#define GoodsOffered [NSString stringWithFormat:@"%@FriendGroup/Offered",TEST_Title]
+#define JoinCoupon [NSString stringWithFormat:@"%@FriendGroup/joinCoupon",TEST_Title]
+#define RecentMyOrder [NSString stringWithFormat:@"%@Customization/myOrder",TEST_Title]
+#define MyOrderComplete [NSString stringWithFormat:@"%@Customization/myOrderComplete",TEST_Title]
+#define KilladdOrder [NSString stringWithFormat:@"%@SecondKill/addOrder",TEST_Title]
+#define CardsBuy [NSString stringWithFormat:@"%@Card/addOrder",TEST_Title]
+
+#define GroupOrderDetails [NSString stringWithFormat:@"%@OrderDetail/groupOrderDetail",TEST_Title]
+#define ActOrderDetails [NSString stringWithFormat:@"%@OrderDetail/actOrderDetail",TEST_Title]
+#define PayOrderDetail [NSString stringWithFormat:@"%@OrderDetail/payOrderDetail",TEST_Title]
+#define RecievedCoupon [NSString stringWithFormat:@"%@UserCenter/getCoupon",TEST_Title]
+#define MyCouponList [NSString stringWithFormat:@"%@UserCenter/myCouponList",TEST_Title]
+#define MyCouponsLists [NSString stringWithFormat:@"%@UserCenter/myCardVoucherNew",TEST_Title]
+#define MyCardsLists [NSString stringWithFormat:@"%@Card/myCardList",TEST_Title]
+#define MyCardsDE [NSString stringWithFormat:@"%@Card/myCardDetail",TEST_Title]
+#define MyCardsLog [NSString stringWithFormat:@"%@Card/useLog",TEST_Title]
+#define MyCouponsDE [NSString stringWithFormat:@"%@Card/conCoupon",TEST_Title]
+#define MyCardsCom [NSString stringWithFormat:@"%@Card/cardEvaluate",TEST_Title]
+#define MyCardsStatus [NSString stringWithFormat:@"%@Card/getUseStatus",TEST_Title]
+
+#define ShopError [NSString stringWithFormat:@"%@FriendGroup/shopError",TEST_Title]
+#define AuthorOrderG [NSString stringWithFormat:@"%@AuthorOrder/authorOrderList",TEST_Title]
+#define AuthorOrderDetailG [NSString stringWithFormat:@"%@AuthorOrder/authorOrderDetail",TEST_Title]
+#define UsergetCoupon [NSString stringWithFormat:@"%@UserCenter/getCoupon",TEST_Title]
+#define OrderDetailCancel [NSString stringWithFormat:@"%@OrderDetail/cancelOrder",TEST_Title]
+#define MainActivity [NSString stringWithFormat:@"%@Activity/activityIndex",TEST_Title]
+#define MainpatGroup [NSString stringWithFormat:@"%@Activity/patGroup",TEST_Title]
+#define MobileAuthorList [NSString stringWithFormat:@"%@Activity/mobileAuthorList",TEST_Title]
+#define LotteryList [NSString stringWithFormat:@"%@UserCenter/lotteryList",TEST_Title]
+#define AddLotteryList [NSString stringWithFormat:@"%@UserCenter/addLotteryList",TEST_Title]
+#define InviteList [NSString stringWithFormat:@"%@UserCenter/invite",TEST_Title]
+#define InviteCallBack [NSString stringWithFormat:@"%@UserCenter/inviteCallBack",TEST_Title]
+#define WeiOrderDetail [NSString stringWithFormat:@"%@OrderDetail/weiOrderDetail",TEST_Title]
+#define KillOrderDetail [NSString stringWithFormat:@"%@Index/secondOrderDetail",TEST_Title]
+#define CardsEvaluate [NSString stringWithFormat:@"%@Card/orderEvaluate",TEST_Title]
+#define WeiOrderEvaluate [NSString stringWithFormat:@"%@OrderDetail/weiOrderEvaluate",TEST_Title]
+#define GetCdkCoupon [NSString stringWithFormat:@"%@UserCenter/getCdkCoupon",TEST_Title]
+#define IndexGetCoupon [NSString stringWithFormat:@"%@UserCenter/indexGetCoupon",TEST_Title]
+#define IndexGetCouponNew [NSString stringWithFormat:@"%@UserCenter/indexGetCouponNew",TEST_Title]
+#define GetInviteCoupon [NSString stringWithFormat:@"%@UserCenter/getInviteCoupon",TEST_Title]
+#define WeiOrderCancel [NSString stringWithFormat:@"%@Activity/weiCancelOrder",TEST_Title]
+#define CheckVersion [NSString stringWithFormat:@"%@Version/Version",TEST_Title2]
+#define DElFridends [NSString stringWithFormat:@"%@FriendGroup/delFriendGroup",TEST_Title]
+#define GetShopID [NSString stringWithFormat:@"%@UserCenter/getShopData",TEST_Title]
+#define FAQP [NSString stringWithFormat:@"%@Register/helpProblems",TEST_Title]
+#define IGetTag [NSString stringWithFormat:@"%@Index/getTag",TEST_Title]
+#define GroupList [NSString stringWithFormat:@"%@Index/friendGroupList",TEST_Title]
+
+//回调
+#define WXNotifyUrl @"http://try.wmh1181.com/WMHFriend/Customization/weiChatShopPay"
+#define AliNotifyUrl  @"http://try.wmh1181.com/WMHFriend/Customization/aliPayShop"
+
+//发起和单买
+#define WXGroupNotifyUrl @"http://try.wmh1181.com/WMHFriend/Register/weiTwoCoupon"
+#define AliGroupNotifyUrl  @"http://try.wmh1181.com/WMHFriend/Register/aliTwoCoupon"
+
+//卡
+#define WXCardsNotifyUrl @"https://try.wmh1181.com/WMHFriend/Card/weiCard"
+#define AliCardsNotifyUrl  @"https://try.wmh1181.com/WMHFriend/Card/aliCard"
+
+//参团和支付拼团中一个
+#define WXGroupSingleNotifyUrl @"http://try.wmh1181.com/WMHFriend/Register/weiOneCoupon"
+#define AliGroupSingleNotifyUrl  @"http://try.wmh1181.com/WMHFriend/Register/aliOneCoupon"
+
+
+#define WXGroupMuchNotifyUrl @"http://try.wmh1181.com/WMHFriend/Register/weiThreeCoupon"
+#define AliGroupMuchNotifyUrl  @"http://try.wmh1181.com/WMHFriend/Register/aliThreeCoupon"
+
+//web
+#define WXWebActivityNotifyUrl @"http://try.wmh1181.com/AdvertWeb/Activity/weiPayShare"
+#define AliWebActivityNotifyUrl  @"http://try.wmh1181.com/AdvertWeb/Activity/aliPayShare"
+
+//两个首页
+#define Alist @"http://try.wmh1181.com/index.php?s=/AppWeb/Activity/Alist"
+
+
+#define NUM @"0123456789"
+#define ALPHA @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+#define ALPHANUM @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+
+
+
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+//腾讯开放平台（对应QQ和QQ空间）SDK头文件
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+//微信SDK头文件
+#import "WXApi.h"
+//新浪微博SDK头文件
+#import "WeiboSDK.h"
+
+
+
+#import "Masonry.h"
+#import "YYNet.h"
+#import "PublicMethods.h"
+#import "solveJsonData.h"
+#import "AFNetworking.h"
+#import "NSString+Size.h"
+#import "UIImageView+WebCache.h"
+#import "NSURL+ImageUrl.h"
+#import "UIButton+ImageTitleSpacing.h"
+#import "MJRefresh.h"
+#import "ZZLimitInputManager.h"
+#import "UMClickViewController.h"
+#import "YYHud.h"
+#import "YMRefresh.h"
+#import "LYEmptyViewHeader.h"
+#import "CKAlertViewController.h"
+#import "NormalContentLabel.h"
+#import "UITextField+JGFormatNumber.h"
+
+#import "FFToast.h"
+#import "UITabBar+Redpoint.h"
+#import "LoginViewController.h"
+#import "UILabel+Utils.h"
+#import "ShareService.h"
+#import "UITabBar+Redpoint.h"
+
+//支付宝
+#import <AlipaySDK/AlipaySDK.h>
+#import "WXApi.h"
+
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
+#import <ShareSDKUI/SSUIEditorViewStyle.h>
+
+#endif /* WMH_pch */
