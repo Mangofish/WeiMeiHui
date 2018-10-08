@@ -95,11 +95,11 @@
         
        
             
-            if (temp.count == 0) {
-                self.mainTableView.ly_emptyView = [LYEmptyView emptyViewWithImageStr:@"暂时没有关注"
-                                                                            titleStr:@""
-                                                                           detailStr:@""];
-            }
+//            if (temp.count == 0) {
+//                self.mainTableView.ly_emptyView = [LYEmptyView emptyViewWithImageStr:@"暂时没有关注"
+//                                                                            titleStr:@""
+//                                                                           detailStr:@""];
+//            }
             self.dataAry = temp;
             
         
