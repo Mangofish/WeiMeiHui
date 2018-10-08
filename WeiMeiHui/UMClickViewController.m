@@ -22,7 +22,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-//    NSLog(@"\n——————————————————————————进入页面: %@ ——————————————————————————",NSStringFromClass([self class]));
+
     [MobClick beginLogPageView:NSStringFromClass([self class])];
 }
 
