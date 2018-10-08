@@ -28,7 +28,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-//    NSLog(@"\n——————————————————————————离开页面: %@ ——————————————————————————",NSStringFromClass([self class]));
+
     [MobClick endLogPageView:NSStringFromClass([self class])];
 }
 
