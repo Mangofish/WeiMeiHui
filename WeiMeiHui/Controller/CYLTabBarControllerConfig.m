@@ -26,7 +26,7 @@ static CGFloat const CYLTabBarControllerHeight = 40.f;
 
 //View Controllers
 #import "MainViewController.h"
-#import "ChatListViewController.h"
+#import "InformationsViewController.h"
 #import "AuthorsAllOrderListViewController.h"
 #import "ActivityViewController.h"
 #import "AuthorMineViewController.h"
@@ -77,10 +77,10 @@ static CGFloat const CYLTabBarControllerHeight = 40.f;
     CYLBaseNavigationController *firstNavigationController = [[CYLBaseNavigationController alloc]
                                                    initWithRootViewController:firstViewController];
     
-    ChatListViewController *secondViewController = [[ChatListViewController alloc] init];
+    InformationsViewController*sameCityViewController = [[InformationsViewController alloc] init];
 //    secondViewController.
     CYLBaseNavigationController *secondNavigationController = [[CYLBaseNavigationController alloc]
-                                                    initWithRootViewController:secondViewController];
+                                                    initWithRootViewController:sameCityViewController];
     
     AuthorsAllOrderListViewController *thirdViewController = [[AuthorsAllOrderListViewController alloc] init];
     thirdViewController.isMain = 1;
@@ -90,6 +90,7 @@ static CGFloat const CYLTabBarControllerHeight = 40.f;
     
     
     NextFreeNewViewController *fourthViewController = [[NextFreeNewViewController alloc] init];
+    fourthViewController.isMain = YES;
     fourthViewController.url = @"http://try.wmh1181.com/index.php?s=/Home/AdvertJson/commonWebDetail/id/6";
     CYLBaseNavigationController *fourthNavigationController = [[CYLBaseNavigationController alloc]
                                                    initWithRootViewController:fourthViewController];
@@ -117,8 +118,8 @@ static CGFloat const CYLTabBarControllerHeight = 40.f;
                                                  };
     NSDictionary *secondTabBarItemsAttributes = @{
 //                                                  CYLTabBarItemTitle : @"同城",
-                                                  CYLTabBarItemImage : @"消息",
-                                                  CYLTabBarItemSelectedImage : @"消息2",
+                                                  CYLTabBarItemImage : @"资讯",
+                                                  CYLTabBarItemSelectedImage : @"资讯2",
                                                   };
     NSDictionary *thirdTabBarItemsAttributes = @{
 //                                                 CYLTabBarItemTitle : @"消息",

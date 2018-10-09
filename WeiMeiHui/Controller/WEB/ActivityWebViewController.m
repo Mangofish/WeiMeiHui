@@ -26,7 +26,7 @@
     WKWebViewConfiguration * configuration = [[WKWebViewConfiguration alloc]init];
     userContentController =[[WKUserContentController alloc]init];
     configuration.userContentController = userContentController;
-    self.webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, 100, 100) configuration:configuration];
+    self.webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, kWidth, 100) configuration:configuration];
 
     //注册方法
 //    通过代理调方法，其他的控制器
@@ -47,7 +47,7 @@
     }];
     self.webView.UIDelegate = self;
     self.webView.navigationDelegate = self;
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.test.com"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
     
 }
 

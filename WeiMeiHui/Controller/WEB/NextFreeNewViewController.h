@@ -83,5 +83,6 @@
 @interface NextFreeNewViewController : UIViewController
 
 @property (nonatomic, copy) NSString *url;
+@property (nonatomic, assign) BOOL isMain;
 
 @end

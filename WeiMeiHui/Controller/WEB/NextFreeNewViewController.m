@@ -46,6 +46,8 @@
     _webView.userInteractionEnabled = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
     _webView.scrollView.bounces = NO;
+    self.navigationController.navigationBar.hidden = YES;
+    self.navigationController.navigationBarHidden = YES;
     
     hud = [[YYHud alloc]init];
     [hud showInView:[UIApplication sharedApplication].keyWindow];
@@ -81,7 +83,13 @@
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-    self.tabBarController.tabBar.hidden= YES;
+    
+    if (!_isMain) {
+        self.tabBarController.tabBar.hidden= YES;
+    }else{
+         self.tabBarController.tabBar.hidden= NO;
+        self.backBtn.hidden = YES;
+    }
     
     NSString *lat = [[NSUserDefaults standardUserDefaults] valueForKey:WEILat];
     NSString *lng = [[NSUserDefaults standardUserDefaults] valueForKey:WEIlngi];
