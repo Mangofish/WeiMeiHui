@@ -393,7 +393,7 @@
 		184EE664210577E4009D3688 /* libOpenInstallSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 184EE661210577E3009D3688 /* libOpenInstallSDK.a */; };
 		184F50601F5D023B004B2517 /* EaseBlankPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F50581F5D023B004B2517 /* EaseBlankPageView.m */; };
 		184F50611F5D023B004B2517 /* UIView+EaseBlankPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F505A1F5D023B004B2517 /* UIView+EaseBlankPage.m */; };
-		184F50631F5D025E004B2517 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184F50621F5D025E004B2517 /* UserNotifications.framework */; };
+		184F50631F5D025E004B2517 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184F50621F5D025E004B2517 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		185338E71F28288100CE7800 /* YYHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 185338E61F28288100CE7800 /* YYHud.m */; };
 		185339041F29C66300CE7800 /* smallCube.gif in Resources */ = {isa = PBXBuildFile; fileRef = 185339031F29C66300CE7800 /* smallCube.gif */; };
 		1855F16521194EAF00AD809C /* MainExclusiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855F16321194EAF00AD809C /* MainExclusiveTableViewCell.m */; };

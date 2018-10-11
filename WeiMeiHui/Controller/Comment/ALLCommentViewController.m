@@ -158,11 +158,11 @@
         self.dataDic = dict[@"data"];
         self.dataAry = [self.dataDic objectForKey:self->typekey];
         
-        NSString *str1 = [NSString stringWithFormat:@"全部(%lu)",self.dataAry.count];
+        NSString *str1 = [NSString stringWithFormat:@"全部(%lu)",(unsigned long)self.dataAry.count];
 
-        NSString *str2 = [NSString stringWithFormat:@"有图(%lu)",((NSArray *)self.dataDic[@"pic_list"]).count];
-        NSString *str3 = [NSString stringWithFormat:@"好评(%lu)",((NSArray *)self.dataDic[@"favorable_list"]).count];
-        NSString *str4 = [NSString stringWithFormat:@"差评(%lu)",((NSArray *)self.dataDic[@"bad_list"]).count];
+        NSString *str2 = [NSString stringWithFormat:@"有图(%lu)",(unsigned long)((NSArray *)self.dataDic[@"pic_list"]).count];
+        NSString *str3 = [NSString stringWithFormat:@"好评(%lu)",(unsigned long)((NSArray *)self.dataDic[@"favorable_list"]).count];
+        NSString *str4 = [NSString stringWithFormat:@"差评(%lu)",(unsigned long)((NSArray *)self.dataDic[@"bad_list"]).count];
         
         [self.allBtn setTitle:str1 forState:UIControlStateSelected];
          [self.picBrn setTitle:str2 forState:UIControlStateSelected];

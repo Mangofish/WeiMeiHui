@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -59,6 +59,15 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yz6-XK-lcC">
+                        <rect key="frame" x="36" y="71" width="8.5" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="3Mu-qa-0qe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="6Lf-Bc-RLF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1Hw-86-zc4"/>
@@ -69,9 +78,11 @@
                     <constraint firstItem="E81-DZ-eCU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="W5i-dY-MXM"/>
                     <constraint firstAttribute="bottom" secondItem="hr1-sV-hWo" secondAttribute="bottom" constant="10.5" id="f6u-FL-zck"/>
                     <constraint firstAttribute="trailing" secondItem="YRX-qW-dgZ" secondAttribute="trailing" constant="20" id="fAc-QX-ium"/>
+                    <constraint firstItem="Yz6-XK-lcC" firstAttribute="centerY" secondItem="hr1-sV-hWo" secondAttribute="centerY" id="lRc-qz-J5i"/>
                     <constraint firstItem="mse-jf-Sg7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pXd-4L-q0K"/>
                     <constraint firstItem="mse-jf-Sg7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qIb-B2-OtJ"/>
                     <constraint firstAttribute="bottom" secondItem="mse-jf-Sg7" secondAttribute="bottom" constant="-0.5" id="qQN-xd-VLQ"/>
+                    <constraint firstItem="Yz6-XK-lcC" firstAttribute="leading" secondItem="hr1-sV-hWo" secondAttribute="trailing" constant="5" id="sHJ-Q6-Orj"/>
                     <constraint firstItem="yDp-Rq-tmB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="t8z-ot-j7b"/>
                     <constraint firstItem="6Lf-Bc-RLF" firstAttribute="top" secondItem="E81-DZ-eCU" secondAttribute="bottom" constant="10" id="xk6-Q6-heg"/>
                     <constraint firstAttribute="trailing" secondItem="yDp-Rq-tmB" secondAttribute="trailing" constant="20.5" id="zFv-Xh-77T"/>
@@ -83,6 +94,7 @@
                 <outlet property="buyLab" destination="YRX-qW-dgZ" id="haR-7q-Oaf"/>
                 <outlet property="detailLab" destination="6Lf-Bc-RLF" id="elN-ov-OmF"/>
                 <outlet property="numLab" destination="yDp-Rq-tmB" id="hpy-AK-28Y"/>
+                <outlet property="oldPriceLab" destination="Yz6-XK-lcC" id="ZHC-gt-lPM"/>
                 <outlet property="priceLab" destination="hr1-sV-hWo" id="Lom-ph-A3p"/>
                 <outlet property="title" destination="E81-DZ-eCU" id="4ZT-7T-wly"/>
             </connections>

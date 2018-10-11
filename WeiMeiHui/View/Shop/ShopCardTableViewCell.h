@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *numLab;
 @property (weak, nonatomic) IBOutlet UILabel *buyLab;
 @property (weak, nonatomic) IBOutlet UIImageView *backImg;
+@property (weak, nonatomic) IBOutlet UILabel *oldPriceLab;
 
 @property (weak, nonatomic) IBOutlet UILabel *title;
 

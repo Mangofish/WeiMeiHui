@@ -21,6 +21,13 @@
     _card = card;
     [_backImg sd_setImageWithURL:[NSURL urlWithNoBlankDataString:card.pic_back] placeholderImage:[UIImage imageNamed:@"test2"]];
     _title.text = card.card_name;
+    
+    NSDictionary *attribtDic = @{NSStrikethroughStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle]};
+    NSMutableAttributedString *attribtStr = [[NSMutableAttributedString alloc]initWithString: [NSString stringWithFormat:@"%@",card.org_price] attributes:attribtDic];
+    
+    // 赋值
+    _oldPriceLab.attributedText = attribtStr;
+    
     _detailLab.text = card.gift;
     _priceLab.text = card.card_price;
     _numLab.text = card.pay_count;
