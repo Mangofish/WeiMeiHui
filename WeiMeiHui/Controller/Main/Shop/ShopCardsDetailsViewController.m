@@ -12,7 +12,10 @@
 #import "UseableShopViewController.h"
 #import "ShopCardsCommentsViewController.h"
 #import "CardsUseLogViewController.h"
-@interface ShopCardsDetailsViewController ()<UITableViewDataSource,UITableViewDelegate>
+#import "EnableShopListsViewController.h"
+
+
+@interface ShopCardsDetailsViewController ()<UITableViewDataSource,UITableViewDelegate,ShopCardDetailTableViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
@@ -122,19 +125,50 @@
             return cell;
         }
         
+        ShopCard *card =  [ShopCard shopCardWithDict:self.dataDic];
         
         ShopCardsTableViewCell *cell = [ShopCardsTableViewCell shopCardsTableViewCell];
-        cell.card = [ShopCard shopCardWithDict:self.dataDic];
+        cell.card = card;
+        
+        
+        
         return cell;
         
     }else {
         
         if (indexPath.row == 0) {
             
-            
+            ShopCard *card =  [ShopCard shopCardWithDict:self.dataDic];
            
             ShopCardDetailTableViewCell *cell = [ShopCardDetailTableViewCell shopCardDetailTableViewCellEr];
             cell.card = [ShopCardDetail shopCardDetailWithDict:self.dataDic];
+            
+            if ([card.use_type integerValue] == 2) {
+                
+                NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:
+                                                    @"仅限本活动合作商户使用查看可用商户"];
+                NSRange titleRange = {11,6};
+                
+                NSRange titleRanget = {0,11};
+                
+                NSDictionary *dic = @{NSForegroundColorAttributeName: MainColor};
+                
+                [title addAttributes:dic range:titleRange];
+                
+                NSDictionary *dic2 = @{NSForegroundColorAttributeName: [UIColor lightGrayColor]};
+                [title addAttributes:dic2 range:titleRanget];
+                
+                [cell.inforLab setAttributedTitle:title
+                                         forState:UIControlStateNormal];
+                
+            }else{
+                
+                cell.inforLab.enabled = NO;
+                
+            }
+            
+            
+            cell.delegate = self;
             cell.conentLab.hidden = YES;
             return cell;
             
@@ -348,6 +382,14 @@
     
 }
 
+
+- (void)didClickMenu{
+    
+    EnableShopListsViewController *shopVC = [[EnableShopListsViewController alloc]init];
+    shopVC.ID = self.dataDic[@"id"];
+    [self.navigationController pushViewController:shopVC animated:YES];
+    
+}
 
 
 @end

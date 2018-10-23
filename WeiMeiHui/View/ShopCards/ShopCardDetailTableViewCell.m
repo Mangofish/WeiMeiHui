@@ -54,4 +54,8 @@
 }
 
 
+- (IBAction)seeBtn:(UIButton *)sender {
+    [self.delegate didClickMenu];
+}
+
 @end

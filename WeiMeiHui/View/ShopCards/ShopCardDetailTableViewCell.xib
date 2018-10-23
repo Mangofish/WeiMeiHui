@@ -25,29 +25,29 @@
                             <constraint firstAttribute="height" constant="120" id="hhd-y6-Emp"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请在微美惠合作门店出示此二维码享受服务" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dce-eR-4O9">
-                        <rect key="frame" x="16" y="149" width="343" height="14"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="14" id="EJS-St-LYY"/>
-                        </constraints>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbW-zZ-Ik8">
+                        <rect key="frame" x="51.5" y="147" width="272" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.87450980389999999" green="0.26274509800000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <state key="normal" title="请在微美惠合作门店出示此二维码享受服务">
+                            <color key="titleColor" red="0.87450980389999999" green="0.26274509800000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="seeBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="11n-n6-ywl"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Dce-eR-4O9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Abr-j8-gWK"/>
-                    <constraint firstAttribute="trailing" secondItem="Dce-eR-4O9" secondAttribute="trailing" constant="16" id="CWc-KQ-8Jg"/>
+                    <constraint firstItem="TbW-zZ-Ik8" firstAttribute="top" secondItem="d1k-T2-343" secondAttribute="bottom" constant="7" id="Azg-dr-m5g"/>
                     <constraint firstItem="d1k-T2-343" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Gxc-z8-4TW"/>
                     <constraint firstItem="d1k-T2-343" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="fUF-33-Zad"/>
-                    <constraint firstAttribute="bottom" secondItem="Dce-eR-4O9" secondAttribute="bottom" constant="20.5" id="oUC-e3-Bif"/>
+                    <constraint firstItem="TbW-zZ-Ik8" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ln2-le-PNo"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="erImg" destination="d1k-T2-343" id="cwT-q2-LXt"/>
-                <outlet property="inforLab" destination="Dce-eR-4O9" id="m2B-bn-ze3"/>
+                <outlet property="inforLab" destination="TbW-zZ-Ik8" id="shL-EX-hou"/>
             </connections>
-            <point key="canvasLocation" x="33.5" y="54"/>
+            <point key="canvasLocation" x="32.799999999999997" y="53.973013493253376"/>
         </tableViewCell>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="content" rowHeight="39" id="16w-Na-iM3" customClass="ShopCardDetailTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>

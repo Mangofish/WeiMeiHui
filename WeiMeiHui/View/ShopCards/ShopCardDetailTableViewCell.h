@@ -10,6 +10,14 @@
 #import "TYAttributedLabel.h"
 #import "ShopCardDetail.h"
 
+@protocol ShopCardDetailTableViewCellDelegate <NSObject>
+
+
+- (void)didClickMenu;
+
+
+@end
+
 @interface ShopCardDetailTableViewCell : UITableViewCell
 
 
@@ -19,14 +27,14 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *erImg;
 
-@property (weak, nonatomic) IBOutlet UILabel *inforLab;
+@property (weak, nonatomic) IBOutlet UIButton *inforLab;
 
 
 + (instancetype)shopCardDetailTableViewCell;
 + (instancetype)shopCardDetailTableViewCellEr;
 
 @property(strong,nonatomic) ShopCardDetail *card;
-
+@property (nonatomic,   weak) id<ShopCardDetailTableViewCellDelegate> delegate;
 @property(assign,nonatomic) float contentHeight;
 
 @end

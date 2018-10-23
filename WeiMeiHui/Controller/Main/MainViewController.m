@@ -474,7 +474,7 @@
         
         //得到定位信息，添加annotation
         if (location)
-        {
+        {  
             if (regeocode)
             {
                 //存当前位置
@@ -510,8 +510,12 @@
                                 
                                 [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:ChangeCITY];
                                 
+                               [[NSUserDefaults standardUserDefaults] setValue:regeocode.adcode forKey:WEICITYID];
+                               [[NSUserDefaults standardUserDefaults] setValue:regeocode.city forKey:WEICurrentCity];
+                                
                                 [weakSelf.titleView.locationBtn setTitle:regeocode.city forState:UIControlStateNormal];
                                 [weakSelf getDataAtIndex:weakSelf.currentIndex];
+                                
                             } ];
                             
                             [cV addAction:action];

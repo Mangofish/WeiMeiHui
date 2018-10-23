@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ShopCard.h"
 
+
+
 @interface ShopCardTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *detailLab;
 @property (weak, nonatomic) IBOutlet UILabel *priceLab;

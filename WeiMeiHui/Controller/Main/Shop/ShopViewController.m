@@ -765,7 +765,7 @@
     
     
 //    商品
-    if (indexPath.section == 2) {
+    if (indexPath.section == 3) {
         
         NSString *temp = [_goodsData[indexPath.row] objectForKey:@"id"];
         
@@ -777,7 +777,7 @@
     }
     
 //
-    if (indexPath.section == 4) {
+    if (indexPath.section == 5) {
      
         NSString *friendID = [[_dataAry objectAtIndex:indexPath.row] objectForKey:@"id"];
         WeiFriendDetailViewController *weiVC  = [[WeiFriendDetailViewController alloc]init];

@@ -22,6 +22,7 @@
 @property (nonatomic, copy) NSString *shop_name;
 @property (nonatomic, copy) NSString *remainder;
 @property (nonatomic, copy) NSString *end_time;
+@property (nonatomic, copy) NSString *use_type;
 
 @property (nonatomic, copy) NSString *order_number;
 

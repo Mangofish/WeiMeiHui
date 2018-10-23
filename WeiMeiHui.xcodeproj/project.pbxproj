@@ -81,20 +81,6 @@
 		04BD07281EB2CB9A005155CB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BD07271EB2CB9A005155CB /* ImageIO.framework */; };
 		04BD07381EB30F26005155CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BD07371EB30F26005155CB /* Assets.xcassets */; };
 		04BD41C41EA895C4002E9F30 /* ZYKeyboardUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD41C31EA895C4002E9F30 /* ZYKeyboardUtil.m */; };
-		04C1E6611EC588E600BBE317 /* AddressItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E6591EC588E600BBE317 /* AddressItem.m */; };
-		04C1E6621EC588E600BBE317 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E65C1EC588E600BBE317 /* AddressTableViewCell.m */; };
-		04C1E6631EC588E600BBE317 /* AddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E65E1EC588E600BBE317 /* AddressView.m */; };
-		04C1E6641EC588E600BBE317 /* ChooseLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E6601EC588E600BBE317 /* ChooseLocationView.m */; };
-		04C1E6681EC588EE00BBE317 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E6671EC588EE00BBE317 /* UIView+Frame.m */; };
-		04C1E66B1EC58A4000BBE317 /* CitiesDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E66A1EC58A4000BBE317 /* CitiesDataTool.m */; };
-		04C1E67B1EC58CFB00BBE317 /* ChineseCities.json in Resources */ = {isa = PBXBuildFile; fileRef = 04C1E66C1EC58CFB00BBE317 /* ChineseCities.json */; };
-		04C1E67C1EC58CFB00BBE317 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 04C1E66D1EC58CFB00BBE317 /* Cities.json */; };
-		04C1E67D1EC58CFB00BBE317 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E6701EC58CFB00BBE317 /* FMDatabase.m */; };
-		04C1E67E1EC58CFB00BBE317 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E6721EC58CFB00BBE317 /* FMDatabaseAdditions.m */; };
-		04C1E67F1EC58CFB00BBE317 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E6741EC58CFB00BBE317 /* FMDatabasePool.m */; };
-		04C1E6801EC58CFB00BBE317 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E6761EC58CFB00BBE317 /* FMDatabaseQueue.m */; };
-		04C1E6811EC58CFB00BBE317 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C1E6791EC58CFB00BBE317 /* FMResultSet.m */; };
-		04C1E6821EC58CFB00BBE317 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04C1E67A1EC58CFB00BBE317 /* Info.plist */; };
 		04C375451ED7D29300090F34 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C375421ED7D29300090F34 /* UIImage+Extension.m */; };
 		04C375461ED7D29300090F34 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C375441ED7D29300090F34 /* NSString+Extension.m */; };
 		04C3F0A91EC18A61009FE0B0 /* UIView+DWQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C3F0A81EC18A61009FE0B0 /* UIView+DWQExtension.m */; };
@@ -378,6 +364,8 @@
 		184B8BAD20590D67006C1BB3 /* AuthorConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184B8BAB20590D67006C1BB3 /* AuthorConfirmViewController.xib */; };
 		184B8E7A2040F169006CAC96 /* UIImage+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B8E792040F169006CAC96 /* UIImage+Orientation.m */; };
 		184C08C120450387008CB45B /* GBTagListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C08C020450387008CB45B /* GBTagListView.m */; };
+		184C4C82217726EE00BFB42A /* EnableShopListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184C4C80217726EE00BFB42A /* EnableShopListsViewController.m */; };
+		184C4C83217726EE00BFB42A /* EnableShopListsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184C4C81217726EE00BFB42A /* EnableShopListsViewController.xib */; };
 		184D1FC320215EC20024C306 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D1FC120215EC20024C306 /* PublishViewController.m */; };
 		184D1FC420215EC20024C306 /* PublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184D1FC220215EC20024C306 /* PublishViewController.xib */; };
 		184D1FC72021691A0024C306 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D1FC62021691A0024C306 /* UITextView+Placeholder.m */; };
@@ -724,6 +712,20 @@
 		186471DC20DE1B7200F8CDB4 /* WeiOrderWaitOrMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186471DA20DE1B7200F8CDB4 /* WeiOrderWaitOrMoneyViewController.xib */; };
 		186480652148F06C00FA0FFD /* CircleRippleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186480632148F06C00FA0FFD /* CircleRippleView.m */; };
 		186580E620255E1900097772 /* LLPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186580E520255E1900097772 /* LLPhotoView.m */; };
+		1865AA722175942A00F31D77 /* ChineseCities.json in Resources */ = {isa = PBXBuildFile; fileRef = 1865AA552175942A00F31D77 /* ChineseCities.json */; };
+		1865AA732175942B00F31D77 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 1865AA562175942A00F31D77 /* Cities.json */; };
+		1865AA742175942B00F31D77 /* CitiesDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA582175942A00F31D77 /* CitiesDataTool.m */; };
+		1865AA752175942B00F31D77 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA5B2175942A00F31D77 /* FMDatabase.m */; };
+		1865AA762175942B00F31D77 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA5D2175942A00F31D77 /* FMDatabaseAdditions.m */; };
+		1865AA772175942B00F31D77 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA5F2175942A00F31D77 /* FMDatabasePool.m */; };
+		1865AA782175942B00F31D77 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA612175942A00F31D77 /* FMDatabaseQueue.m */; };
+		1865AA792175942B00F31D77 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA642175942A00F31D77 /* FMResultSet.m */; };
+		1865AA7A2175942B00F31D77 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1865AA652175942A00F31D77 /* Info.plist */; };
+		1865AA7B2175942B00F31D77 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA672175942A00F31D77 /* UIView+Frame.m */; };
+		1865AA7C2175942B00F31D77 /* AddressItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA6A2175942A00F31D77 /* AddressItem.m */; };
+		1865AA7D2175942B00F31D77 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA6D2175942A00F31D77 /* AddressTableViewCell.m */; };
+		1865AA7E2175942B00F31D77 /* AddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA6F2175942A00F31D77 /* AddressView.m */; };
+		1865AA7F2175942B00F31D77 /* ChooseLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1865AA712175942A00F31D77 /* ChooseLocationView.m */; };
 		18664E76212132F10097E7B1 /* BHBBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18664E5D212132F10097E7B1 /* BHBBottomBar.m */; };
 		18664E77212132F10097E7B1 /* BHBCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18664E5F212132F10097E7B1 /* BHBCenterView.m */; };
 		18664E79212132F10097E7B1 /* BHBGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 18664E63212132F10097E7B1 /* BHBGroup.m */; };
@@ -1282,32 +1284,6 @@
 		04BD07371EB30F26005155CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BD41C21EA895C4002E9F30 /* ZYKeyboardUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYKeyboardUtil.h; sourceTree = "<group>"; };
 		04BD41C31EA895C4002E9F30 /* ZYKeyboardUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYKeyboardUtil.m; sourceTree = "<group>"; };
-		04C1E6581EC588E600BBE317 /* AddressItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressItem.h; sourceTree = "<group>"; };
-		04C1E6591EC588E600BBE317 /* AddressItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressItem.m; sourceTree = "<group>"; };
-		04C1E65B1EC588E600BBE317 /* AddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
-		04C1E65C1EC588E600BBE317 /* AddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
-		04C1E65D1EC588E600BBE317 /* AddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressView.h; sourceTree = "<group>"; };
-		04C1E65E1EC588E600BBE317 /* AddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressView.m; sourceTree = "<group>"; };
-		04C1E65F1EC588E600BBE317 /* ChooseLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationView.h; sourceTree = "<group>"; };
-		04C1E6601EC588E600BBE317 /* ChooseLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationView.m; sourceTree = "<group>"; };
-		04C1E6661EC588EE00BBE317 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
-		04C1E6671EC588EE00BBE317 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
-		04C1E6691EC58A4000BBE317 /* CitiesDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesDataTool.h; sourceTree = "<group>"; };
-		04C1E66A1EC58A4000BBE317 /* CitiesDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesDataTool.m; sourceTree = "<group>"; };
-		04C1E66C1EC58CFB00BBE317 /* ChineseCities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ChineseCities.json; sourceTree = "<group>"; };
-		04C1E66D1EC58CFB00BBE317 /* Cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
-		04C1E66F1EC58CFB00BBE317 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		04C1E6701EC58CFB00BBE317 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		04C1E6711EC58CFB00BBE317 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		04C1E6721EC58CFB00BBE317 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		04C1E6731EC58CFB00BBE317 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		04C1E6741EC58CFB00BBE317 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		04C1E6751EC58CFB00BBE317 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		04C1E6761EC58CFB00BBE317 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		04C1E6771EC58CFB00BBE317 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		04C1E6781EC58CFB00BBE317 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		04C1E6791EC58CFB00BBE317 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		04C1E67A1EC58CFB00BBE317 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C375411ED7D29300090F34 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		04C375421ED7D29300090F34 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		04C375431ED7D29300090F34 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
@@ -1775,6 +1751,9 @@
 		184B8E792040F169006CAC96 /* UIImage+Orientation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Orientation.m"; sourceTree = "<group>"; };
 		184C08BF20450387008CB45B /* GBTagListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBTagListView.h; sourceTree = "<group>"; };
 		184C08C020450387008CB45B /* GBTagListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBTagListView.m; sourceTree = "<group>"; };
+		184C4C7F217726EE00BFB42A /* EnableShopListsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnableShopListsViewController.h; sourceTree = "<group>"; };
+		184C4C80217726EE00BFB42A /* EnableShopListsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnableShopListsViewController.m; sourceTree = "<group>"; };
+		184C4C81217726EE00BFB42A /* EnableShopListsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnableShopListsViewController.xib; sourceTree = "<group>"; };
 		184D1FC020215EC20024C306 /* PublishViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
 		184D1FC120215EC20024C306 /* PublishViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
 		184D1FC220215EC20024C306 /* PublishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublishViewController.xib; sourceTree = "<group>"; };
@@ -2461,6 +2440,32 @@
 		186480642148F06C00FA0FFD /* CircleRippleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleRippleView.h; sourceTree = "<group>"; };
 		186580E420255E1900097772 /* LLPhotoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPhotoView.h; sourceTree = "<group>"; };
 		186580E520255E1900097772 /* LLPhotoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPhotoView.m; sourceTree = "<group>"; };
+		1865AA552175942A00F31D77 /* ChineseCities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ChineseCities.json; sourceTree = "<group>"; };
+		1865AA562175942A00F31D77 /* Cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
+		1865AA572175942A00F31D77 /* CitiesDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesDataTool.h; sourceTree = "<group>"; };
+		1865AA582175942A00F31D77 /* CitiesDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesDataTool.m; sourceTree = "<group>"; };
+		1865AA5A2175942A00F31D77 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		1865AA5B2175942A00F31D77 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		1865AA5C2175942A00F31D77 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		1865AA5D2175942A00F31D77 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		1865AA5E2175942A00F31D77 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		1865AA5F2175942A00F31D77 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		1865AA602175942A00F31D77 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		1865AA612175942A00F31D77 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		1865AA622175942A00F31D77 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		1865AA632175942A00F31D77 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		1865AA642175942A00F31D77 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		1865AA652175942A00F31D77 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1865AA662175942A00F31D77 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		1865AA672175942A00F31D77 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		1865AA692175942A00F31D77 /* AddressItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressItem.h; sourceTree = "<group>"; };
+		1865AA6A2175942A00F31D77 /* AddressItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressItem.m; sourceTree = "<group>"; };
+		1865AA6C2175942A00F31D77 /* AddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
+		1865AA6D2175942A00F31D77 /* AddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
+		1865AA6E2175942A00F31D77 /* AddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressView.h; sourceTree = "<group>"; };
+		1865AA6F2175942A00F31D77 /* AddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressView.m; sourceTree = "<group>"; };
+		1865AA702175942A00F31D77 /* ChooseLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationView.h; sourceTree = "<group>"; };
+		1865AA712175942A00F31D77 /* ChooseLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationView.m; sourceTree = "<group>"; };
 		18664E5C212132F10097E7B1 /* BHBBottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBBottomBar.h; sourceTree = "<group>"; };
 		18664E5D212132F10097E7B1 /* BHBBottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBBottomBar.m; sourceTree = "<group>"; };
 		18664E5E212132F10097E7B1 /* BHBCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBCenterView.h; sourceTree = "<group>"; };
@@ -3498,71 +3503,6 @@
 			path = Keyboard;
 			sourceTree = "<group>";
 		};
-		04C1E6561EC588E600BBE317 /* ChooseLocation */ = {
-			isa = PBXGroup;
-			children = (
-				04C1E6651EC588EE00BBE317 /* Category */,
-				04C1E6571EC588E600BBE317 /* Model */,
-				04C1E65A1EC588E600BBE317 /* View */,
-			);
-			path = ChooseLocation;
-			sourceTree = "<group>";
-		};
-		04C1E6571EC588E600BBE317 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				04C1E6581EC588E600BBE317 /* AddressItem.h */,
-				04C1E6591EC588E600BBE317 /* AddressItem.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		04C1E65A1EC588E600BBE317 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				04C1E65B1EC588E600BBE317 /* AddressTableViewCell.h */,
-				04C1E65C1EC588E600BBE317 /* AddressTableViewCell.m */,
-				04C1E65D1EC588E600BBE317 /* AddressView.h */,
-				04C1E65E1EC588E600BBE317 /* AddressView.m */,
-				04C1E65F1EC588E600BBE317 /* ChooseLocationView.h */,
-				04C1E6601EC588E600BBE317 /* ChooseLocationView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		04C1E6651EC588EE00BBE317 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				04C1E66C1EC58CFB00BBE317 /* ChineseCities.json */,
-				04C1E66D1EC58CFB00BBE317 /* Cities.json */,
-				04C1E66E1EC58CFB00BBE317 /* fmdb */,
-				04C1E6691EC58A4000BBE317 /* CitiesDataTool.h */,
-				04C1E66A1EC58A4000BBE317 /* CitiesDataTool.m */,
-				04C1E6661EC588EE00BBE317 /* UIView+Frame.h */,
-				04C1E6671EC588EE00BBE317 /* UIView+Frame.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		04C1E66E1EC58CFB00BBE317 /* fmdb */ = {
-			isa = PBXGroup;
-			children = (
-				04C1E66F1EC58CFB00BBE317 /* FMDatabase.h */,
-				04C1E6701EC58CFB00BBE317 /* FMDatabase.m */,
-				04C1E6711EC58CFB00BBE317 /* FMDatabaseAdditions.h */,
-				04C1E6721EC58CFB00BBE317 /* FMDatabaseAdditions.m */,
-				04C1E6731EC58CFB00BBE317 /* FMDatabasePool.h */,
-				04C1E6741EC58CFB00BBE317 /* FMDatabasePool.m */,
-				04C1E6751EC58CFB00BBE317 /* FMDatabaseQueue.h */,
-				04C1E6761EC58CFB00BBE317 /* FMDatabaseQueue.m */,
-				04C1E6771EC58CFB00BBE317 /* FMDB.h */,
-				04C1E6781EC58CFB00BBE317 /* FMResultSet.h */,
-				04C1E6791EC58CFB00BBE317 /* FMResultSet.m */,
-				04C1E67A1EC58CFB00BBE317 /* Info.plist */,
-			);
-			path = fmdb;
-			sourceTree = "<group>";
-		};
 		04C3F0A61EC18A61009FE0B0 /* DWQExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -3683,6 +3623,7 @@
 		04C711131EA6E9AB002102E3 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				1865AA532175942A00F31D77 /* ChooseLocation */,
 				1837BE77211D77000016D0A9 /* BANetManager */,
 				18857C892113E9C900E6EFA8 /* JSDropDownMenu */,
 				184EE660210577E3009D3688 /* OpenInstallSDK2.2.0 */,
@@ -3727,7 +3668,6 @@
 				04FEEB781EF26C5100DCD300 /* Calendar */,
 				040706541EEFCB0600976CDE /* CountDown */,
 				04E5FAFF1ED280C400F50164 /* AlertView */,
-				04C1E6561EC588E600BBE317 /* ChooseLocation */,
 				047911E51EC45606008DFC59 /* Wxpay */,
 				0479115E1EC451C3008DFC59 /* AliPay */,
 				04C3F0A61EC18A61009FE0B0 /* DWQExtension */,
@@ -5898,6 +5838,71 @@
 			path = WaveView;
 			sourceTree = "<group>";
 		};
+		1865AA532175942A00F31D77 /* ChooseLocation */ = {
+			isa = PBXGroup;
+			children = (
+				1865AA542175942A00F31D77 /* Category */,
+				1865AA682175942A00F31D77 /* Model */,
+				1865AA6B2175942A00F31D77 /* View */,
+			);
+			path = ChooseLocation;
+			sourceTree = "<group>";
+		};
+		1865AA542175942A00F31D77 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1865AA552175942A00F31D77 /* ChineseCities.json */,
+				1865AA562175942A00F31D77 /* Cities.json */,
+				1865AA572175942A00F31D77 /* CitiesDataTool.h */,
+				1865AA582175942A00F31D77 /* CitiesDataTool.m */,
+				1865AA592175942A00F31D77 /* fmdb */,
+				1865AA662175942A00F31D77 /* UIView+Frame.h */,
+				1865AA672175942A00F31D77 /* UIView+Frame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		1865AA592175942A00F31D77 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				1865AA5A2175942A00F31D77 /* FMDatabase.h */,
+				1865AA5B2175942A00F31D77 /* FMDatabase.m */,
+				1865AA5C2175942A00F31D77 /* FMDatabaseAdditions.h */,
+				1865AA5D2175942A00F31D77 /* FMDatabaseAdditions.m */,
+				1865AA5E2175942A00F31D77 /* FMDatabasePool.h */,
+				1865AA5F2175942A00F31D77 /* FMDatabasePool.m */,
+				1865AA602175942A00F31D77 /* FMDatabaseQueue.h */,
+				1865AA612175942A00F31D77 /* FMDatabaseQueue.m */,
+				1865AA622175942A00F31D77 /* FMDB.h */,
+				1865AA632175942A00F31D77 /* FMResultSet.h */,
+				1865AA642175942A00F31D77 /* FMResultSet.m */,
+				1865AA652175942A00F31D77 /* Info.plist */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		1865AA682175942A00F31D77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1865AA692175942A00F31D77 /* AddressItem.h */,
+				1865AA6A2175942A00F31D77 /* AddressItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1865AA6B2175942A00F31D77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1865AA6C2175942A00F31D77 /* AddressTableViewCell.h */,
+				1865AA6D2175942A00F31D77 /* AddressTableViewCell.m */,
+				1865AA6E2175942A00F31D77 /* AddressView.h */,
+				1865AA6F2175942A00F31D77 /* AddressView.m */,
+				1865AA702175942A00F31D77 /* ChooseLocationView.h */,
+				1865AA712175942A00F31D77 /* ChooseLocationView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		18664E5B212132F10097E7B1 /* BHBPopView */ = {
 			isa = PBXGroup;
 			children = (
@@ -6476,6 +6481,9 @@
 				18436F41215CB7D200086DA6 /* ShopCardsCommentsViewController.h */,
 				18436F42215CB7D200086DA6 /* ShopCardsCommentsViewController.m */,
 				18436F43215CB7D200086DA6 /* ShopCardsCommentsViewController.xib */,
+				184C4C7F217726EE00BFB42A /* EnableShopListsViewController.h */,
+				184C4C80217726EE00BFB42A /* EnableShopListsViewController.m */,
+				184C4C81217726EE00BFB42A /* EnableShopListsViewController.xib */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -6923,6 +6931,7 @@
 				18E33ED220621C4500BDE6FE /* 动效0017.png in Resources */,
 				1809C14120BBCE5D00D5D583 /* MyJoinActivityViewController.xib in Resources */,
 				18963E3A20D36E90004E7053 /* guide_4.png in Resources */,
+				1865AA7A2175942B00F31D77 /* Info.plist in Resources */,
 				18E33DE320A3FD4000B3269C /* OrderCommentTableViewCell.xib in Resources */,
 				18BB2F0E204660F9009B6DEF /* ShopViewController.xib in Resources */,
 				18E33DF320A43ABD00B3269C /* OrderMoneyBackViewController.xib in Resources */,
@@ -6947,13 +6956,13 @@
 				184B8BA720590BE8006C1BB3 /* AuthorPriceRangeTableViewCell.xib in Resources */,
 				18BB2F03204651A6009B6DEF /* AuthorCell.xib in Resources */,
 				187124D72043BB0900A13F8F /* UserDetailViewController.xib in Resources */,
-				04C1E67B1EC58CFB00BBE317 /* ChineseCities.json in Resources */,
 				18722B3A2051269300DFEC24 /* AlredyOrderListViewController.xib in Resources */,
 				18E33EC820621C4500BDE6FE /* 动效0007.png in Resources */,
 				18B26C972080957D00BA0394 /* icon_communicate_reply@3x.png in Resources */,
 				18E33EC520621C4500BDE6FE /* 动效0004.png in Resources */,
 				18963E3720D36E90004E7053 /* guide_1.png in Resources */,
 				04E0AD1D1EA9CD9B0092CB00 /* AMap.bundle in Resources */,
+				184C4C83217726EE00BFB42A /* EnableShopListsViewController.xib in Resources */,
 				185C2F6920A14D1E0002600A /* CouponAlertView.xib in Resources */,
 				182716671F67BE430061991F /* WeiboSDK.bundle in Resources */,
 				18436F3B215C724000086DA6 /* UseableShopViewController.xib in Resources */,
@@ -6974,6 +6983,7 @@
 				185C2F6E20A154130002600A /* CouponTableViewCell.xib in Resources */,
 				185BCE8E20637A6E0053FF99 /* SearchTagViewController.xib in Resources */,
 				1855F16621194EAF00AD809C /* MainExclusiveTableViewCell.xib in Resources */,
+				1865AA722175942A00F31D77 /* ChineseCities.json in Resources */,
 				187EBBB32112C804006DC616 /* FamousShopTableViewCell.xib in Resources */,
 				8AF90BBC2050041300414391 /* AlertView.xib in Resources */,
 				186B0A61207C7E2D00CBAEA1 /* SystemNotifyViewController.xib in Resources */,
@@ -7038,7 +7048,6 @@
 				1848E5372115829C004A8E8C /* FamousShopGoodsViewController.xib in Resources */,
 				183C1FB8205A228100821247 /* MyReplyTableViewCell.xib in Resources */,
 				18B26C9F2080957D00BA0394 /* icon_play_hl@3x.png in Resources */,
-				04C1E67C1EC58CFB00BBE317 /* Cities.json in Resources */,
 				182D5EDF20BEC4310089C371 /* AUthorsListsViewController.xib in Resources */,
 				18963E3820D36E90004E7053 /* guide_2.png in Resources */,
 				1837BE51211D38910016D0A9 /* ExclusiveSecViewController.xib in Resources */,
@@ -7093,9 +7102,9 @@
 				183914BC209C56DA00411854 /* GoodsGroupTableViewCell.xib in Resources */,
 				18E33ED020621C4500BDE6FE /* 动效0015.png in Resources */,
 				1847CE962020115500652873 /* LoginViewController.xib in Resources */,
+				1865AA732175942B00F31D77 /* Cities.json in Resources */,
 				182716651F67BE430061991F /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				18B26CA32080957D00BA0394 /* icon_repeat_video@3x.png in Resources */,
-				04C1E6821EC58CFB00BBE317 /* Info.plist in Resources */,
 				188CF75A20A586DD009508CF /* OutdateCouponViewController.xib in Resources */,
 				1841D0C420AAC83A005D8DD2 /* NormalAuthorDEtailTableViewCell.xib in Resources */,
 				180543BE2005E83B00EFA6C4 /* Emoji.plist in Resources */,
@@ -7189,6 +7198,7 @@
 				185EF4FA20849E1D00FC7542 /* ZXAI013103decoder.m in Sources */,
 				1847CE84202008A600652873 /* TZAssetCell.m in Sources */,
 				18E33E8120620F5000BDE6FE /* YMRefresh.m in Sources */,
+				1865AA7B2175942B00F31D77 /* UIView+Frame.m in Sources */,
 				185EF4AB20849E1D00FC7542 /* ZXSMSTOMMSTOResultParser.m in Sources */,
 				185EF48A20849E1D00FC7542 /* ZXAztecDetector.m in Sources */,
 				185D5818201EEA4D00D49637 /* CustomSegmentControl.m in Sources */,
@@ -7199,6 +7209,7 @@
 				185EF55020849E1D00FC7542 /* ZXQRCodeFormatInformation.m in Sources */,
 				185EF4D120849E1D00FC7542 /* ZXStringUtils.m in Sources */,
 				185EF51520849E1D00FC7542 /* ZXRSSUtils.m in Sources */,
+				1865AA772175942B00F31D77 /* FMDatabasePool.m in Sources */,
 				8A6CD9EE204428060055811A /* NSAttributedString+calculate.m in Sources */,
 				04E0ACF51EA9B32E0092CB00 /* SDWebImageManager.m in Sources */,
 				1855F1972119C74000AD809C /* ServiceResultViewController.m in Sources */,
@@ -7241,7 +7252,6 @@
 				185D57FE201EC4B100D49637 /* UIView+SDExtension.m in Sources */,
 				1847CED02020611100652873 /* TYImageCache.m in Sources */,
 				182A31AF1F189BA900F1098B /* XLCircleProgress.m in Sources */,
-				04C1E66B1EC58A4000BBE317 /* CitiesDataTool.m in Sources */,
 				185EF4F720849E1D00FC7542 /* ZXByQuadrantReader.m in Sources */,
 				185EF55C20849E1D00FC7542 /* ZXQRCodeMaskUtil.m in Sources */,
 				18A5C4F2204E25F400C3559D /* MyOrderList.m in Sources */,
@@ -7326,6 +7336,7 @@
 				1881285C20526B30000CA14A /* MyCommentListViewController.m in Sources */,
 				185EF52E20849E1D00FC7542 /* ZXUPCEANWriter.m in Sources */,
 				042767CB1EA7370400543B40 /* YYNet.m in Sources */,
+				1865AA7C2175942B00F31D77 /* AddressItem.m in Sources */,
 				1862562D20E355C80051C9FF /* TYAlertScaleFadeAnimation.m in Sources */,
 				185EF4F320849E1D00FC7542 /* ZXMaxiCodeBitMatrixParser.m in Sources */,
 				18E33E3120610C3800BDE6FE /* ShopAuthor.m in Sources */,
@@ -7344,7 +7355,6 @@
 				188CF75920A586DD009508CF /* OutdateCouponViewController.m in Sources */,
 				1893905620240F6B008B8177 /* PublishFooterCollectionReusableView.m in Sources */,
 				8A4C264D209ED961000880BF /* AuthorGoodsItemTableViewCell.m in Sources */,
-				04C1E67F1EC58CFB00BBE317 /* FMDatabasePool.m in Sources */,
 				04C710E31EA6E8D6002102E3 /* AppDelegate.m in Sources */,
 				18B26CA82080957D00BA0394 /* UIView+SYExtend.m in Sources */,
 				187F6981211ECC3E00A945CB /* SecondKillsOrderViewController.m in Sources */,
@@ -7439,7 +7449,6 @@
 				185EF50520849E1D00FC7542 /* ZXRSSExpandedCurrentParsingState.m in Sources */,
 				185EF54D20849E1D00FC7542 /* ZXQRCodeDecoder.m in Sources */,
 				183914CD209D50DC00411854 /* GroupPayPageTableViewCell.m in Sources */,
-				04C1E67D1EC58CFB00BBE317 /* FMDatabase.m in Sources */,
 				1836AA10215B63AB00D8277E /* CardsUseLogViewController.m in Sources */,
 				185EF49C20849E1D00FC7542 /* ZXEmailAddressParsedResult.m in Sources */,
 				185EF49320849E1D00FC7542 /* ZXAztecReader.m in Sources */,
@@ -7469,7 +7478,6 @@
 				1893906C2024449D008B8177 /* ChooseShops.m in Sources */,
 				185D4E442027F56400524112 /* JFCityCollectionFlowLayout.m in Sources */,
 				185EF53A20849E1D00FC7542 /* ZXPDF417DetectionResultColumn.m in Sources */,
-				04C1E67E1EC58CFB00BBE317 /* FMDatabaseAdditions.m in Sources */,
 				185D4E412027F56400524112 /* JFButton.m in Sources */,
 				04E0ACF21EA9B32E0092CB00 /* SDWebImageDecoder.m in Sources */,
 				180060D820D8CFA1007BEFB7 /* SELUpdateAlertConst.m in Sources */,
@@ -7488,10 +7496,12 @@
 				184B8BAC20590D67006C1BB3 /* AuthorConfirmViewController.m in Sources */,
 				185EF53C20849E1D00FC7542 /* ZXPDF417ScanningDecoder.m in Sources */,
 				1893906720243B43008B8177 /* ChooseShopTableViewCell.m in Sources */,
+				184C4C82217726EE00BFB42A /* EnableShopListsViewController.m in Sources */,
 				185D5801201EC74500D49637 /* MainTitleView.m in Sources */,
 				185EF4F120849E1D00FC7542 /* ZXDataMatrixReader.m in Sources */,
 				1837BE9B211DA4B10016D0A9 /* SecondKillGoods.m in Sources */,
 				1836372120C7DAD90007B521 /* DYAdAlertView.m in Sources */,
+				1865AA792175942B00F31D77 /* FMResultSet.m in Sources */,
 				185EF48220849E1D00FC7542 /* LBXScanResult.m in Sources */,
 				189390522022AF82008B8177 /* LLMicroVideoConfig.m in Sources */,
 				185EF4C820849E1D00FC7542 /* ZXCharacterSetECI.m in Sources */,
@@ -7513,6 +7523,7 @@
 				185EF51C20849E1D00FC7542 /* ZXCode93Reader.m in Sources */,
 				04C375461ED7D29300090F34 /* NSString+Extension.m in Sources */,
 				185D4E3F2027F56400524112 /* JFCityHeaderView.m in Sources */,
+				1865AA7E2175942B00F31D77 /* AddressView.m in Sources */,
 				183914C4209C71D400411854 /* RulesItem.m in Sources */,
 				187DFE18204A46EA008E9C90 /* MainOrderStatusAlready.m in Sources */,
 				185EF48B20849E1D00FC7542 /* ZXAztecBinaryShiftToken.m in Sources */,
@@ -7555,6 +7566,7 @@
 				1848E5312115422A004A8E8C /* FamousGoodsTableViewCell.m in Sources */,
 				185EF27A20849DFB00FC7542 /* ErResultViewController.m in Sources */,
 				185EF55E20849E1D00FC7542 /* ZXMultiDetector.m in Sources */,
+				1865AA742175942B00F31D77 /* CitiesDataTool.m in Sources */,
 				185EF52920849E1D00FC7542 /* ZXUPCAWriter.m in Sources */,
 				04E0ACEE1EA9B32E0092CB00 /* MKAnnotationView+WebCache.m in Sources */,
 				8A6CD9D720440E610055811A /* UserHeader.m in Sources */,
@@ -7563,9 +7575,11 @@
 				180060D720D8CFA1007BEFB7 /* SELUpdateAlert.m in Sources */,
 				047911D41EC451C3008DFC59 /* RSADataSigner.m in Sources */,
 				18664E76212132F10097E7B1 /* BHBBottomBar.m in Sources */,
+				1865AA752175942B00F31D77 /* FMDatabase.m in Sources */,
 				18722B392051269300DFEC24 /* AlredyOrderListViewController.m in Sources */,
 				043112071EB85E3B00D174D6 /* MJRefreshFooter.m in Sources */,
 				187EBBB22112C804006DC616 /* FamousShopTableViewCell.m in Sources */,
+				1865AA7F2175942B00F31D77 /* ChooseLocationView.m in Sources */,
 				18707013204F980000D063F5 /* AuthorWorkListTableViewCell.m in Sources */,
 				189ABDF11F668CE4007C8BA0 /* AFURLRequestSerialization.m in Sources */,
 				8A12145B20A483D200D50CA4 /* GroupPayOutdateViewController.m in Sources */,
@@ -7573,7 +7587,6 @@
 				185EF4AA20849E1D00FC7542 /* ZXSMSParsedResult.m in Sources */,
 				04C3F0A91EC18A61009FE0B0 /* UIView+DWQExtension.m in Sources */,
 				185EF53B20849E1D00FC7542 /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
-				04C1E6611EC588E600BBE317 /* AddressItem.m in Sources */,
 				185EF55A20849E1D00FC7542 /* ZXQRCodeBlockPair.m in Sources */,
 				18664E79212132F10097E7B1 /* BHBGroup.m in Sources */,
 				8A22F56C20C834B600D1CFC9 /* UIView+LYExtension.m in Sources */,
@@ -7597,7 +7610,6 @@
 				187EBBBB2112D430006DC616 /* ShopAndAuthor.m in Sources */,
 				185BCE772063417F0053FF99 /* MainAuthorsOrderListViewController.m in Sources */,
 				04E0ACB91EA99A890092CB00 /* UIButton+ImageTitleSpacing.m in Sources */,
-				04C1E6811EC58CFB00BBE317 /* FMResultSet.m in Sources */,
 				182EBE4520DCF2AF004C3418 /* WeiOrderWaitUseViewController.m in Sources */,
 				185EF53120849E1D00FC7542 /* ZXModulusPoly.m in Sources */,
 				18616B12202C3D910000FA04 /* RegistViewController.m in Sources */,
@@ -7612,6 +7624,7 @@
 				042767701EA7033100543B40 /* View+MASAdditions.m in Sources */,
 				047911D21EC451C3008DFC59 /* NSDataEx.m in Sources */,
 				185EF49720849E1D00FC7542 /* ZXAddressBookDoCoMoResultParser.m in Sources */,
+				1865AA762175942B00F31D77 /* FMDatabaseAdditions.m in Sources */,
 				18482ADD203FF3140006E856 /* HanyuPinyinOutputFormat.m in Sources */,
 				0427676F1EA7033100543B40 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				185EF4A720849E1D00FC7542 /* ZXProductResultParser.m in Sources */,
@@ -7653,7 +7666,6 @@
 				185EF52D20849E1D00FC7542 /* ZXUPCEANReader.m in Sources */,
 				8AF4A0721F603FE200F21276 /* UIImage+XYGif.m in Sources */,
 				185EF4EA20849E1D00FC7542 /* ZXDataMatrixEncoderContext.m in Sources */,
-				04C1E6621EC588E600BBE317 /* AddressTableViewCell.m in Sources */,
 				185EF4F520849E1D00FC7542 /* ZXMaxiCodeDecoder.m in Sources */,
 				185EF49A20849E1D00FC7542 /* ZXBookmarkDoCoMoResultParser.m in Sources */,
 				185EF4CB20849E1D00FC7542 /* ZXDetectorResult.m in Sources */,
@@ -7675,7 +7687,6 @@
 				185C2F6120A14C820002600A /* BasePresentationContentController.m in Sources */,
 				188E3D11205CA7AA00F4FB1D /* FindPSWViewController.m in Sources */,
 				185EF50720849E1D00FC7542 /* ZXRSSExpandedDecodedInformation.m in Sources */,
-				04C1E6681EC588EE00BBE317 /* UIView+Frame.m in Sources */,
 				04BD41C41EA895C4002E9F30 /* ZYKeyboardUtil.m in Sources */,
 				18E33E272060FEF700BDE6FE /* AuthorViewController.m in Sources */,
 				189ABDF31F668CE4007C8BA0 /* AFURLSessionManager.m in Sources */,
@@ -7691,7 +7702,6 @@
 				1862562C20E355C80051C9FF /* TYAlertFadeAnimation.m in Sources */,
 				040706571EEFCB1400976CDE /* UIButton+CountDown.m in Sources */,
 				184B8E7A2040F169006CAC96 /* UIImage+Orientation.m in Sources */,
-				04C1E6801EC58CFB00BBE317 /* FMDatabaseQueue.m in Sources */,
 				185C2F6020A14C820002600A /* BasePresentationController.m in Sources */,
 				185EF4CE20849E1D00FC7542 /* ZXHybridBinarizer.m in Sources */,
 				0427676A1EA7033100543B40 /* MASConstraintMaker.m in Sources */,
@@ -7757,7 +7767,6 @@
 				8AF4A0711F603FE200F21276 /* XYLaunchVC.m in Sources */,
 				04E5FB031ED2841B00F50164 /* CKAlertViewController.m in Sources */,
 				185EF4EF20849E1D00FC7542 /* ZXDataMatrixTextEncoder.m in Sources */,
-				04C1E6631EC588E600BBE317 /* AddressView.m in Sources */,
 				18DC70FA215A0C6F00238133 /* HNPopMenuManager.m in Sources */,
 				185D57FC201EC4B100D49637 /* SDCollectionViewCell.m in Sources */,
 				185338E71F28288100CE7800 /* YYHud.m in Sources */,
@@ -7810,7 +7819,7 @@
 				1837BE8E211D77000016D0A9 /* UIImage+CompressImage.m in Sources */,
 				185EF49120849E1D00FC7542 /* ZXAztecToken.m in Sources */,
 				8A6CD9ED204428060055811A /* NSString+calculate.m in Sources */,
-				04C1E6641EC588E600BBE317 /* ChooseLocationView.m in Sources */,
+				1865AA7D2175942B00F31D77 /* AddressTableViewCell.m in Sources */,
 				18E33EF32062531500BDE6FE /* UIView+CYLTabBarControllerExtention.m in Sources */,
 				047911D01EC451C3008DFC59 /* DataVerifier.m in Sources */,
 				185EF4A220849E1D00FC7542 /* ZXGeoResultParser.m in Sources */,
@@ -7855,6 +7864,7 @@
 				1847CE91202008A600652873 /* UIView+Layout.m in Sources */,
 				18DC70FB215A0C6F00238133 /* HNPopMenuModel.m in Sources */,
 				043112051EB85E3B00D174D6 /* MJRefreshBackFooter.m in Sources */,
+				1865AA782175942B00F31D77 /* FMDatabaseQueue.m in Sources */,
 				1855F16A21194ED200AD809C /* ExclusiveItemCollectionViewCell.m in Sources */,
 				0427676C1EA7033100543B40 /* MASViewAttribute.m in Sources */,
 				185EF4BE20849E1D00FC7542 /* ZXWhiteRectangleDetector.m in Sources */,
@@ -8017,7 +8027,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -8068,7 +8078,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -8082,6 +8092,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WeiMeiHui/WeiMeiHui.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5WY78VRFQ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -8133,6 +8145,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wmhapp.weiMeiHui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -8143,6 +8156,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WeiMeiHui/WeiMeiHui.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5WY78VRFQ;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -8194,6 +8209,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wmhapp.weiMeiHui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

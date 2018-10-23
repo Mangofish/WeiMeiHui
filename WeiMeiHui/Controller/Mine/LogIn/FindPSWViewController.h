@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FindPSWViewController : UMClickViewController
+@interface FindPSWViewController : UIViewController
 
 @property (nonatomic, copy) NSString *tel;
 

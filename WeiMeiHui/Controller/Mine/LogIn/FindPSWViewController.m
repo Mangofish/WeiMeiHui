@@ -162,7 +162,7 @@
     
     NSString *url = [PublicMethods dataTojsonString:@{@"phone":temp,@"pwd":md5Str}];
     
-    [YYNet POST:FindPasswd paramters:@{@"json":url} success:^(id responseObject) {
+    [YYNet POST:ProofCode paramters:@{@"json":url} success:^(id responseObject) {
         
         NSDictionary *dic = [solveJsonData changeType:responseObject];
         
@@ -177,8 +177,6 @@
             
             //存信息
             [[NSUserDefaults standardUserDefaults]setValue:dic[@"data"] forKey:@"user"];
-            
-            [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:WEICoupon];
             [[NSUserDefaults standardUserDefaults] synchronize];
             
             [self.navigationController popToRootViewControllerAnimated:YES];
