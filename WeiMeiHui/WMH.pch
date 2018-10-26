@@ -248,7 +248,7 @@
 #define IGetTag [NSString stringWithFormat:@"%@Index/getTag",TEST_Title]
 #define GroupList [NSString stringWithFormat:@"%@Index/friendGroupList",TEST_Title]
 #define EnableShop [NSString stringWithFormat:@"%@Index/enableShop",TEST_Title]
-
+#define UpdateInviteVID [NSString stringWithFormat:@"%@Register/updateInviteID",TEST_Title]
 //回调
 #define WXNotifyUrl @"http://try.wmh1181.com/WMHFriend/Customization/weiChatShopPay"
 #define AliNotifyUrl  @"http://try.wmh1181.com/WMHFriend/Customization/aliPayShop"

@@ -20,6 +20,7 @@
 @interface SecondsKillTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *img;
+@property (weak, nonatomic) IBOutlet UIImageView *tagImg;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLab;
 @property (weak, nonatomic) IBOutlet UILabel *shopLab;

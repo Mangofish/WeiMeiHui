@@ -180,19 +180,28 @@
                 
             }
             
-           
+        }else{
+            
+            MJWeakSelf
+            self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImageStr:@"暂时没有作品" titleStr:@"" detailStr:@"" btnTitleStr:@"重新加载" btnClickBlock:^{
+                [weakSelf getData];
+            }];
+            
+            
         }
-        
-        
-        
         
         [self.tableView.mj_header endRefreshing];
         [self.tableView.mj_footer endRefreshing];
         
-        
         [self.tableView reloadData];
         
     } faild:^(id responseObject) {
+        
+        MJWeakSelf
+        self.tableView.ly_emptyView = [LYEmptyView emptyActionViewWithImageStr:@"暂时没有网络" titleStr:@"" detailStr:@"" btnTitleStr:@"重新加载" btnClickBlock:^{
+            [weakSelf getData];
+        }];
+        
         
     }];
     

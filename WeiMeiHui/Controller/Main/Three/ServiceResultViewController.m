@@ -270,7 +270,7 @@
             }
             
             NSUInteger index = [temp indexOfObject:arr[0]];
-            weakSelf.tag_id = [weakSelf.tagAry[index] objectForKey:@"tag_id"];
+            weakSelf.tag_id = [weakSelf.tagAry[index] objectForKey:@"id"];
             [weakSelf.tableView.mj_header beginRefreshing];
             
         };

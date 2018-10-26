@@ -127,17 +127,20 @@
         
         if ([[dic[@"data"] objectForKey:@"type"] isKindOfClass:[NSArray class]]) {
             self.tagAry = [dic[@"data"] objectForKey:@"type"];
+            
+            NSMutableArray *temp = [NSMutableArray array];
+            
+            for (NSDictionary *obj in self.tagAry) {
+                [temp addObject:obj[@"name"]];
+            }
+            
+            self.dataArr = temp;
+            
+            [self customUI];
+            
         }
         
-        NSMutableArray *temp = [NSMutableArray array];
         
-        for (NSDictionary *obj in self.tagAry) {
-            [temp addObject:obj[@"name"]];
-        }
-        
-        self.dataArr = temp;
-        
-        [self customUI];
         
     } faild:^(id responseObject) {
         [self.hud dismiss];

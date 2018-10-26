@@ -12,6 +12,7 @@
 typedef void(^confirmCallback)(NSString *inputString);
 
 @interface ZYInputAlertView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *titleLab;
 
 /** 确认按钮 */
 @property (weak, nonatomic) IBOutlet UIButton *confirmBtn;

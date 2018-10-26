@@ -106,6 +106,15 @@
     _progressView.percentText = [NSString stringWithFormat:@"%@",goods.percent];
     _countLab.text = [NSString stringWithFormat:@"%@人已购买",goods.num];
     
+    if ([goods.type integerValue] == 1) {
+         [_tagImg sd_setImageWithURL:[NSURL URLWithString:goods.must_pic] placeholderImage:[UIImage imageNamed:@"test2"]];
+    }else{
+        
+        _tagImg.hidden = YES;
+        
+    }
+    
+   
 }
 
 - (IBAction)remindAction:(UIButton *)sender {

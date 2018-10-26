@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlayViewController : UMClickViewController
+@interface PlayViewController : UIViewController
 
 @property(nonatomic, copy) NSString *urlStr;
 

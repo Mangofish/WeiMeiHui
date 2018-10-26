@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReportViewController : UMClickViewController
+@interface ReportViewController : UIViewController
 
 @property (nonatomic, copy) NSString *ID;
 

@@ -21,6 +21,8 @@
 
 #import "CYLTabBarControllerConfig.h"
 #import "CYLTabBarController.h"
+#import "ZYInputAlertView.h"
+#import "TYAlertController+BlurEffects.h"
 
 @interface MySettingViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
@@ -44,7 +46,7 @@
     
     if ([PublicMethods isLogIn]) {
         _quitBtn.hidden = NO;
-        dataAry = @[@"清除缓存",@"意见反馈",@"分享APP",@"修改密码"];
+        dataAry = @[@"清除缓存",@"意见反馈",@"分享APP",@"修改密码",@"添加邀请人"];
     }else{
    _quitBtn.hidden = YES;
         dataAry = @[@"清除缓存",@"意见反馈",@"分享APP"];
@@ -195,6 +197,65 @@
         [self.navigationController pushViewController:reVC animated:YES];
     }
     
+    if (indexPath.row == 4) {
+       
+        ZYInputAlertView *alertView = [ZYInputAlertView alertView];
+        [alertView.confirmBtn setTitle:@"确认" forState:UIControlStateNormal];
+        alertView.placeholder = @"输入邀请码";
+        alertView.titleLab.text = @"请输入邀请码";
+        [alertView confirmBtnClickBlock:^(NSString *inputString) {
+            
+            //网络请求
+            NSString *uuid = @"";
+            if ([PublicMethods isLogIn]) {
+                uuid = [[[NSUserDefaults standardUserDefaults] valueForKey:@"user"] objectForKey:@"uuid"];
+            }
+            
+            NSString *deviceID = [PublicMethods requestDeviceInfo][0];
+            
+            NSString *url = [PublicMethods dataTojsonString:@{@"uuid":uuid,@"invite_id":inputString,@"device_id":deviceID}];
+            
+            [YYNet POST:UpdateInviteVID paramters:@{@"json":url} success:^(id responseObject) {
+                
+                NSDictionary *dic = [solveJsonData changeType:responseObject];
+                
+                if ([dic[@"success"] boolValue]) {
+                   
+                    //                [self getData];
+                    TYAlertView *alertView = [TYAlertView alertViewWithTitle:@"" message:dic[@"info"]];
+                    
+                    [alertView addAction:[TYAlertAction actionWithTitle:@"确定" style:TYAlertActionStyleCancel handler:^(TYAlertAction *action) {
+                        NSLog(@"%@",action.title);
+                    }]];
+                    
+                    TYAlertController *alertController = [TYAlertController alertControllerWithAlertView:alertView preferredStyle:TYAlertControllerStyleActionSheet transitionAnimation:TYAlertTransitionAnimationFade];
+                    alertController.backgoundTapDismissEnable = YES;
+                    [self presentViewController:alertController animated:YES completion:nil];
+                    
+                }else{
+                    
+                    TYAlertView *alertView = [TYAlertView alertViewWithTitle:@"" message:dic[@"info"]];
+                    
+                    [alertView addAction:[TYAlertAction actionWithTitle:@"确定" style:TYAlertActionStyleCancel handler:^(TYAlertAction *action) {
+                        NSLog(@"%@",action.title);
+                    }]];
+                    
+                    TYAlertController *alertController = [TYAlertController alertControllerWithAlertView:alertView preferredStyle:TYAlertControllerStyleActionSheet transitionAnimation:TYAlertTransitionAnimationFade];
+                    alertController.backgoundTapDismissEnable = YES;
+                    [self presentViewController:alertController animated:YES completion:nil];
+                    
+                }
+                
+                
+            } faild:^(id responseObject) {
+                
+            }];
+            
+        }];
+        
+          [alertView show];
+        
+    }
 }
 
 - (IBAction)signOutAction:(UIButton *)sender {

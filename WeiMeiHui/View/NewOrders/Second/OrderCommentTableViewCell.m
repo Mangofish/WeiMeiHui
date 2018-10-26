@@ -101,7 +101,7 @@
     NSMutableArray *temp = [NSMutableArray array];
     for (NSDictionary *obj in finalTag) {
         
-        NSString *num = obj[@"num"];
+        NSString *num = [NSString stringWithFormat:@"%@",obj[@"num"]];
         
         if (num.length) {
              [temp addObject:[NSString stringWithFormat:@"%@（%@）",obj[@"name"],obj[@"num"]]];

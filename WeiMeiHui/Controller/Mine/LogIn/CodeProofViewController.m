@@ -174,6 +174,25 @@
         inviteid = [[NSUserDefaults standardUserDefaults] valueForKey:OpenInstallStr];
     }
     
+//    
+//    [[OpenInstallSDK defaultManager] getInstallParmsCompleted:^(OpeninstallData*_Nullable appData) {
+//        
+//       
+//        //弹出提示框(便于调试，调试完成后删除此代码)
+//        NSLog(@"OpenInstallSDK:\n动态参数：%@;\n渠道编号：%@",appData.data,appData.channelCode);
+//        NSString *getData;
+//        if (appData.data) {
+//            //中文转换，方便看数据
+//            getData = [[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:appData.data options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
+//        }
+//        
+//        [[NSUserDefaults standardUserDefaults] setValue:appData.data[@"invite_vid"] forKey:OpenInstallStr];
+//        [[NSUserDefaults standardUserDefaults] synchronize];
+//   
+//        
+//    }];
+    
+    
      NSString *temp = [self.tel stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     NSString *url = [PublicMethods dataTojsonString:@{@"phone":temp,@"code":self.codeStr,@"fromtype":@"our",@"type":@"4",@"invite_vid":inviteid}];

@@ -94,8 +94,8 @@
     }
     
     NSDictionary *userDict = [[NSUserDefaults standardUserDefaults] valueForKey:@"user"];
-    WeiUserInfo * user = [WeiUserInfo weiUserInfoWithDict:userDict];
-    NSString *url = [PublicMethods dataTojsonString:@{@"uuid":user.uuid,@"id":_ID,@"reason":_selectedBtn.currentTitle,@"content":_textView.text}];
+//    WeiUserInfo * user = [WeiUserInfo weiUserInfoWithDict:userDict];
+    NSString *url = [PublicMethods dataTojsonString:@{@"uuid":[userDict  objectForKey:@"uuid"],@"id":_ID,@"reason":_selectedBtn.currentTitle,@"content":_textView.text}];
     
     
     [YYNet POST:Report paramters:@{@"json":url} success:^(id responseObject) {

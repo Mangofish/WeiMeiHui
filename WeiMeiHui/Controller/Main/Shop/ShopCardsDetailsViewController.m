@@ -34,7 +34,7 @@
     _heightDic = [NSMutableDictionary dictionary];
     _dataDic = [NSMutableDictionary dictionary];
     if (self.coupon_ID.length) {
-        [self.questionBtn setTitle:@"适用商户" forState:UIControlStateNormal];
+        [self.questionBtn setTitle:@"预约电话" forState:UIControlStateNormal];
     }
     
     [self configNavView];
@@ -143,7 +143,25 @@
             ShopCardDetailTableViewCell *cell = [ShopCardDetailTableViewCell shopCardDetailTableViewCellEr];
             cell.card = [ShopCardDetail shopCardDetailWithDict:self.dataDic];
             
-            if ([card.use_type integerValue] == 2) {
+            if (self.coupon_ID) {
+                
+            NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:
+                                                                    @"请在微美惠合作门店出示此二维码享受服务适用商家"];
+            NSRange titleRange = {19,4};
+                
+            NSRange titleRanget = {0,19};
+                
+            NSDictionary *dic = @{NSForegroundColorAttributeName: MainColor};
+                
+            [title addAttributes:dic range:titleRange];
+                
+            NSDictionary *dic2 = @{NSForegroundColorAttributeName: [UIColor lightGrayColor]};
+            [title addAttributes:dic2 range:titleRanget];
+                
+            [cell.inforLab setAttributedTitle:title
+                                                         forState:UIControlStateNormal];
+                
+            }else if ([card.use_type integerValue] == 2) {
                 
                 NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:
                                                     @"仅限本活动合作商户使用查看可用商户"];
@@ -164,6 +182,21 @@
             }else{
                 
                 cell.inforLab.enabled = NO;
+//                NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:
+//                                                    @"请在微美惠合作门店出示此二维码享受服务适用商家"];
+//                NSRange titleRange = {19,4};
+//
+//                NSRange titleRanget = {0,19};
+//
+//                NSDictionary *dic = @{NSForegroundColorAttributeName: MainColor};
+//
+//                [title addAttributes:dic range:titleRange];
+//
+//                NSDictionary *dic2 = @{NSForegroundColorAttributeName: [UIColor lightGrayColor]};
+//                [title addAttributes:dic2 range:titleRanget];
+//
+//                [cell.inforLab setAttributedTitle:title
+//                                         forState:UIControlStateNormal];
                 
             }
             
@@ -359,10 +392,13 @@
     
     if (self.coupon_ID.length) {
         
-        UseableShopViewController *useVC = [[UseableShopViewController alloc]init];
-        useVC.ID = self.coupon_ID;
-        [self.navigationController pushViewController:useVC animated:YES];
+//        UseableShopViewController *useVC = [[UseableShopViewController alloc]init];
+//        useVC.ID = self.coupon_ID;
+//        [self.navigationController pushViewController:useVC animated:YES];
         
+        UIWebView * callWebview = [[UIWebView alloc] init];
+        [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL urlWithNoBlankDataString:[NSString stringWithFormat:@"tel://%@",self.dataDic[@"tel"]]]]];
+        [self.view addSubview:callWebview];
         
     }else{
         
@@ -385,9 +421,24 @@
 
 - (void)didClickMenu{
     
-    EnableShopListsViewController *shopVC = [[EnableShopListsViewController alloc]init];
-    shopVC.ID = self.dataDic[@"id"];
-    [self.navigationController pushViewController:shopVC animated:YES];
+    ShopCard *card =  [ShopCard shopCardWithDict:self.dataDic];
+    
+    if ([card.use_type integerValue] == 2) {
+        
+        EnableShopListsViewController *shopVC = [[EnableShopListsViewController alloc]init];
+        shopVC.ID = self.dataDic[@"id"];
+        [self.navigationController pushViewController:shopVC animated:YES];
+        
+    }else if (self.coupon_ID.length){
+        
+        UseableShopViewController *useVC = [[UseableShopViewController alloc]init];
+        useVC.ID = self.coupon_ID;
+        [self.navigationController pushViewController:useVC animated:YES];
+        
+        
+    }
+    
+    
     
 }
 

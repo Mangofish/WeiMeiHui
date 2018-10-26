@@ -211,7 +211,16 @@
                                                                        detailStr:@""];
         }
         [self.useDataAry removeAllObjects];
-        [self.useDataAry addObjectsFromArray: [dic[@"data"] objectForKey:@"use_list"]];
+        
+        if (self.notUseBtn.selected) {
+            [self.useDataAry addObjectsFromArray: [dic[@"data"] objectForKey:@"use_list"]];
+        }else if (self.useBtn.selected){
+            [self.useDataAry addObjectsFromArray: [dic[@"data"] objectForKey:@"lose_list"]];
+        }else{
+             [self.useDataAry addObjectsFromArray: [dic[@"data"] objectForKey:@"past_list"]];
+        }
+        
+        
         
         [self.mainTableView.mj_header endRefreshing];
         [self.mainTableView reloadData];

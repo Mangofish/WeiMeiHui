@@ -22,6 +22,8 @@
 @property (nonatomic, copy) NSString *status;
 @property (nonatomic, copy) NSString *session_id;
 @property (nonatomic, copy) NSString *ID;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) NSString *must_pic;
 
 +(instancetype)goodsWithDict:(NSDictionary *)dic;
 @end

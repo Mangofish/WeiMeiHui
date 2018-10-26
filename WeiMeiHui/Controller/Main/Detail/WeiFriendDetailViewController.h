@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WeiFriendDetailViewController : UMClickViewController
+@interface WeiFriendDetailViewController : UIViewController
 
 @property (nonatomic, copy) NSString *friendID;
 

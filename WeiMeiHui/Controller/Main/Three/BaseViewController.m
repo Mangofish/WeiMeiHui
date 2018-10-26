@@ -15,7 +15,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+ 
+    self.dump_id = @"";
+    self.tag_id = @"";
+    self.grade = @"";
+    self.cut_id = @"";
+    self.nearby = @"";
+    self.intelligent = @"";
 }
 
 - (void)viewWillLayoutSubviews {
