@@ -102,8 +102,6 @@
     conversationVC.conversationTitle = model.conversationTitle;
     [self.navigationController pushViewController:conversationVC animated:YES];
     
-    
-    
 }
 
 

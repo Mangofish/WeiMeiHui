@@ -97,9 +97,9 @@
         return;
     }
     
+     NSString *deviceID = [PublicMethods requestDeviceInfo][0];
     
-    
-    NSString*strResult = [NSString stringWithFormat:@"%@/uuid/%@",scanResult.strScanned,uuid];
+    NSString*strResult = [NSString stringWithFormat:@"%@/uuid/%@/device_id/%@",scanResult.strScanned,uuid,deviceID];
     
     self.scanImage = scanResult.imgScanned;
     
