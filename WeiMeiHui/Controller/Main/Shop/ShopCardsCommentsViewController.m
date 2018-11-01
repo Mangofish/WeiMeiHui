@@ -187,7 +187,7 @@
     }else{
         
         PersonalTableViewCell *cell = [PersonalTableViewCell personalTableViewCellThreeWithString:@"上传图片有机会获得额外抽奖机会(0/4)"];
-        cell.stateStr = @"上传图片有机会获得额外抽奖机会(0/4)";
+        cell.stateStr = @"上传图片有机会获得额外抽奖机会";
         cell.delegate = self;
         cell.selectedAry = _selectedImgAry;
         cell.selectedAsset = _selectedAsset;
@@ -521,7 +521,7 @@
 - (IBAction)serviceAction:(UIButton *)sender {
     
     UIWebView * callWebview = [[UIWebView alloc] init];
-    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL urlWithNoBlankDataString:[NSString stringWithFormat:@"tel://%@",self.orderDataDic[@"tel"]]]]];
+    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL urlWithNoBlankDataString:[NSString stringWithFormat:@"tel://%@",self.orderDataDic[@"service_tel"]]]]];
     [self.view addSubview:callWebview];
     
 }
