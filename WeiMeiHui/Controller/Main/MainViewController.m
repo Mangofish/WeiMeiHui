@@ -1217,6 +1217,8 @@
     
     [self.titleView.locationBtn setTitle:name forState:UIControlStateNormal];
   
+    self.page = 1;
+    
     [self getDataAtIndex:_currentIndex];
     
 }

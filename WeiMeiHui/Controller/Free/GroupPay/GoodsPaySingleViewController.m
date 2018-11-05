@@ -457,7 +457,7 @@
         
     }
     
-    
+     
     NSString *url = [PublicMethods dataTojsonString:@{@"uuid":uuid,@"goods_id":_ID,@"coupon_id":_coupon_id,@"buy_num":@(_count),@"group_mode_id":@"",@"is_use_coupon":is_use_coupon,@"price":@(_finalPrice),@"is_use_activity":self.isActivity,@"type":@"2",@"del_order_num":_orderNumber,@"activity_id":activity_id}];
     
     [YYNet POST:GoodsSingleTOPay paramters:@{@"json":url} success:^(id responseObject) {

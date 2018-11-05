@@ -186,7 +186,7 @@
         
     }else{
         
-        PersonalTableViewCell *cell = [PersonalTableViewCell personalTableViewCellThreeWithString:@"上传图片有机会获得额外抽奖机会(0/4)"];
+        PersonalTableViewCell *cell = [PersonalTableViewCell personalTableViewCellThreeWithString:@"请详细描述你对本次服务的评价(0/4)"];
         cell.stateStr = @"上传图片有机会获得额外抽奖机会";
         cell.delegate = self;
         cell.selectedAry = _selectedImgAry;
@@ -367,10 +367,7 @@
 #pragma mark- 提交评价
 - (IBAction)sendComment:(UIButton *)sender {
     
-    if (self.selectedImgAry.count) {
-        [self uploadPics];
-        return;
-    }
+   
     
     if (!finaltagID.length) {
         FFToast *toast = [[FFToast alloc]initToastWithTitle:nil message:@"请至少选择一个评价标签！" iconImage:[UIImage imageNamed:@"warning"]];
@@ -385,6 +382,11 @@
         toast.toastType = FFToastTypeWarning;
         toast.toastPosition = FFToastPositionBelowStatusBarWithFillet;
         [toast show];
+        return;
+    }
+    
+    if (self.selectedImgAry.count) {
+        [self uploadPics];
         return;
     }
     
