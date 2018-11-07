@@ -112,8 +112,10 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
     
     self.historyCityMutableArray = [NSKeyedUnarchiver unarchiveObjectWithData:[kCurrentCityInfoDefaults objectForKey:@"historyCity"]];
     
-    if (self.historyCityMutableArray.count == 0) {
-        if ([[NSUserDefaults standardUserDefaults] valueForKey:WEILOCATION]) {
+    NSString *city = [[NSUserDefaults standardUserDefaults] valueForKey:WEILOCATION];
+    
+    if (![self.historyCityMutableArray containsObject:city]) {
+        if (city.length) {
             [self.historyCityMutableArray addObject:[[NSUserDefaults standardUserDefaults] valueForKey:WEILOCATION]];
         }
     }
@@ -142,6 +144,7 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
     }];
 }
 
+#pragma mark  - 点击cell回调
 /// 选择城市时调用通知函数（前提是点击cell的section < 3）
 - (void)chooseCityWithName:(NSNotification *)info {
     NSDictionary *cityDic = info.userInfo;
@@ -168,8 +171,8 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
         
         [_manager cityNumberWithCity:[cityDic valueForKey:@"cityName"] cityNumber:^(NSString *cityNumber) {
 //            存储当前城市ID
-            [kCurrentCityInfoDefaults setObject:cityNumber forKey:WEICITYID];
-            
+            [kCurrentCityInfoDefaults setValue:cityNumber forKey:WEICITYID];
+            [kCurrentCityInfoDefaults synchronize];
             if (self.delegate && [self.delegate respondsToSelector:@selector(cityName:)]) {
                 [self.delegate cityName:cityName];
             }
@@ -349,6 +352,7 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
         _rootTableView.delegate = self;
         _rootTableView.dataSource = self;
         self.automaticallyAdjustsScrollViewInsets = NO;
+        
         [_rootTableView registerClass:[JFCityTableViewCell class] forCellReuseIdentifier:@"cityCell"];
         [_rootTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cityNameCell"];
     }
@@ -372,11 +376,28 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return section < _HeaderSectionTotal ? 1 : [_sectionMutableArray[0][_characterMutableArray[section]] count];
+    
+    if (section == 0) {
+        
+        if (self.historyCityMutableArray.count) {
+            return section < _HeaderSectionTotal ? 1 : [_sectionMutableArray[0][_characterMutableArray[section]] count];
+        }else{
+            return section < _HeaderSectionTotal ? 0 : [_sectionMutableArray[0][_characterMutableArray[section]] count];
+        }
+    }else{
+        
+        return section < _HeaderSectionTotal ? 1 : [_sectionMutableArray[0][_characterMutableArray[section]] count];
+        
+        
+    }
+    
+    
+   
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section < _HeaderSectionTotal) {
+        
         self.cell = [tableView dequeueReusableCellWithIdentifier:@"cityCell" forIndexPath:indexPath];
         if (_HeaderSectionTotal == 4 && indexPath.section == 0) {
             _cell.cityNameArray = _areaMutableArray;
@@ -387,12 +408,12 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
         }
         if (indexPath.section == _HeaderSectionTotal - 2) {
             
-            
             _cell.cityNameArray = self.historyCityMutableArray;
         }
         if (indexPath.section == _HeaderSectionTotal - 1) {
             _cell.cityNameArray = self.hotCityArray;
         }
+        _cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return _cell;
         
     }else {
@@ -402,6 +423,7 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
         cell.textLabel.textColor = [UIColor grayColor];
         cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.separatorInset = UIEdgeInsetsMake(44, 0, 0, 30);
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
 }
@@ -418,6 +440,12 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
     if (_HeaderSectionTotal == 4 && section == 0) {
         return 0;
     }else{
+        
+        if (self.historyCityMutableArray.count == 0 && section == 0) {
+            
+            return 0;
+            
+        }
         return 44;
     }
 }
@@ -430,17 +458,24 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
     lab.font = [UIFont systemFontOfSize:12];
     lab.backgroundColor = MJRefreshColor(240, 240, 240);
     lab.textColor = MJRefreshColor(153, 153, 153);
-    switch (section) {
-        case 0:
-            lab.text = @"   最近访问的城市";
-            break;
-        case 1:
-            lab.text = @"   热门城市";
-            break;
-        default:
-            lab.text = [NSString stringWithFormat:@"    %@",_characterMutableArray[section]];
-            break;
-    }
+    
+//    if (self.historyCityMutableArray.count) {
+    
+        switch (section) {
+            case 0:
+                lab.text = @"   最近访问的城市";
+                break;
+            case 1:
+                lab.text = @"   热门城市";
+                break;
+            default:
+                lab.text = [NSString stringWithFormat:@"    %@",_characterMutableArray[section]];
+                break;
+        }
+        
+//    }
+    
+    
     [v addSubview:lab];
     return v;
 }
@@ -451,6 +486,11 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section < _HeaderSectionTotal) {
+        return;
+    }
+    
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 //    _headerView.cityName = cell.textLabel.text;
     [kCurrentCityInfoDefaults setObject:cell.textLabel.text forKey:WEICurrentCity];
@@ -606,28 +646,28 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
 - (void)refuseToUsePositioningSystem:(NSString *)message {
     NSLog(@"%@",message);
     
-    [kCurrentCityInfoDefaults setObject:@"无权限" forKey:WEICurrentCity];
-    [kCurrentCityInfoDefaults setObject:@"220100" forKey:WEICITYID];
-    
-    if ([PublicMethods isLogIn]) {
-        
-        NSString *uuid = [[[NSUserDefaults standardUserDefaults] valueForKey:@"user"] objectForKey:@"uuid"];
-        NSString *city_id = [[NSUserDefaults standardUserDefaults] valueForKey:WEICITYID];
-        
-        NSString *url = [PublicMethods dataTojsonString:@{@"uuid":uuid,@"city_id":city_id}];
-        
-        [YYNet POST:ChangeCity paramters:@{@"json":url} success:^(id responseObject) {
-            
-//            [self.navigationController popViewControllerAnimated:YES];
-            
-        } faild:^(id responseObject) {
-            
-            
-            
-        }];
-        
-    }
-    
+//    [kCurrentCityInfoDefaults setObject:@"无权限" forKey:WEICurrentCity];
+//    [kCurrentCityInfoDefaults setObject:@"220100" forKey:WEICITYID];
+//
+//    if ([PublicMethods isLogIn]) {
+//
+//        NSString *uuid = [[[NSUserDefaults standardUserDefaults] valueForKey:@"user"] objectForKey:@"uuid"];
+//        NSString *city_id = [[NSUserDefaults standardUserDefaults] valueForKey:WEICITYID];
+//
+//        NSString *url = [PublicMethods dataTojsonString:@{@"uuid":uuid,@"city_id":city_id}];
+//
+//        [YYNet POST:ChangeCity paramters:@{@"json":url} success:^(id responseObject) {
+//
+////            [self.navigationController popViewControllerAnimated:YES];
+//
+//        } faild:^(id responseObject) {
+//
+//
+//
+//        }];
+//
+//    }
+//
     _headerView.cityName = @"未开启定位权限";
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(cityName:)]) {
@@ -646,28 +686,28 @@ JFSearchViewDelegate,LocateAuthorityDelegate>
     
     
     //    _headerView.cityName = cell.textLabel.text;
-    [kCurrentCityInfoDefaults setObject:@"定位失败" forKey:WEICurrentCity];
-    [kCurrentCityInfoDefaults setObject:@"220100" forKey:WEICITYID];
-    
-    if ([PublicMethods isLogIn]) {
-        
-        NSString *uuid = [[[NSUserDefaults standardUserDefaults] valueForKey:@"user"] objectForKey:@"uuid"];
-        NSString *city_id = [[NSUserDefaults standardUserDefaults] valueForKey:WEICITYID];
-        
-        NSString *url = [PublicMethods dataTojsonString:@{@"uuid":uuid,@"city_id":city_id}];
-        
-        [YYNet POST:ChangeCity paramters:@{@"json":url} success:^(id responseObject) {
-            
-//            [self.navigationController popViewControllerAnimated:YES];
-            
-        } faild:^(id responseObject) {
-            
-            
-            
-        }];
-        
-    }
-    
+//    [kCurrentCityInfoDefaults setObject:@"定位失败" forKey:WEICurrentCity];
+//    [kCurrentCityInfoDefaults setObject:@"220100" forKey:WEICITYID];
+//    
+//    if ([PublicMethods isLogIn]) {
+//        
+//        NSString *uuid = [[[NSUserDefaults standardUserDefaults] valueForKey:@"user"] objectForKey:@"uuid"];
+//        NSString *city_id = [[NSUserDefaults standardUserDefaults] valueForKey:WEICITYID];
+//        
+//        NSString *url = [PublicMethods dataTojsonString:@{@"uuid":uuid,@"city_id":city_id}];
+//        
+//        [YYNet POST:ChangeCity paramters:@{@"json":url} success:^(id responseObject) {
+//            
+////            [self.navigationController popViewControllerAnimated:YES];
+//            
+//        } faild:^(id responseObject) {
+//            
+//            
+//            
+//        }];
+//        
+//    }
+//    
     _headerView.cityName = @"定位失败";
     if (self.delegate && [self.delegate respondsToSelector:@selector(cityName:)]) {
         [self.delegate cityName:@"定位失败"];

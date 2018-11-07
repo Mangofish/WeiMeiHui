@@ -157,14 +157,14 @@
         [[NSUserDefaults standardUserDefaults] setValue:@(0) forKey:WEILat];
     }
     
-    if (![[NSUserDefaults standardUserDefaults] valueForKey:WEILocationCITYID]) {
-        [[NSUserDefaults standardUserDefaults] setValue:@"220100" forKey:WEICITYID];
-    }
-    
-    if (![[NSUserDefaults standardUserDefaults] valueForKey:WEILOCATION]) {
-        [[NSUserDefaults standardUserDefaults] setValue:@"长春市" forKey:WEILOCATION];
-    }
-    
+//    if (![[NSUserDefaults standardUserDefaults] valueForKey:WEILocationCITYID]) {
+//        [[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:WEILocationCITYID];
+//    }
+//
+//    if (![[NSUserDefaults standardUserDefaults] valueForKey:WEILOCATION]) {
+//        [[NSUserDefaults standardUserDefaults] setValue:@"" forKey:WEILOCATION];
+//    }
+//
 //    //    引导页
 //    KSGuaidManager.images = @[[UIImage imageNamed:@"guid01"],
 //                              [UIImage imageNamed:@"guid02"],
@@ -463,12 +463,38 @@
             //如果为定位失败的error
             if (error.code == AMapLocationErrorLocateFailed)
             {
-                [[NSUserDefaults standardUserDefaults] setValue:@(0) forKey:WEILat];
-                [[NSUserDefaults standardUserDefaults] setValue:@(0) forKey:WEIlngi];
-                [[NSUserDefaults standardUserDefaults] setValue:@"长春市" forKey:WEILOCATION];
-                [[NSUserDefaults standardUserDefaults] setValue:@"220100" forKey:WEILocationCITYID];
-                [[NSUserDefaults standardUserDefaults] synchronize];
-                return;
+//                [[NSUserDefaults standardUserDefaults] setValue:@(0) forKey:WEILat];
+//                [[NSUserDefaults standardUserDefaults] setValue:@(0) forKey:WEIlngi];
+//                [[NSUserDefaults standardUserDefaults] setValue:@"长春市" forKey:WEILOCATION];
+//                [[NSUserDefaults standardUserDefaults] setValue:@"220100" forKey:WEILocationCITYID];
+//                [[NSUserDefaults standardUserDefaults] synchronize];
+                
+                NSString *city = [[NSUserDefaults standardUserDefaults] valueForKey:WEICITYID];
+                
+                if (!city.length) {
+                    
+                    CKAlertViewController *cV =  [CKAlertViewController alertControllerWithTitle:@"微美惠提示" message:@"当前定位不可用请前往进行城市选择"];
+                    CKAlertAction *action2 = [CKAlertAction actionWithTitle:@"确定" handler:^(CKAlertAction *action) {
+                        
+                        [weakSelf chooseLocation:nil];
+                        
+                    } ];
+                    
+                    [cV addAction:action2];
+                    
+                    [weakSelf presentViewController:cV animated:YES completion:nil];
+                    
+                    
+                    return;
+                    
+                }else{
+                    
+                    NSString *cityC = [[NSUserDefaults standardUserDefaults] valueForKey:WEICurrentCity];
+                    [weakSelf.titleView.locationBtn setTitle:cityC forState:UIControlStateNormal];
+                    
+                }
+                
+                
             }
         }
         
@@ -488,12 +514,37 @@
                     
                     [weakSelf.titleView.locationBtn setTitle:regeocode.city forState:UIControlStateNormal];
                     
+                    CKAlertViewController *cV =  [CKAlertViewController alertControllerWithTitle:@"微美惠提示" message:@"当前定位不可用请前往进行城市选择"];
+                    CKAlertAction *action2 = [CKAlertAction actionWithTitle:@"确定" handler:^(CKAlertAction *action) {
+                        
+                        [weakSelf chooseLocation:nil];
+                        
+                    } ];
+                    
+                    [cV addAction:action2];
+                    
+                    [weakSelf presentViewController:cV animated:YES completion:nil];
+                    
+                    
                 }else{
                     
                     if ([[[NSUserDefaults standardUserDefaults] valueForKey:WEICurrentCity] isEqualToString:@"无权限"]) {
                         [weakSelf.titleView.locationBtn setTitle:regeocode.city forState:UIControlStateNormal];
                         
                         [[NSUserDefaults standardUserDefaults] setValue:regeocode.city forKey:WEICurrentCity];
+                        
+                        CKAlertViewController *cV =  [CKAlertViewController alertControllerWithTitle:@"微美惠提示" message:@"当前定位不可用请前往进行城市选择"];
+                        CKAlertAction *action2 = [CKAlertAction actionWithTitle:@"确定" handler:^(CKAlertAction *action) {
+                            
+                            [weakSelf chooseLocation:nil];
+                            
+                        } ];
+                        
+                        [cV addAction:action2];
+                        
+                        [weakSelf presentViewController:cV animated:YES completion:nil];
+                        
+                        
                         
                     }else{
                         

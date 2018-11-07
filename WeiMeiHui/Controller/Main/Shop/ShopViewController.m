@@ -266,7 +266,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
-    if (section == 0) {
+    if (section == 0 ) {
         return Space;
     }
     
@@ -274,7 +274,7 @@
         return 54;
     }
     
-    if (section == 3&& self.orderdataAry.count) {
+    if (section == 3 && self.goodsData.count) {
         return 54;
     }
     
