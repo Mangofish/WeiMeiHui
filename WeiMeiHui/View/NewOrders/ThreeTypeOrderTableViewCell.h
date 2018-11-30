@@ -129,4 +129,17 @@
  */
 @property (nonatomic, strong) ThreeOrder *groupFinishOrder;
 
+/**
+ 1.商品订单- 待支付
+ */
+@property (nonatomic, strong) ThreeOrder *realWaitPayOrder;
+/**
+ 2.商品订单- 待使用
+ */
+@property (nonatomic, strong) ThreeOrder *realUseOrder;
+/**
+ 3.商品订单- 已使用
+ */
+@property (nonatomic, strong) ThreeOrder *realAlreadyUse;
+
 @end

@@ -46,7 +46,7 @@
     
     [super viewWillAppear:animated];
     
-    if (self.dataDic.count) {
+    if (!self.dataDic.count) {
         [self getData];
     }
     

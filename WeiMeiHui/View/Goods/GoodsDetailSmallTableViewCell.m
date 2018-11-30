@@ -170,6 +170,17 @@
     
     _status.text = [NSString stringWithFormat:@"¥%@",weiorder.pay_price];
     
+       
+}
+
+-(void)setRealorder:(GoodsDetail *)realorder{
+    
+    _orderNum.text =[NSString stringWithFormat:@"%@",realorder.title];
+    
+    _time.text = [NSString stringWithFormat:@"%@",realorder.pay_price];
+    
+    _status.hidden = YES;
+    
     
 }
 

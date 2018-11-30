@@ -476,8 +476,10 @@
             
             [UIView animateWithDuration:0.25 animations:^{
                 
-                weakSelf.city.text = weakSelf.chooseLocationView.address;
-                weakSelf.finalcityid = weakSelf.chooseLocationView.code;
+                if (weakSelf.chooseLocationView.code.length) {
+                    weakSelf.city.text = weakSelf.chooseLocationView.address;
+                    weakSelf.finalcityid = weakSelf.chooseLocationView.code;
+                }
                 weakSelf.cover.hidden = YES;
                 weakSelf.chooseLocationView.frame = CGRectMake(0, kHeight, kWidth, kHeight/2);
             }];
@@ -605,7 +607,7 @@
         if (photos.count) {
             
             //            做上传保存
-            [_icon setImage:photos[0]];
+            [self->_icon setImage:photos[0]];
             
             YYNetModel *model = [[YYNetModel alloc]init];
             model.fileData = [self imageToData:photos[0]];
@@ -613,11 +615,14 @@
             model.name = [NSString stringWithFormat:@"image%i",1];
             model.mimeType = @"image/png";
             
-            NSString *url = [PublicMethods dataTojsonString:@{@"uuid":user.uuid}];
+            NSString *url = [PublicMethods dataTojsonString:@{@"uuid":self->user.uuid}];
             
             [YYNet upLoad:SavePersonalData paramter:@{@"json":url} fileModelOne:model success:^(id responseObject) {
         
                 NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+                
+                NSDictionary *dict = [solveJsonData changeType:dic];
+                
                 if ([dic[@"success"] boolValue]) {
                     
                     FFToast *toast = [[FFToast alloc]initToastWithTitle:nil message:dic[@"info"] iconImage:[UIImage imageNamed:@"success"]];
@@ -625,7 +630,7 @@
                     toast.toastPosition = FFToastPositionBelowStatusBarWithFillet;
                     [toast show];
 //                    [self.navigationController popViewControllerAnimated:YES];
-                    [[NSUserDefaults standardUserDefaults] setValue:dic[@"data"] forKey:@"user"];
+                    [[NSUserDefaults standardUserDefaults] setValue:dict[@"data"] forKey:@"user"];
                     [[NSUserDefaults standardUserDefaults] synchronize];
                     
                 }else{

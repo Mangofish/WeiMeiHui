@@ -19,6 +19,8 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/Photos.h>
 
+#import "UIButton+ImageTitleSpacing.h"
+
 #import <AVFoundation/AVFoundation.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
@@ -53,13 +55,20 @@
 
 //#import "KSGuaidViewManager.h"
 #import "MyCardsListsViewController.h"
+#import "FamousShopTitleTableViewCell.h"
+#import "CardsDoubleTableViewCell.h"
+#import "FamousGoodsTableViewCell.h"
+#import "SearchFooterTableViewCell.h"
+#import "GoodsDetailViewController.h"
+#import "FamousShopGoodsViewController.h"
+
 
 #define DefaultLocationTimeout  10
 #define DefaultReGeocodeTimeout 10
 
 #define DefaultHeaderHeight (kWidth*200/375)
 
-@interface MainViewController ()<UIGestureRecognizerDelegate,MainTitleViewDelegate,AMapLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource,JFCityViewControllerDelegate,MainCouponAlertViewDelegate,ActivityThreeTableViewCellDelegate,SDCycleScrollViewDelegate,JSDropDownMenuDelegate,JSDropDownMenuDataSource,MainExclusiveTableViewCellDelegate>
+@interface MainViewController ()<UIGestureRecognizerDelegate,MainTitleViewDelegate,AMapLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource,JFCityViewControllerDelegate,MainCouponAlertViewDelegate,ActivityThreeTableViewCellDelegate,SDCycleScrollViewDelegate,JSDropDownMenuDelegate,JSDropDownMenuDataSource,MainExclusiveTableViewCellDelegate,CardsDoubleTableViewCellDelegate>
 {
     
     NSInteger _currentData1Index;
@@ -141,7 +150,7 @@
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
- 
+//    self.tabBarController.tabBar
     order = @"";
     nearby = @"";
     type = @"";
@@ -414,7 +423,7 @@
     [self initCompleteBlock];
     [self.locationManager requestLocationWithReGeocode:YES completionBlock:self.completionBlock];
     
-//    [self getData];
+    [self getData];
    
 }
 
@@ -783,7 +792,7 @@
     
         JFCityViewController *pubVC = [[JFCityViewController alloc]init];
         pubVC.delegate = self;
-
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:pubVC animated:YES];
     
 }
@@ -801,7 +810,9 @@
             if (![PublicMethods isLogIn]) {
                 
                 LoginViewController *logVc = [[LoginViewController alloc]init];
+                self.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:logVc animated:YES];
+                return ;
             }
             
             MyCardsListsViewController *pubVC = [[MyCardsListsViewController alloc]init];
@@ -895,6 +906,31 @@
         
     }
     
+    if (section >= 4) {
+        
+        if (self.dataAry.count == 0) {
+            return 0;
+        }
+        
+        NSArray *cardTemp = [self.dataAry[section-4] objectForKey:@"card_list"];
+        NSArray *goodsTemp = [self.dataAry[section-4] objectForKey:@"goods_list"];
+        
+        if (cardTemp.count && goodsTemp.count) {
+            return 3+goodsTemp.count;
+        }
+        
+        if (cardTemp.count && !goodsTemp.count) {
+            return 2;
+        }
+        
+        if (!cardTemp.count && goodsTemp.count) {
+            return 2+goodsTemp.count;
+        }
+        
+        return 1;
+    }
+    
+  
     return 1;
 }
 
@@ -931,39 +967,165 @@
     }
     
     if (indexPath.section == 3) {
+        
         ActivityThreeTableViewCell *cell = [ActivityThreeTableViewCell activityThreeTableViewCellSingleMain];
         [cell.singleImg sd_setImageWithURL:[NSURL urlWithNoBlankDataString:[self.userDic objectForKey:@"pic"]] placeholderImage:[UIImage imageNamed:@"test2"] options:(SDWebImageRefreshCached)];
         return cell;
         
     }else{
         
-        
         if (self.dataAry.count == 0) {
             
-            
             UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"mainCell"];
-           
             cell.ly_emptyView = [LYEmptyView emptyActionViewWithImageStr:@"筛选结果" titleStr:@"" detailStr:@"" btnTitleStr:@"" btnClickBlock:^{
-                ;
+                
             }];
             
             return cell;
         }
         
-        FamousShopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"main"];
-        
-        if (!cell) {
-            cell = [FamousShopTableViewCell famousShopTableViewCellMain];
+        //        门店
+        if (indexPath.row == 0) {
+            
+            FamousShopTitleTableViewCell *cell = [FamousShopTitleTableViewCell famousShopTitleTableViewCellSingle];
+            cell.authorSingle = [ShopAndAuthor shopAuthorWithDict:self.dataAry[indexPath.section-4]];
+            return cell;
+            
         }
-        
-        cell.authorMain = [ShopAndAuthor shopAuthorWithDict:self.dataAry[indexPath.section-4]];
-        return cell;
-        
+        NSArray *cardTemp = [self.dataAry[indexPath.section-4] objectForKey:@"card_list"];
+        NSArray *goodsTemp = [self.dataAry[indexPath.section-4] objectForKey:@"goods_list"];
+        //        有卡有商品
+        if (cardTemp.count && goodsTemp.count) {
+            
+            if (indexPath.row == 1) {
+                //                卡
+                if (cardTemp.count == 1) {
+                    
+                    CardsDoubleTableViewCell *cell = [CardsDoubleTableViewCell cardsDoubleTableViewCellSingle];
+                    cell.tag = indexPath.section;
+                    cell.cardLeft = [ShopCard shopCardWithDict:cardTemp[0]];
+                    return cell;
+                    
+                }else if(cardTemp.count == 2) {
+                    
+                    CardsDoubleTableViewCell *cell = [CardsDoubleTableViewCell cardsDoubleTableViewCellDouble];
+                    cell.cardLeft = [ShopCard shopCardWithDict:cardTemp[0]];
+                    cell.cardright = [ShopCard shopCardWithDict:cardTemp[1]];
+                    cell.tag = indexPath.section;
+                    cell.delegate = self;
+                    return cell;
+                    
+                }
+            }
+            //            商品有一个还是两个
+            if (goodsTemp.count == 2) {
+                if (indexPath.row == 2 || indexPath.row == 3) {
+                    
+                    NSArray *goodsTemp = [self.dataAry[indexPath.section-4] objectForKey:@"goods_list"];
+                    FamousGoodsTableViewCell *cell = [FamousGoodsTableViewCell famousGoodsTableViewCellDetailSn];
+                    cell.goodsSearch = [AuthorGoods authorGoodsWithDict:goodsTemp[indexPath.row-2]];
+                    return cell;
+                    
+                }else{
+                    
+                    SearchFooterTableViewCell *cell = [SearchFooterTableViewCell searchFooterTableViewCellFooterMain];
+                    [cell.titleBtn setTitle:[self.dataAry[indexPath.section-4] objectForKey:@"group_count"] forState:UIControlStateNormal];
+                    [cell.titleBtn layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleRight) imageTitleSpace:5];
+                    return cell;
+                }
+            }else if (goodsTemp.count == 1){
+                
+                if (indexPath.row == 2) {
+                    
+                    NSArray *goodsTemp = [self.dataAry[indexPath.section-4] objectForKey:@"goods_list"];
+                    FamousGoodsTableViewCell *cell = [FamousGoodsTableViewCell famousGoodsTableViewCellDetailSn];
+                    cell.goodsSearch = [AuthorGoods authorGoodsWithDict:goodsTemp[indexPath.row-2]];
+                    return cell;
+                    
+                }else{
+                    
+                    SearchFooterTableViewCell *cell = [SearchFooterTableViewCell searchFooterTableViewCellFooterMain];
+                    [cell.titleBtn setTitle:[self.dataAry[indexPath.section-4] objectForKey:@"group_count"] forState:UIControlStateNormal];
+                    [cell.titleBtn layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleRight) imageTitleSpace:5];
+                    return cell;
+                    
+                }
+            }
+        }
+            //        有卡无商品
+            if (cardTemp.count && !goodsTemp.count) {
+                
+                if (indexPath.row == 1) {
+                    
+                    //                卡
+                    if (cardTemp.count == 1) {
+                        
+                        CardsDoubleTableViewCell *cell = [CardsDoubleTableViewCell cardsDoubleTableViewCellSingle];
+                        cell.cardLeft = [ShopCard shopCardWithDict:cardTemp[0]];
+                        cell.tag = indexPath.section;
+                        return cell;
+                        
+                    }else if(cardTemp.count == 2) {
+                        
+                        CardsDoubleTableViewCell *cell = [CardsDoubleTableViewCell cardsDoubleTableViewCellDouble];
+                        cell.cardLeft = [ShopCard shopCardWithDict:cardTemp[0]];
+                        cell.cardright = [ShopCard shopCardWithDict:cardTemp[1]];
+                        cell.tag = indexPath.section;
+                        return cell;
+                        
+                    }
+                }
+                
+            }
+            
+            //        无卡有商品
+            if (!cardTemp.count && goodsTemp.count) {
+                
+                if (goodsTemp.count == 2) {
+                    
+                    if (indexPath.row == 1 || indexPath.row == 2) {
+                        
+                        NSArray *goodsTemp = [self.dataAry[indexPath.section-4] objectForKey:@"goods_list"];
+                        FamousGoodsTableViewCell *cell = [FamousGoodsTableViewCell famousGoodsTableViewCellDetailSn];
+                        cell.goodsSearch = [AuthorGoods authorGoodsWithDict:goodsTemp[indexPath.row-1]];
+                        return cell;
+                        
+                    }else{
+                        
+                        SearchFooterTableViewCell *cell = [SearchFooterTableViewCell searchFooterTableViewCellFooterMain];
+                        [cell.titleBtn setTitle:[self.dataAry[indexPath.section-4] objectForKey:@"group_count"] forState:UIControlStateNormal];
+                        [cell.titleBtn layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleRight) imageTitleSpace:5];
+                        return cell;
+                        
+                    }
+                    
+                }else if (goodsTemp.count == 1){
+                    
+                    if (indexPath.row == 1) {
+                        
+                        NSArray *goodsTemp = [self.dataAry[indexPath.section-4] objectForKey:@"goods_list"];
+                        FamousGoodsTableViewCell *cell = [FamousGoodsTableViewCell famousGoodsTableViewCellDetailSn];
+                        cell.goodsSearch = [AuthorGoods authorGoodsWithDict:goodsTemp[indexPath.row-1]];
+                        return cell;
+                        
+                    }else{
+                        
+                        SearchFooterTableViewCell *cell = [SearchFooterTableViewCell searchFooterTableViewCellFooterMain];
+                        [cell.titleBtn setTitle:[self.dataAry[indexPath.section-4] objectForKey:@"group_count"] forState:UIControlStateNormal];
+                        [cell.titleBtn layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleRight) imageTitleSpace:5];
+                        return cell;
+                        
+                    }
+                    
+                }
+            }
+                
+                SearchFooterTableViewCell *cell = [SearchFooterTableViewCell searchFooterTableViewCellFooterMain];
+                [cell.titleBtn setTitle:[self.dataAry[indexPath.section-4] objectForKey:@"group_count"] forState:UIControlStateNormal];
+                [cell.titleBtn layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyleRight) imageTitleSpace:5];
+                return cell;
+       
     }
-        
-    
-    
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -981,8 +1143,125 @@
     }
     
     if (indexPath.section == 3) {
-        return   80;
+        return   (kWidth-20)* 80/355;
     }
+    
+    if (indexPath.section >= 4) {
+        
+//        商品
+        if (indexPath.row == 0) {
+            return 80;
+        }
+        
+
+        NSArray *cardTemp = [self.dataAry[indexPath.section-4] objectForKey:@"card_list"];
+        NSArray *goodsTemp = [self.dataAry[indexPath.section-4] objectForKey:@"goods_list"];
+        
+        //        有卡有商品
+        if (cardTemp.count && goodsTemp.count ) {
+            
+            if (cardTemp.count == 1) {
+                
+                if (indexPath.row == 1) {
+                    return 200*kWidth/750;;
+                }
+                
+            }
+            
+            if (cardTemp.count == 2) {
+                
+                if (indexPath.row == 1) {
+                   return 220*kWidth/750;
+                }
+                
+            }
+            
+            if (goodsTemp.count == 1) {
+                
+                if (indexPath.row == 2) {
+                    return 60;
+                }
+                
+                if (indexPath.row == 3) {
+                    return 30;
+                }
+                
+            }
+            
+            if (goodsTemp.count == 2) {
+                
+                if (indexPath.row == 2) {
+                    return 60;
+                }
+                
+                if (indexPath.row == 3) {
+                    return 60;
+                }
+                
+                if (indexPath.row == 4) {
+                    return 30;
+                }
+            
+            }
+        }
+        
+//有卡无商品
+        if (!goodsTemp.count && cardTemp.count) {
+            
+            if (cardTemp.count == 1) {
+                
+                if (indexPath.row == 1) {
+                    return 200*kWidth/750;
+                }
+                
+            }
+            
+            if (cardTemp.count == 2) {
+                
+                if (indexPath.row == 1) {
+                   return 220*kWidth/750;
+                }
+                
+            }
+            
+        }
+        
+//        无卡有商品
+        if (goodsTemp.count && !cardTemp.count) {
+            
+            if (goodsTemp.count == 1) {
+                
+                if (indexPath.row == 1) {
+                    return 60;
+                }
+                
+                if (indexPath.row == 2) {
+                    return 30;
+                }
+                
+            }
+            
+            if (goodsTemp.count == 2) {
+                
+                if (indexPath.row == 1) {
+                    return 60;
+                }
+                
+                if (indexPath.row == 2) {
+                    return 60;
+                }
+                
+                if (indexPath.row == 3) {
+                    return 30;
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+
     
     return 189*(kWidth-20)/355+80;
     
@@ -1041,6 +1320,7 @@
     
     NextFreeNewViewController *adVC = [[NextFreeNewViewController alloc]init];
     adVC.url = [_imagesURLAry[index] objectForKey:@"url"];
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:adVC animated:YES];
     
 }
@@ -1304,10 +1584,11 @@
     
     [YYNet POST:INDEXList paramters:@{@"json":url} success:^(id responseObject) {
         
+
         NSDictionary *dict = [solveJsonData changeType:responseObject];
         NSDictionary *dic = dict[@"data"];
         
-        NSUInteger type = [[dic[@"order_data"] objectForKey:@"type"] integerValue];
+        NSUInteger type = [[dic objectForKey:@"type"] integerValue];
         
         [[NSUserDefaults standardUserDefaults] setValue:@(type) forKey:WEIPUBLISH];
          [[NSUserDefaults standardUserDefaults] setValue:dic[@"about_wmh"] forKey:AboutAppUrl];
@@ -1320,20 +1601,20 @@
         
         
         
-        BOOL isCoupon = [[[NSUserDefaults standardUserDefaults] valueForKey:WEICoupon] boolValue];
-        
-        if ([dic[@"is_receive"] integerValue] == 2 && isCoupon) {
-            
-            [self.view addSubview:self.couponAlertView];
-            
-            self.couponAry = dic[@"coupon_list"];
-            self.couponAlertView.dataAry = dic[@"coupon_list"];
-            self.couponAlertView.imgUrl = dic[@"coupon_image"];
-            
-            [[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:WEICoupon];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            
-        }
+//        BOOL isCoupon = [[[NSUserDefaults standardUserDefaults] valueForKey:WEICoupon] boolValue];
+//
+//        if ([dic[@"is_receive"] integerValue] == 2 && isCoupon) {
+//
+//            [self.view addSubview:self.couponAlertView];
+//
+//            self.couponAry = dic[@"coupon_list"];
+//            self.couponAlertView.dataAry = dic[@"coupon_list"];
+//            self.couponAlertView.imgUrl = dic[@"coupon_image"];
+//
+//            [[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:WEICoupon];
+//            [[NSUserDefaults standardUserDefaults] synchronize];
+//
+//        }
         
         
     } faild:^(id responseObject) {
@@ -1357,10 +1638,100 @@
     }
     
     if (indexPath.section >= 4) {
-        ShopViewController *shopVC = [[ShopViewController alloc]init];
-        shopVC.ID = [self.dataAry[indexPath.section-4] objectForKey:@"id"];
-        [self.navigationController pushViewController:shopVC animated:YES];
-    }
+        
+        if (indexPath.row == 0) {
+            ShopViewController *shopVC = [[ShopViewController alloc]init];
+            shopVC.ID = [self.dataAry[indexPath.section-4] objectForKey:@"id"];
+            [self.navigationController pushViewController:shopVC animated:YES];
+        }
+        
+        NSArray *cardTemp = [self.dataAry[indexPath.section-4] objectForKey:@"card_list"];
+        NSArray *goodsTemp = [self.dataAry[indexPath.section-4] objectForKey:@"goods_list"];
+        
+
+//            卡
+            if (indexPath.row == 1) {
+                
+                if (cardTemp.count == 1) {
+                    NextFreeNewViewController *lists = [[NextFreeNewViewController alloc]init];
+                    lists.url = cardTemp[indexPath.row-1][@"url"];
+                    [self.navigationController pushViewController:lists animated:YES];
+                    return;
+                }
+                
+                if (cardTemp.count == 2) {
+                    return;
+                }
+                
+                if (cardTemp.count == 0) {
+                    
+                    if (goodsTemp.count) {
+                        
+                        NSString *temp = [goodsTemp[indexPath.row-1] objectForKey:@"id"];
+                        
+                        GoodsDetailViewController *detailVc = [[GoodsDetailViewController alloc]init];
+                        detailVc.ID = temp;
+                        detailVc.isGroup = [[goodsTemp[indexPath.row-1] objectForKey:@"is_group"] integerValue];
+                        [self.navigationController pushViewController:detailVc animated:YES];
+                        detailVc.hidesBottomBarWhenPushed = YES;
+                         return;
+                    }
+                    
+                   
+                }
+                
+                
+            }
+            
+            //            商品
+            if (indexPath.row == 2) {
+                
+                
+                NSString *temp = [goodsTemp[indexPath.row-2] objectForKey:@"id"];
+                
+                GoodsDetailViewController *detailVc = [[GoodsDetailViewController alloc]init];
+                detailVc.ID = temp;
+                detailVc.isGroup = [[goodsTemp[indexPath.row-2] objectForKey:@"is_group"] integerValue];
+                detailVc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:detailVc animated:YES];
+                
+            }
+            
+            if (indexPath.row == 3) {
+                
+                if (goodsTemp.count == 2) {
+                    
+                    NSString *temp = [goodsTemp[indexPath.row-2] objectForKey:@"id"];
+                    
+                    GoodsDetailViewController *detailVc = [[GoodsDetailViewController alloc]init];
+                    detailVc.ID = temp;
+                    detailVc.isGroup = [[goodsTemp[indexPath.row-2] objectForKey:@"is_group"] integerValue];
+                    detailVc.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:detailVc animated:YES];
+                    
+                }else{
+                    
+                    FamousShopGoodsViewController *detailVc = [[FamousShopGoodsViewController alloc]init];
+                    detailVc.ID = self.dataAry[indexPath.section-4][@"uuid"];
+                    detailVc.name =self.dataAry[indexPath.section-4][@"shop_name"];
+                    detailVc.tagID = @"";
+                    detailVc.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:detailVc animated:YES];
+                    
+                }
+            }
+            
+            if (indexPath.row == 4) {
+                FamousShopGoodsViewController *detailVc = [[FamousShopGoodsViewController alloc]init];
+                detailVc.ID = self.dataAry[indexPath.section-4][@"uuid"];
+                detailVc.name =self.dataAry[indexPath.section-4][@"shop_name"];
+                detailVc.tagID = @"";
+                detailVc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:detailVc animated:YES];
+            }
+            
+        }
+    
     
 }
 - (void)didSelectedAtIndex:(NSUInteger)index{
@@ -1415,6 +1786,17 @@
     
     
 }
+
+#pragma mark- 点击卡
+- (void)leftOrRightAtIndex:(NSUInteger)index andCellIndex:(NSUInteger)cellIndex{
+    
+    NSArray *cardTemp = [self.dataAry[cellIndex-4] objectForKey:@"card_list"];
+    NextFreeNewViewController *lists = [[NextFreeNewViewController alloc]init];
+    lists.url = cardTemp[index][@"url"];
+    [self.navigationController pushViewController:lists animated:YES];
+    
+}
+
 
 - (void)viewWillDisappear:(BOOL)animated{
     

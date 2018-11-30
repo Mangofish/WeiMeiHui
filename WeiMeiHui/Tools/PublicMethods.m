@@ -42,6 +42,21 @@
 {
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:object];
     
+    NSMutableArray *dataAry = [NSMutableArray arrayWithArray:[dic allValues]];
+    NSArray *keyAry = dic.allKeys;
+    for (int i =0; i<dataAry.count; i++) {
+        
+        NSString *str = [dataAry objectAtIndex:i];
+        if ([str containsString:@"+"]) {
+            
+            str = [str stringByReplacingOccurrencesOfString:@"+" withString:@"%2b"];
+            [dataAry replaceObjectAtIndex:i withObject:str];
+        }
+        
+        [dic setObject:dataAry[i] forKey:keyAry[i]];
+    }
+    
+    
     NSString *jsonString = nil;
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic
@@ -475,6 +490,21 @@
     
     return finalPrice;
 }
+
+// 百度地图经纬度转换为高德地图经纬度
++ (CLLocationCoordinate2D)getGaoDeCoordinateByBaiDuCoordinate:(CLLocationCoordinate2D)coordinate {
+    return CLLocationCoordinate2DMake(coordinate.latitude - 0.006, coordinate.longitude - 0.0065);
+    
+}
+
+// 高德地图经纬度转换为百度地图经纬度
++ (CLLocationCoordinate2D)getBaiDuCoordinateByGaoDeCoordinate:(CLLocationCoordinate2D)coordinate {
+    return CLLocationCoordinate2DMake(coordinate.latitude + 0.006, coordinate.longitude + 0.0065);
+    
+}
+
+
+
 
 @end
 

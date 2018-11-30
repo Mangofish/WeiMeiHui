@@ -197,15 +197,15 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 5;
+    return 4;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 3) {
+    if (section == 2) {
         return dataAry.count;
     }
     
-    if (section == 4) {
+    if (section == 3) {
         return self.friendsdataAry.count;
     }
     
@@ -223,12 +223,14 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+//    所在商家
     if (indexPath.section == 0) {
         UserShopTableViewCell *cell = [UserShopTableViewCell userShopTableViewCell];
         cell.model = [ShopModel shopModeltWithDict:headDic];
         cell.delegate = self;
         return cell;
     }
+    
     //价目表
     if (indexPath.section == 1) {
         
@@ -247,20 +249,21 @@
 //        return cell;
     }
     
+//    作品
+//    if (indexPath.section == 2) {
+//        AuthorWorkListTableViewCell *cell = [AuthorWorkListTableViewCell authorWorkListTableViewCell:authorData];
+//        cell.title.text = [NSString stringWithFormat:@"作品（%@）",headDic[@"product_num"]];
+//        return cell;
+//    }
+//    评论
     if (indexPath.section == 2) {
-        AuthorWorkListTableViewCell *cell = [AuthorWorkListTableViewCell authorWorkListTableViewCell:authorData];
-        cell.title.text = [NSString stringWithFormat:@"作品（%@）",headDic[@"product_num"]];
-        return cell;
-    }
-    
-    if (indexPath.section == 3) {
         CommentOrderTableViewCell *cell = [CommentOrderTableViewCell commentOrderTableViewCell];
         cell.comment = [OrderComment orderCommentWithDict:dataAry[indexPath.row]];
         heightDic[@(indexPath.row)] = @(cell.cellHeight);
         return cell;
     }
-    
-    if (indexPath.section == 4) {
+//    作品
+    if (indexPath.section == 3) {
         
         WeiContentTableViewCell *cell = [[WeiContentTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell2"];
         cell.delegate = self;
@@ -310,14 +313,14 @@
         return cell;
     }
     
-    if (section == 3) {
+    if (section == 2) {
         
         UIView *v = [UIView new];
         [v addSubview:self.head];
         return v;
     }
     
-    if (section == 4) {
+    if (section == 3) {
         
         UIView *v = [UIView new];
         //        NSArray *pics = headDic[@"user_pics"];
@@ -355,10 +358,10 @@
     }
     
     if (indexPath.section == 2) {
-        return 112;
+        return [heightDic[@(indexPath.row)] doubleValue];;
     }
     
-    if (indexPath.section == 4) {
+    if (indexPath.section == 3) {
         return [friendHeightDic[@(indexPath.row)] doubleValue];;
     }
     
@@ -382,12 +385,12 @@
     }
     
     
-    if (section == 3) {
+    if (section == 2) {
         
         return [heightDic[@"head"] doubleValue];
     }
     
-    if (section == 4) {
+    if (section == 3) {
         
         return 54;
     }
@@ -397,7 +400,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
     
-    if (section == 3) {
+    if (section == 2) {
         
         return 54;
     }
@@ -409,7 +412,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     
-    if (section == 3 && dataAry.count) {
+    if (section == 2 && dataAry.count) {
         
         UIView *v = [UIView new];
         v.backgroundColor= [UIColor groupTableViewBackgroundColor];
@@ -456,7 +459,7 @@
         self.friendsCount = self->headDic[@"friends_count"];
         self.commsCount = self->headDic[@"evaluate_count"];
         self.head.tagAry = self->tagData;
-        self.head.model = [ShopModel shopModeltWithDict:self->headDic];
+        self.head.modelGoods = [ShopModel shopModeltWithDict:self->headDic];
         self->heightDic[@"head"] = @(self.head.cellHeight);
         self.head.frame = CGRectMake(0, 0, kWidth, self.head.cellHeight);
         
@@ -544,8 +547,10 @@
     
     if (indexPath.section == 3) {
         
-        AuthorWorkListsViewController *shopVC= [[AuthorWorkListsViewController alloc]init];
-        shopVC.authorUuid = _ID;
+        NSString *IDs = [_friendsdataAry[indexPath.row] objectForKey:@"id"];
+        
+        WeiFriendDetailViewController *shopVC= [[WeiFriendDetailViewController alloc]init];
+        shopVC.friendID = IDs;
         [self.navigationController pushViewController:shopVC animated:YES];
         
     }
@@ -755,7 +760,7 @@
         NSLog(@"%@",dict);
         
         //        [self.view setNeedsLayout];
-        
+        [self.mainTableView.mj_header beginRefreshing];
         
     } faild:^(id responseObject) {
         

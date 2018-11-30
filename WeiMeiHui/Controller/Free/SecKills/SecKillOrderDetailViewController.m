@@ -304,7 +304,7 @@
     }];
     //          取消订单
     if (index == 1) {
-        [self applyForMoney:nil];
+        [self payback];
     }
 }
 

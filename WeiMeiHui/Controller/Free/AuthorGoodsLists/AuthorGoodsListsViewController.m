@@ -198,6 +198,11 @@
             
         }
         
+        
+        [self.mainTableView.mj_header endRefreshing];
+        [self.mainTableView.mj_footer endRefreshing];
+        
+        
     } faild:^(id responseObject) {
         
     }];

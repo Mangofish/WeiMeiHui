@@ -127,13 +127,14 @@
 
 #define ChooseSHOP [NSString stringWithFormat:@"%@FriendGroup/chooseShop",TEST_Title]
 #define SENDGroup [NSString stringWithFormat:@"%@FriendGroup/sendFriendGroup",TEST_Title]
-#define INDEXList [NSString stringWithFormat:@"%@Index/mainPage",TEST_Title]
+#define INDEXList [NSString stringWithFormat:@"%@PetCard/mainPage",TEST_Title]
 #define ProofCode [NSString stringWithFormat:@"%@Register/proofCodeTwo",TEST_Title]
 #define SendPhoneCode [NSString stringWithFormat:@"%@Register/sendCode",TEST_Title]
 #define FriendDetails [NSString stringWithFormat:@"%@FriendGroup/friendDetails",TEST_Title]
 #define FriendPraise [NSString stringWithFormat:@"%@Currency/praise",TEST_Title]
 #define FriendCollect [NSString stringWithFormat:@"%@Currency/collect",TEST_Title]
 #define FriendPraise [NSString stringWithFormat:@"%@Currency/praise",TEST_Title]
+#define PackageDetail [NSString stringWithFormat:@"%@PetCard/packageDetail",TEST_Title]
 
 #define SendComment [NSString stringWithFormat:@"%@FriendGroup/sendComment",TEST_Title]
 #define FriendFollow [NSString stringWithFormat:@"%@Currency/follow",TEST_Title]
@@ -148,8 +149,8 @@
 #define AuthorConfirmOrder [NSString stringWithFormat:@"%@Customization/authorTakeOrder",TEST_Title]
 #define GetServiceType [NSString stringWithFormat:@"%@Customization/getServiceType",TEST_Title]
 #define SendCustomization [NSString stringWithFormat:@"%@Customization/sendCustomization",TEST_Title]
-#define ShopDetail [NSString stringWithFormat:@"%@Index/shopDetail",TEST_Title]
-#define ShopGoodsDetail [NSString stringWithFormat:@"%@FriendGroup/shopAuthorGroup",TEST_Title]
+#define ShopDetail [NSString stringWithFormat:@"%@PetCard/shopDetail",TEST_Title]
+#define ShopGoodsDetail [NSString stringWithFormat:@"%@PetCard/shopAuthorGroup",TEST_Title]
 #define MyWaitOrder [NSString stringWithFormat:@"%@Customization/myOrderStay",TEST_Title]
 #define MyPayOrder [NSString stringWithFormat:@"%@Customization/myOrderAccomplish",TEST_Title]
 #define MyYetOrder [NSString stringWithFormat:@"%@Customization/myOrderYet",TEST_Title]
@@ -202,10 +203,13 @@
 #define GoodsSingleTOPay [NSString stringWithFormat:@"%@FriendGroup/OfferedAddOrder",TEST_Title]
 #define GoodsOffered [NSString stringWithFormat:@"%@FriendGroup/Offered",TEST_Title]
 #define JoinCoupon [NSString stringWithFormat:@"%@FriendGroup/joinCoupon",TEST_Title]
-#define RecentMyOrder [NSString stringWithFormat:@"%@Customization/myOrder",TEST_Title]
-#define MyOrderComplete [NSString stringWithFormat:@"%@Customization/myOrderComplete",TEST_Title]
+#define RecentMyOrder [NSString stringWithFormat:@"%@PetCard/myOrder",TEST_Title]
+#define MyOrderComplete [NSString stringWithFormat:@"%@PetCard/myOrderComplete",TEST_Title]
 #define KilladdOrder [NSString stringWithFormat:@"%@SecondKill/addOrder",TEST_Title]
 #define CardsBuy [NSString stringWithFormat:@"%@Card/addOrder",TEST_Title]
+
+#define AddShopOrder [NSString stringWithFormat:@"%@PetCard/addShopGoodsOrder",TEST_Title]
+#define AddOrder [NSString stringWithFormat:@"%@PetCard/packageAddOrder",TEST_Title]
 
 #define GroupOrderDetails [NSString stringWithFormat:@"%@OrderDetail/groupOrderDetail",TEST_Title]
 #define ActOrderDetails [NSString stringWithFormat:@"%@OrderDetail/actOrderDetail",TEST_Title]
@@ -249,6 +253,9 @@
 #define GroupList [NSString stringWithFormat:@"%@Index/friendGroupList",TEST_Title]
 #define EnableShop [NSString stringWithFormat:@"%@Index/enableShop",TEST_Title]
 #define UpdateInviteVID [NSString stringWithFormat:@"%@Register/updateInviteID",TEST_Title]
+#define RealOrderCancel [NSString stringWithFormat:@"%@PetCard/cancelPackageOrder",TEST_Title]
+#define RealOrderDetail [NSString stringWithFormat:@"%@PetCard/packageOrderDetail",TEST_Title]
+
 //回调
 #define WXNotifyUrl @"http://try.wmh1181.com/WMHFriend/Customization/weiChatShopPay"
 #define AliNotifyUrl  @"http://try.wmh1181.com/WMHFriend/Customization/aliPayShop"
@@ -273,6 +280,9 @@
 #define WXWebActivityNotifyUrl @"http://try.wmh1181.com/AdvertWeb/Activity/weiPayShare"
 #define AliWebActivityNotifyUrl  @"http://try.wmh1181.com/AdvertWeb/Activity/aliPayShare"
 
+//realGoods
+#define WXPetCardNotifyUrl @"http://try.wmh1181.com/WMHFriend/PetCard/weiChatShopPay"
+#define AliPetCardNotifyUrl  @"http://try.wmh1181.com/WMHFriend/PetCard/aliPayShop"
 //两个首页
 #define Alist @"http://try.wmh1181.com/index.php?s=/AppWeb/Activity/Alist"
 

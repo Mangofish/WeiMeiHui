@@ -17,7 +17,7 @@
 
 @property (nonatomic, copy) NSString *pay_count;
 @property (nonatomic, copy) NSString *org_price;
-
+@property (nonatomic, copy) NSString *price;
 @property (nonatomic, copy) NSString *card_pic;
 @property (nonatomic, copy) NSString *shop_name;
 @property (nonatomic, copy) NSString *remainder;

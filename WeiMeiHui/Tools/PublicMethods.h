@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <MapKit/MapKit.h>
 
 @interface PublicMethods : NSObject
 
@@ -45,6 +45,7 @@
  */
 +(BOOL)isTelphoneNumber:(NSString *)telNum;
 
-
++ (CLLocationCoordinate2D)getGaoDeCoordinateByBaiDuCoordinate:(CLLocationCoordinate2D)coordinate;
++ (CLLocationCoordinate2D)getBaiDuCoordinateByGaoDeCoordinate:(CLLocationCoordinate2D)coordinate;
 
 @end

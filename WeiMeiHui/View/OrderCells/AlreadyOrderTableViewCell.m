@@ -34,6 +34,7 @@
 @property (strong, nonatomic)  ZYLineProgressView *progressView;
 
 @property (strong, nonatomic)  UICollectionView *imgCollectionView;
+@property (weak, nonatomic) IBOutlet UIButton *messageBtn;
 
 @end
 @implementation AlreadyOrderTableViewCell
@@ -98,7 +99,7 @@
     }
     self.tagAry = tagtemp;
     
-    [_iconBtn sd_setImageWithURL:[NSURL urlWithNoBlankDataString:order.image] forState:UIControlStateNormal];
+    [_iconBtn sd_setImageWithURL:[NSURL urlWithNoBlankDataString:order.image] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"test"]];
     _nameLab.text = order.nickname;
     _orderCount.text = order.order;
     _shopName.text = order.shop_name;
@@ -114,6 +115,7 @@
     
     _payBtn.tag = self.tag;
     _iconBtn.tag = self.tag;
+    _messageBtn.tag = self.tag;
     
     if (order.order_pic.count) {
     

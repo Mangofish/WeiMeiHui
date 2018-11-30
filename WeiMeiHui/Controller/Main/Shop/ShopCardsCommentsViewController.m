@@ -24,6 +24,7 @@
 #import "ChooseAuthorViewController.h"
 #import "MyCardsListsViewController.h"
 
+#import "UITextView+Placeholder.h"
 @interface ShopCardsCommentsViewController ()<UITableViewDelegate, UITableViewDataSource,PersonalTableViewCellDelegate,TZImagePickerControllerDelegate,OrderCommentTableViewCellDelegate,ThreeStarsDelegate>
 
 {
@@ -144,6 +145,7 @@
             cell.textLabel.textColor = FontColor;
             cell.textLabel.font = [UIFont systemFontOfSize:14];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
             
         }else{
@@ -174,6 +176,7 @@
         cellHeight = cell.cellHeight;
         cell.delegate = self;
         self.contentTF = cell.contentTF ;
+        cell.contentTF.placeholder = @"请详细描述你对本次服务的评价";
         [self addToolTab];
         
         self.keyboardUtil = [[ZYKeyboardUtil alloc] initWithKeyboardTopMargin:5];
@@ -186,8 +189,8 @@
         
     }else{
         
-        PersonalTableViewCell *cell = [PersonalTableViewCell personalTableViewCellThreeWithString:@"请详细描述你对本次服务的评价(0/4)"];
-        cell.stateStr = @"上传图片有机会获得额外抽奖机会";
+        PersonalTableViewCell *cell = [PersonalTableViewCell personalTableViewCellThreeWithString:@"(0/4)"];
+        cell.stateStr = @"";
         cell.delegate = self;
         cell.selectedAry = _selectedImgAry;
         cell.selectedAsset = _selectedAsset;

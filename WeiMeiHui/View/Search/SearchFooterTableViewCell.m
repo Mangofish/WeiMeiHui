@@ -22,6 +22,12 @@
     
 }
 
++(instancetype)searchFooterTableViewCellFooterMain{
+    
+    return [[NSBundle mainBundle] loadNibNamed:@"SearchFooterTableViewCell" owner:nil options:nil][2];
+    
+}
+
 - (IBAction)clickAction:(UIButton *)sender {
     
     [self.delegate lookMore:sender.tag];

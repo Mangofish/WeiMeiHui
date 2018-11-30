@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,6 +24,7 @@
                             <constraint firstAttribute="height" constant="68" id="Aba-jX-lcP"/>
                             <constraint firstAttribute="width" constant="68" id="UMm-Sh-mkn"/>
                         </constraints>
+                        <state key="normal" image="test"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -131,6 +131,7 @@
             <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="iconBtn" destination="0fi-fl-7t3" id="pCm-zI-PuA"/>
+                <outlet property="messageBtn" destination="Xwb-EB-IhG" id="EzZ-1T-5YV"/>
                 <outlet property="nameLab" destination="Z3g-V9-ydb" id="Fkq-x2-epA"/>
                 <outlet property="nickBtn" destination="k9b-VE-mXL" id="Ffa-bm-RBg"/>
                 <outlet property="orderCount" destination="ne3-z1-1kC" id="G5z-Sv-1Mf"/>
@@ -143,6 +144,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="test" width="200" height="200"/>
         <image name="私信b" width="20" height="20"/>
     </resources>
 </document>

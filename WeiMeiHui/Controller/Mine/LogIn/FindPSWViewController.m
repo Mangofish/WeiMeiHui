@@ -9,6 +9,12 @@
 #import "FindPSWViewController.h"
 #import "UIButton+CountDown.h"
 #import "UIButton+WebCache.h"
+//
+#import "LeftMainViewController.h"
+#import "AppDelegate.h"
+#import "EnterChooseLocationViewController.h"
+#import "EnterShopSaveSuccessViewController.h"
+#import "EnterShopRefuseViewController.h"
 
 @interface FindPSWViewController () <UITextFieldDelegate>
 
@@ -162,7 +168,7 @@
     
     NSString *url = [PublicMethods dataTojsonString:@{@"phone":temp,@"pwd":md5Str}];
     
-    [YYNet POST:ProofCode paramters:@{@"json":url} success:^(id responseObject) {
+    [YYNet POST:PwdSave paramters:@{@"json":url} success:^(id responseObject) {
         
         NSDictionary *dic = [solveJsonData changeType:responseObject];
         
@@ -175,11 +181,95 @@
             toast.toastPosition = FFToastPositionCentreWithFillet;
             [toast show];
             
-            //存信息
-            [[NSUserDefaults standardUserDefaults]setValue:dic[@"data"] forKey:@"user"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
             
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            
+            if ([PublicMethods isLogIn]) {
+                
+                //存信息
+                [[NSUserDefaults standardUserDefaults]setValue:dic[@"data"] forKey:@"user"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
+                [self.navigationController popToRootViewControllerAnimated:YES];
+                
+            }else{
+                
+                //存信息
+                [[NSUserDefaults standardUserDefaults]setValue:dic[@"data"] forKey:@"user"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
+                NSUInteger status = [[dic[@"data"] objectForKey:@"apply_status"] integerValue];
+                
+                NSUInteger level = [[dic[@"data"] objectForKey:@"level"] integerValue];
+                
+                if (level == 2) {
+                    
+                    [[NSUserDefaults standardUserDefaults]setObject:dic[@"data"] forKey:@"user"];
+                    [[NSUserDefaults standardUserDefaults]synchronize];
+                    
+                    //                    设置控制器
+                    LeftMainViewController *leftMVC = [[LeftMainViewController alloc]init];
+                    
+                    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                    
+                    tempAppDelegate.authorVC = [[WeiTabBarController alloc]init];
+                    
+                    tempAppDelegate.LeftSlideVC = [[LeftSlideViewController alloc]initWithLeftView:leftMVC andMainView:tempAppDelegate.authorVC];
+                    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
+                    [UIApplication sharedApplication].keyWindow.rootViewController = tempAppDelegate.LeftSlideVC;
+                    
+                }
+                
+                if (level == 1) {
+                    
+                    if (status == 0) {
+                        
+                        EnterChooseLocationViewController *enterVC= [[EnterChooseLocationViewController alloc]init];
+                        [self.navigationController pushViewController:enterVC animated:YES];
+                        
+                    }
+                    
+                    if (status == 1) {
+                        
+                        EnterShopSaveSuccessViewController *shopVC = [[EnterShopSaveSuccessViewController alloc]init];
+                        shopVC.tel = temp;
+                        [self.navigationController pushViewController:shopVC animated:YES];
+                        
+                    }
+                    
+                    if (status == 2) {
+                        
+                        [[NSUserDefaults standardUserDefaults]setObject:dic[@"data"] forKey:@"user"];
+                        [[NSUserDefaults standardUserDefaults]synchronize];
+                        
+                        //                    设置控制器
+                        LeftMainViewController *leftMVC = [[LeftMainViewController alloc]init];
+                        
+                        AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                        
+                        tempAppDelegate.authorVC = [[WeiTabBarController alloc]init];
+                        
+                        tempAppDelegate.LeftSlideVC = [[LeftSlideViewController alloc]initWithLeftView:leftMVC andMainView:tempAppDelegate.authorVC];
+                        [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
+                        [UIApplication sharedApplication].keyWindow.rootViewController = tempAppDelegate.LeftSlideVC;
+                        
+                        
+                        
+                    }
+                    
+                    if (status == 3) {
+                        
+                        EnterShopRefuseViewController *shopVC = [[EnterShopRefuseViewController alloc]init];
+                        [self.navigationController pushViewController:shopVC animated:YES];
+                        
+                    }
+                    
+                }
+                
+                if (level == 3) {
+                    self->_inforLable.text = dic[@"info"];
+                }
+                
+            }
             
         }else{
             

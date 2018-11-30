@@ -22,5 +22,5 @@
 
 +(instancetype)searchFooterTableViewCell;
 +(instancetype)searchFooterTableViewCellFooter;
-
++(instancetype)searchFooterTableViewCellFooterMain;
 @end

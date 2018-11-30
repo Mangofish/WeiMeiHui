@@ -203,8 +203,8 @@
         
     }else{
         
-        PersonalTableViewCell *cell = [PersonalTableViewCell personalTableViewCellThreeWithString:@"上传图片评价获得1次抽奖机会(0/4)"];
-        cell.stateStr = @"上传图片评价获得1次抽奖机会";
+        PersonalTableViewCell *cell = [PersonalTableViewCell personalTableViewCellThreeWithString:@"(0/4)"];
+        cell.stateStr = @"";
         cell.delegate = self;
         cell.selectedAry = _selectedImgAry;
         cell.selectedAsset = _selectedAsset;

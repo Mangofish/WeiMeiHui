@@ -131,6 +131,71 @@
     return instance;
 }
 
++ (instancetype)famousGoodsTableViewCellDetailSn{
+    
+    FamousGoodsTableViewCell *instance = [[NSBundle mainBundle] loadNibNamed:@"FamousGoodsTableViewCell" owner:nil options:nil][6];
+    
+    instance.statusLab.layer.cornerRadius = 2;
+    instance.statusLab.layer.masksToBounds = YES;
+    
+    instance.redLab.layer.cornerRadius = 2;
+    instance.redLab.layer.masksToBounds = YES;
+    
+    return instance;
+}
+
++ (instancetype)famousGoodsTableViewCellDetailOrder{
+    
+    FamousGoodsTableViewCell *instance = [[NSBundle mainBundle] loadNibNamed:@"FamousGoodsTableViewCell" owner:nil options:nil][7];
+    
+    
+    return instance;
+}
+
++ (instancetype)famousGoodsTableViewCellDetailShop{
+    
+    FamousGoodsTableViewCell *instance = [[NSBundle mainBundle] loadNibNamed:@"FamousGoodsTableViewCell" owner:nil options:nil][9];
+    
+    
+    return instance;
+}
+
+
++ (instancetype)famousGoodsTableViewCellDetailMain{
+    
+    FamousGoodsTableViewCell *instance = [[NSBundle mainBundle] loadNibNamed:@"FamousGoodsTableViewCell" owner:nil options:nil][8];
+    ZYLineProgressView *progressView = [[ZYLineProgressView alloc] init];
+  
+    [progressView updateConfig:^(ZYLineProgressViewConfig *config) {
+        config.isShowDot = NO;
+        config.backLineColor = [UIColor colorWithRed:248/255.0 green:176/255.0 blue:185/255.0 alpha:1];
+    }];
+    
+    [instance.contentView addSubview:progressView];
+    
+    [progressView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.right.mas_equalTo(instance.contentView.mas_right).offset(Space);
+        make.top.mas_equalTo(instance.nameLab.mas_bottom).offset(Space);
+        make.height.mas_equalTo(@(15));
+        make.width.mas_equalTo(@(150));
+        
+    }];
+    
+    instance.progressView = progressView;
+    
+    return instance;
+}
+
+- (void)setGoodsO:(AuthorGoods *)goodsO{
+    
+    [_iconImg sd_setImageWithURL:[NSURL urlWithNoBlankDataString:goodsO.pic] placeholderImage:[UIImage imageNamed:@"test"]];
+     _nameLab.text = goodsO.name;
+    
+    _authornameLab.text = goodsO.shop_name;
+     _priceLab.text = goodsO.price;
+}
+
 -(void)setGoods:(AuthorGoods *)goods{
     
     [_iconImg sd_setImageWithURL:[NSURL urlWithNoBlankDataString:goods.image] placeholderImage:[UIImage imageNamed:@"test"]];
@@ -184,6 +249,15 @@
     }
     
    
+    
+}
+
+- (void)setGoodsShop:(AuthorGoods *)goodsShop{
+    
+    _nameLab.text = goodsShop.package_name;
+     [_iconImg sd_setImageWithURL:[NSURL urlWithNoBlankDataString:goodsShop.pic] placeholderImage:[UIImage imageNamed:@"test"]];
+    _priceLab.text = goodsShop.package_detail;
+    _authornameLab.text = goodsShop.price;
     
 }
 

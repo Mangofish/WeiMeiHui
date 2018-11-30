@@ -155,7 +155,7 @@
             
             GroupPayPageTableViewCell *cell = [GroupPayPageTableViewCell groupPayPageTableViewCellThree];
             cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
-            cell.countLab.text = [NSString stringWithFormat:@"%lu",_count];
+            cell.countLab.text = [NSString stringWithFormat:@"%lu",(unsigned long)_count];
             cell.delegate = self;
             return cell;
             

@@ -283,11 +283,11 @@
 - (void)didClickMenuIndex:(NSInteger)index{
     //          移除
     [UIView animateWithDuration:0.3 animations:^{
-        alert.frame  =  CGRectMake(Space, kHeight, kWidth-Space*2, 131);
-        bgTapView.hidden  = YES;
+        self->alert.frame  =  CGRectMake(Space, kHeight, kWidth-Space*2, 131);
+        self->bgTapView.hidden  = YES;
     }completion:^(BOOL finished) {
-        [bgTapView removeFromSuperview];
-        [alert removeFromSuperview];
+        [self->bgTapView removeFromSuperview];
+        [self->alert removeFromSuperview];
     }];
     //          取消订单
     if (index == 1) {

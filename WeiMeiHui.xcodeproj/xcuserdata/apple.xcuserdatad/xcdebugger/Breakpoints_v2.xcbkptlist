@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/Main/Shop/ShopLocationViewController.m"
-            timestampString = "561520729.267328"
+            timestampString = "564999521.7228529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
+            startingLineNumber = "376"
+            endingLineNumber = "376"
             landmarkName = "-didClickMenuIndex:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/Main/Shop/ShopLocationViewController.m"
-            timestampString = "561520729.267378"
+            timestampString = "564999521.722927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
+            startingLineNumber = "374"
+            endingLineNumber = "374"
             landmarkName = "-didClickMenuIndex:"
             landmarkType = "7">
             <Locations>
@@ -58,11 +58,11 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Main/Shop/ShopLocationViewController.m"
-                  timestampString = "563179662.888328"
+                  timestampString = "565237898.196532"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "340"
-                  endingLineNumber = "340"
+                  startingLineNumber = "374"
+                  endingLineNumber = "374"
                   offsetFromSymbolStart = "645">
                </Location>
                <Location
@@ -73,26 +73,26 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Main/Shop/ShopLocationViewController.m"
-                  timestampString = "563179662.8901989"
+                  timestampString = "565237898.198403"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "342"
-                  endingLineNumber = "342"
+                  startingLineNumber = "376"
+                  endingLineNumber = "376"
                   offsetFromSymbolStart = "47">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.323"
+                  symbolName = "__destroy_helper_block_.325"
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Main/Shop/ShopLocationViewController.m"
-                  timestampString = "563179662.891969"
+                  timestampString = "565237898.200194"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "340"
-                  endingLineNumber = "340"
+                  startingLineNumber = "374"
+                  endingLineNumber = "374"
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
@@ -164,11 +164,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/Publish/Personal/CustomizationPubViewController.m"
-            timestampString = "554272393.592353"
+            timestampString = "563683308.018831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "334"
@@ -216,7 +216,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/Authors/Details/AuthorConfirmViewController.m"
-                  timestampString = "563179662.906334"
+                  timestampString = "565237898.211049"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "357"
@@ -231,7 +231,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/Authors/Details/AuthorConfirmViewController.m"
-                  timestampString = "563179662.908425"
+                  timestampString = "565237898.2128609"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "357"
@@ -246,7 +246,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/Authors/Details/AuthorConfirmViewController.m"
-                  timestampString = "563179662.9106261"
+                  timestampString = "565237898.214659"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "357"
@@ -279,7 +279,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/AppDelegate.m"
-            timestampString = "557198100.0418921"
+            timestampString = "563978933.048188"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "743"
@@ -311,7 +311,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/Authors/AuthorsorderListViewController.m"
-                  timestampString = "563179662.925593"
+                  timestampString = "565237898.228283"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "274"
@@ -326,7 +326,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/Authors/AuthorsorderListViewController.m"
-                  timestampString = "563179662.927737"
+                  timestampString = "565237898.230072"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "276"
@@ -341,7 +341,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/Authors/AuthorsorderListViewController.m"
-                  timestampString = "563179662.929925"
+                  timestampString = "565237898.2323689"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "274"
@@ -374,7 +374,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/Authors/Details/MoneyBackViewController.m"
-                  timestampString = "563179662.936349"
+                  timestampString = "565237898.237816"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "137"
@@ -389,7 +389,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/Authors/Details/MoneyBackViewController.m"
-                  timestampString = "563179662.938538"
+                  timestampString = "565237898.239809"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "139"
@@ -404,7 +404,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/Authors/Details/MoneyBackViewController.m"
-                  timestampString = "563179662.940946"
+                  timestampString = "565237898.24158"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "137"
@@ -437,7 +437,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/AppDelegate.m"
-            timestampString = "557198100.0422"
+            timestampString = "563978933.073411"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "912"
@@ -453,7 +453,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/AppDelegate.m"
-            timestampString = "557198100.042485"
+            timestampString = "563978933.073743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "966"
@@ -501,11 +501,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/Publish/PublishViewController.m"
-            timestampString = "558323666.689344"
+            timestampString = "564999521.723433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "620"
-            endingLineNumber = "620"
+            startingLineNumber = "623"
+            endingLineNumber = "623"
             landmarkName = "-addSelectedVideoIntoLocation:"
             landmarkType = "7">
          </BreakpointContent>
@@ -549,7 +549,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/MyOrder/MyOrderListViewController.m"
-                  timestampString = "563179662.965948"
+                  timestampString = "565237898.268226"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "129"
@@ -564,7 +564,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/MyOrder/MyOrderListViewController.m"
-                  timestampString = "563179662.967927"
+                  timestampString = "565237898.270335"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "129"
@@ -579,7 +579,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/MyOrder/MyOrderListViewController.m"
-                  timestampString = "563179662.969694"
+                  timestampString = "565237898.272119"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "129"
@@ -612,7 +612,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/Mine/LogIn/FindPSWViewController.m"
-            timestampString = "554460244.995123"
+            timestampString = "563704889.872297"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "167"
@@ -654,7 +654,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Author/NewOrderLists/Detail/OrderWaitCommentsViewController.m"
-                  timestampString = "563179662.984476"
+                  timestampString = "565237898.283152"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "506"
@@ -669,7 +669,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Author/NewOrderLists/Detail/OrderWaitCommentsViewController.m"
-                  timestampString = "563179662.986282"
+                  timestampString = "565237898.285018"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "506"
@@ -680,11 +680,11 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.397"
+                  symbolName = "__destroy_helper_block_.395"
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Author/NewOrderLists/Detail/OrderWaitCommentsViewController.m"
-                  timestampString = "563179662.988142"
+                  timestampString = "565237898.286745"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "506"
@@ -701,91 +701,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/Free/GroupPay/GoodsDetailViewController.m"
-            timestampString = "562758943.2797771"
+            timestampString = "564646851.80053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "889"
             endingLineNumber = "889"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiMeiHui/Controller/Comment/ALLCommentViewController.m"
-            timestampString = "560918114.311698"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "-getData"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__35-[ALLCommentViewController getData]_block_invoke.148"
-                  moduleName = "WeiMeiHui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Comment/ALLCommentViewController.m"
-                  timestampString = "563179662.9972399"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "183"
-                  endingLineNumber = "183"
-                  offsetFromSymbolStart = "74">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__35-[ALLCommentViewController getData]_block_invoke_2"
-                  moduleName = "WeiMeiHui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Comment/ALLCommentViewController.m"
-                  timestampString = "563179662.9991879"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.157"
-                  moduleName = "WeiMeiHui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Comment/ALLCommentViewController.m"
-                  timestampString = "563179663.000945"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "183"
-                  endingLineNumber = "183"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiMeiHui/Controller/Exclusive/ExclusiveSecViewController.m"
-            timestampString = "560758652.991895"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "528"
-            endingLineNumber = "528"
-            landmarkName = "-lookMore:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -812,7 +733,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/Publish/PublishViewController.m"
-            timestampString = "558323666.689839"
+            timestampString = "564999521.724221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "154"
@@ -828,7 +749,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Publish/PublishViewController.m"
-                  timestampString = "563179663.0108809"
+                  timestampString = "565237898.29794"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "154"
@@ -843,7 +764,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Publish/PublishViewController.m"
-                  timestampString = "563179663.0127029"
+                  timestampString = "565237898.300094"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "154"
@@ -858,7 +779,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Publish/PublishViewController.m"
-                  timestampString = "563179663.01445"
+                  timestampString = "565237898.302283"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "154"
@@ -954,7 +875,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/Free/GroupPay/GoodsDetailViewController.m"
-            timestampString = "562758943.279943"
+            timestampString = "564646851.8006949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1092"
@@ -986,7 +907,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Free/GroupGoodsLists/GroupGoodsListsViewController.m"
-                  timestampString = "563179663.02513"
+                  timestampString = "565237898.313035"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "166"
@@ -1001,7 +922,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Free/GroupGoodsLists/GroupGoodsListsViewController.m"
-                  timestampString = "563179663.027294"
+                  timestampString = "565237898.3153189"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "168"
@@ -1016,7 +937,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Free/GroupGoodsLists/GroupGoodsListsViewController.m"
-                  timestampString = "563179663.029428"
+                  timestampString = "565237898.317265"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "166"
@@ -1029,27 +950,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiMeiHui/Controller/Mine/MySecond/ChangeUserDataViewController.m"
-            timestampString = "561619094.032101"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "621"
-            endingLineNumber = "621"
-            landmarkName = "-changeIcon:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/Exclusive/ExclusiveSecViewController.m"
-            timestampString = "560758652.992391"
+            timestampString = "564474940.989026"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "149"
@@ -1128,7 +1033,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/MySecond/MyPulishedWorkViewController.m"
-                  timestampString = "563179663.040537"
+                  timestampString = "565237898.3231961"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
@@ -1143,7 +1048,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/MySecond/MyPulishedWorkViewController.m"
-                  timestampString = "563179663.04263"
+                  timestampString = "565237898.325422"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "113"
@@ -1158,7 +1063,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/MySecond/MyPulishedWorkViewController.m"
-                  timestampString = "563179663.044667"
+                  timestampString = "565237898.327334"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "111"
@@ -1207,7 +1112,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/secondKill/SecondKillsViewController.m"
-            timestampString = "561949987.33951"
+            timestampString = "564552076.612764"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "237"
@@ -1239,7 +1144,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/View/Publish/BHBPopView/BHBPopView.m"
-                  timestampString = "563179663.059498"
+                  timestampString = "565237898.340817"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
@@ -1254,7 +1159,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/View/Publish/BHBPopView/BHBPopView.m"
-                  timestampString = "563179663.061639"
+                  timestampString = "565237898.343026"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "109"
@@ -1303,7 +1208,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Main/Three/ServiceResultViewController.m"
-                  timestampString = "563179663.070619"
+                  timestampString = "565237898.351653"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "136"
@@ -1318,7 +1223,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Main/Three/ServiceResultViewController.m"
-                  timestampString = "563179663.072378"
+                  timestampString = "565237898.353462"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "138"
@@ -1333,7 +1238,7 @@
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Main/Three/ServiceResultViewController.m"
-                  timestampString = "563179663.074057"
+                  timestampString = "565237898.355139"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "136"
@@ -1441,39 +1346,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiMeiHui/Controller/Author/NewOrderLists/Detail/WeiOrderWaitOrMoneyViewController.m"
-            timestampString = "562748273.4118561"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "305"
-            endingLineNumber = "305"
-            landmarkName = "-cancelAction:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiMeiHui/Controller/Free/GroupPay/GoodsDetailViewController.m"
-            timestampString = "562759069.628425"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1066"
-            endingLineNumber = "1066"
-            landmarkName = "-groupPay:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiMeiHui/Controller/Free/GroupPay/GoodsPaySingleViewController.m"
@@ -1486,67 +1359,51 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[GoodsPaySingleViewController payAction:]"
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Free/GroupPay/GoodsPaySingleViewController.m"
-                  timestampString = "563179663.092927"
+                  timestampString = "563856837.81563"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "463"
                   endingLineNumber = "463"
-                  offsetFromSymbolStart = "1815">
+                  offsetFromSymbolStart = "1712">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__42-[GoodsPaySingleViewController payAction:]_block_invoke"
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Free/GroupPay/GoodsPaySingleViewController.m"
-                  timestampString = "563179663.095409"
+                  timestampString = "563856837.817722"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "465"
                   endingLineNumber = "465"
-                  offsetFromSymbolStart = "47">
+                  offsetFromSymbolStart = "64">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__destroy_helper_block_.334"
                   moduleName = "WeiMeiHui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Free/GroupPay/GoodsPaySingleViewController.m"
-                  timestampString = "563179663.097626"
+                  timestampString = "563856837.819447"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "463"
                   endingLineNumber = "463"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiMeiHui/Controller/Free/GroupPay/GoodsPaySingleViewController.m"
-            timestampString = "562815360.7922651"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "465"
-            endingLineNumber = "465"
-            landmarkName = "-payAction:"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1568,17 +1425,381 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Publish/Personal/CustomizationPubViewController.m"
+            timestampString = "563683308.019768"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
+            landmarkName = "-uploadPics"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CustomizationPubViewController uploadPics]"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Publish/Personal/CustomizationPubViewController.m"
+                  timestampString = "563678821.294462"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "375"
+                  endingLineNumber = "375"
+                  offsetFromSymbolStart = "2352">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[CustomizationPubViewController uploadPics]_block_invoke"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Publish/Personal/CustomizationPubViewController.m"
+                  timestampString = "563678821.29635"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "375"
+                  endingLineNumber = "375"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.329"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Publish/Personal/CustomizationPubViewController.m"
+                  timestampString = "563678821.298039"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "375"
+                  endingLineNumber = "375"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Publish/Personal/CustomizationPubViewController.m"
+            timestampString = "563683308.019984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "406"
+            endingLineNumber = "406"
+            landmarkName = "-uploadPics"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WeiMeiHui/Controller/Main/CityChoose/JFCityViewController.m"
-            timestampString = "563179662.4060251"
+            filePath = "WeiMeiHui/Controller/Mine/MyOrder/AlredyOrderListViewController.m"
+            timestampString = "563704889.872864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "758"
-            endingLineNumber = "758"
-            landmarkName = "-getHotCityAry"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "-getData"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AlredyOrderListViewController getData]"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/MyOrder/AlredyOrderListViewController.m"
+                  timestampString = "565237898.368798"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "543">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__40-[AlredyOrderListViewController getData]_block_invoke"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/MyOrder/AlredyOrderListViewController.m"
+                  timestampString = "565237898.370713"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.195"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Mine/MyOrder/AlredyOrderListViewController.m"
+                  timestampString = "565237898.372624"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Main/Shop/ShopCardsCommentsViewController.m"
+            timestampString = "563765729.914042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
+            landmarkName = "-sendComment:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ShopCardsCommentsViewController sendComment:]"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Main/Shop/ShopCardsCommentsViewController.m"
+                  timestampString = "565237898.378239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "411"
+                  endingLineNumber = "411"
+                  offsetFromSymbolStart = "1909">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__47-[ShopCardsCommentsViewController sendComment:]_block_invoke"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Main/Shop/ShopCardsCommentsViewController.m"
+                  timestampString = "565237898.380132"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "413"
+                  endingLineNumber = "413"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.340"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Main/Shop/ShopCardsCommentsViewController.m"
+                  timestampString = "565237898.38227"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "411"
+                  endingLineNumber = "411"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Author/NewOrderLists/AllMineOrderListsViewController.m"
+            timestampString = "563856920.801515"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "440"
+            endingLineNumber = "440"
+            landmarkName = "-getData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Author/NewOrderLists/Detail/RealGoodsWaitPayViewController.m"
+            timestampString = "564912950.488166"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "-getData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Mine/LogIn/TiePhoneViewController.m"
+            timestampString = "564902337.494683"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-tieAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Mine/LogIn/TiePhoneViewController.m"
+            timestampString = "564902337.494988"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "-tieAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Mine/LogIn/RegistViewController.m"
+            timestampString = "564895440.196745"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "584"
+            endingLineNumber = "584"
+            landmarkName = "-signAction:andUid:andtype:andImage:andNickname:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Mine/LogIn/TiePhoneViewController.m"
+            timestampString = "564902337.495242"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "-tieAction:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Mine/LogIn/TiePhoneViewController.m"
+            timestampString = "564902337.495456"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "-changeTabbar:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiMeiHui/Controller/Free/SecKills/SecKillOrderDetailViewController.m"
+            timestampString = "564912950.4883209"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
+            landmarkName = "-payback"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SecKillOrderDetailViewController payback]"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Free/SecKills/SecKillOrderDetailViewController.m"
+                  timestampString = "565237898.410089"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "194">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43-[SecKillOrderDetailViewController payback]_block_invoke"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Free/SecKills/SecKillOrderDetailViewController.m"
+                  timestampString = "565237898.412277"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "342"
+                  endingLineNumber = "342"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.257"
+                  moduleName = "WeiMeiHui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Desktop/WeiMeiHui/WeiMeiHui/Controller/Free/SecKills/SecKillOrderDetailViewController.m"
+                  timestampString = "565237898.414712"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -109,7 +109,9 @@
     if (_homeCellViewModel) {
         [_moreBtn setImage:[UIImage imageNamed:@"更多"] forState:UIControlStateNormal];
         [_moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.mas_equalTo(self.mas_right).offset(-Space);
+            make.width.equalTo(@(40));
+            make.height.equalTo(@(20));
+            make.right.mas_equalTo(self.mas_right).offset(0);
             make.centerY.mas_equalTo(self->_imgAvatarView.mas_centerY).offset(0);
         }];
         

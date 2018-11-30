@@ -227,7 +227,16 @@
             
             //                NSLog(@"alertController -- 高德地图");
             NSString *urlsting =[[NSString stringWithFormat:@"iosamap://navi?sourceApplication= &backScheme= &lat=%f&lon=%f&dev=0&style=2",self.la,self.lo]stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-            [[UIApplication  sharedApplication] openURL:[NSURL URLWithString:urlsting] options:@{} completionHandler:nil];
+            
+            if([[UIApplication sharedApplication] respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+                
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlsting] options:@{} completionHandler:nil];
+                
+            }else{
+                
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlsting]];
+                
+            }
             
         }]];
     }
@@ -237,9 +246,24 @@
         [alertController addAction:[UIAlertAction actionWithTitle:@"百度地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
             //                NSLog(@"alertController -- 百度地图");
-            NSString *urlsting =[[NSString stringWithFormat:@"baidumap://map/direction?origin={{我的位置}}&destination=latlng:%f,%f|name=目的地&mode=driving&coord_type=gcj02",self.coordinate.latitude,self.coordinate.longitude] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+//            NSString *urlsting =[[NSString stringWithFormat:@"baidumap://map/direction?origin={{我的位置}}&destination=latlng:%f,%f|name=目的地&mode=driving&coord_type=gcj02",self.coordinate.latitude,self.coordinate.longitude] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
             
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlsting] options:@{} completionHandler:nil];
+            
+//            CLLocationCoordinate2D coordination = CLLocationCoordinate2DMake(self.la, self.lo);
+//           self.coordinate = [PublicMethods getBaiDuCoordinateByGaoDeCoordinate:coordination];
+            NSString *urlsting = [[NSString stringWithFormat:@"baidumap://map/direction?origin={{我的位置}}&destination=name:%@|latlng:%f,%f&mode=driving&coord_type=gcj02",self.name,self.la,self.lo] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+          
+            
+            if([[UIApplication sharedApplication] respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+                
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlsting] options:@{} completionHandler:nil];
+                
+            }else{
+                
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlsting]];
+                
+            }
+            
             
         }]];
     }
@@ -253,6 +277,16 @@
         [alertController addAction:[UIAlertAction actionWithTitle:@"腾讯地图" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSString *QQParameterFormat = @"qqmap://map/routeplan?type=drive&fromcoord=%f, %f&tocoord=%f,%f&coord_type=1&policy=0&refer=%@";
             NSString *urlString = [[NSString stringWithFormat: QQParameterFormat, lat, lng, self.la, self.lo, @"微美惠"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+            
+            if([[UIApplication sharedApplication] respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+                
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString] options:@{} completionHandler:nil];
+                
+            }else{
+                
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+                
+            }
             
         }]];
         

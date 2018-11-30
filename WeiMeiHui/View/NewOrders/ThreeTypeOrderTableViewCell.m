@@ -1011,6 +1011,73 @@
     
 }
 
+-(void)setRealWaitPayOrder:(ThreeOrder *)realWaitPayOrder{
+    
+    _realWaitPayOrder = realWaitPayOrder;
+    
+    _shopLan.text = [NSString stringWithFormat:@"所属门店：%@",realWaitPayOrder.shop_name];
+    [_iconBtn sd_setImageWithURL:[NSURL URLWithString:realWaitPayOrder.image] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"test"]];
+    
+    _titleLab.text = realWaitPayOrder.title;
+    _timeLab.text = [NSString stringWithFormat:@"下单时间：%@",realWaitPayOrder.use_time];
+    
+    _disPrice.text = [NSString stringWithFormat:@"价格：%@",realWaitPayOrder.price];
+    
+    _stateLab.text = @"待付款";
+    
+   
+    _stateLab.textColor = MainColor;
+    _restTime.hidden = YES;
+   
+    [_rightBtn setTitle:@"付款" forState:UIControlStateNormal];
+    [_rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _rightBtn.backgroundColor = MainColor;
+    
+    _leftBtn.hidden = YES;
+    _orgPrice.hidden = YES;
+    _gradeLab.hidden = YES;
+    
+}
+
+- (void)setRealUseOrder:(ThreeOrder *)realUseOrder{
+    
+    _realUseOrder = realUseOrder;
+    
+    _shopLan.text = [NSString stringWithFormat:@"所属门店：%@",realUseOrder.shop_name];
+    
+    [_iconBtn sd_setImageWithURL:[NSURL URLWithString:realUseOrder.image] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"test"]];
+    
+    _titleLab.text = realUseOrder.title;
+    _timeLab.text = [NSString stringWithFormat:@"下单时间：%@",realUseOrder.use_time];
+    
+    _disPrice.text = [NSString stringWithFormat:@"价格：%@",realUseOrder.price];
+    _stateLab.text = @"待使用";
+    _stateLab.textColor = MainColor;
+    _restTime.hidden = YES;
+    
+    [_rightBtn setTitle:@"去使用" forState:UIControlStateNormal];
+    [_rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _rightBtn.backgroundColor = MainColor;
+}
+
+- (void)setRealAlreadyUse:(ThreeOrder *)realAlreadyUse{
+    
+    _shopLan.text = [NSString stringWithFormat:@"所属门店：%@",realAlreadyUse.shop_name];
+    
+    [_iconBtn sd_setImageWithURL:[NSURL URLWithString:realAlreadyUse.image] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"test"]];
+    
+    _titleLab.text = realAlreadyUse.title;
+    _timeLab.text = [NSString stringWithFormat:@"使用时间：%@",realAlreadyUse.use_time];
+    
+    _disPrice.text = [NSString stringWithFormat:@"价格：%@",realAlreadyUse.price];
+    _stateLab.text = @"已使用";
+    _stateLab.textColor = MainColor;
+    _restTime.hidden = YES;
+}
+
+
+
+
 - (void)setConfigWithSecond:(NSInteger)second {
     _second = second;
     if (_second > 0) {

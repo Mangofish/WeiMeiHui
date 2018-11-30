@@ -366,10 +366,13 @@
     _layout.minimumInteritemSpacing = _margin;
     _layout.minimumLineSpacing = _margin;
 //    _layout.sectionInset = UIEdgeInsetsMake(0, 5, 0,5);
+    
     [self.collectionView setCollectionViewLayout:_layout];
+    self.collectionView.contentSize = CGSizeMake(kWidth, kHeight-contentSizeH);
+    self.collectionView.scrollEnabled = YES;
+    self.collectionView.frame = CGRectMake(0, contentSizeH, self.view.tz_width, kHeight-contentSizeH);
     
-    
-    self.collectionView.frame = CGRectMake(0, contentSizeH, self.view.tz_width, self.view.tz_height-contentSizeH-49);
+//    self.collectionView.frame = CGRectMake(0, contentSizeH, self.view.tz_width, self.view.tz_height-contentSizeH-49);
 }
 
 #pragma mark UICollectionView

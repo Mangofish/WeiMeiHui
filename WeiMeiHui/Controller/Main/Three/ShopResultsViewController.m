@@ -416,10 +416,23 @@
     
     if (indexPath.column == 0) {
         
+        
+        if(indexPath.leftOrRight==0){
+            
+            _currentData1Index = indexPath.leftRow;
+            
+            return;
+            
+        }else{
+            
+            _currentData1SelectedIndex = indexPath.row;
+            
+        }
+        
         NSInteger leftRow = indexPath.leftRow;
         NSDictionary *menuDic = [self.nearbydataAry objectAtIndex:leftRow];
         
-        NSString *ID = [[[menuDic objectForKey:@"dump_list"] objectAtIndex:indexPath.row] objectForKey:@"id"];
+        NSString *ID = [[[menuDic objectForKey:@"dump_list"] objectAtIndex:_currentData1SelectedIndex] objectForKey:@"id"];
         
         if (leftRow == 0) {
             

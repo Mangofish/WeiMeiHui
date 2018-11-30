@@ -199,8 +199,6 @@
 		182BAF79211B1D49007F8D20 /* SecondKillsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182BAF77211B1D49007F8D20 /* SecondKillsViewController.xib */; };
 		182D5EDE20BEC4310089C371 /* AUthorsListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D5EDC20BEC4310089C371 /* AUthorsListsViewController.m */; };
 		182D5EDF20BEC4310089C371 /* AUthorsListsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182D5EDD20BEC4310089C371 /* AUthorsListsViewController.xib */; };
-		182D7ABD20F88DB800C1C8FF /* ActivityWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D7ABB20F88DB800C1C8FF /* ActivityWebViewController.m */; };
-		182D7ABE20F88DB800C1C8FF /* ActivityWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182D7ABC20F88DB800C1C8FF /* ActivityWebViewController.xib */; };
 		182EBE4520DCF2AF004C3418 /* WeiOrderWaitUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182EBE4320DCF2AF004C3418 /* WeiOrderWaitUseViewController.m */; };
 		182EBE4620DCF2AF004C3418 /* WeiOrderWaitUseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182EBE4420DCF2AF004C3418 /* WeiOrderWaitUseViewController.xib */; };
 		18320F7D1F74E91A007BED81 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18320F7C1F74E91A007BED81 /* UMMobClick.framework */; };
@@ -283,6 +281,10 @@
 		1841D0C420AAC83A005D8DD2 /* NormalAuthorDEtailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1841D0C220AAC83A005D8DD2 /* NormalAuthorDEtailTableViewCell.xib */; };
 		1841D0C820AAD1CA005D8DD2 /* ActivityOrdersDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1841D0C620AAD1CA005D8DD2 /* ActivityOrdersDetailViewController.m */; };
 		1841D0C920AAD1CA005D8DD2 /* ActivityOrdersDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1841D0C720AAD1CA005D8DD2 /* ActivityOrdersDetailViewController.xib */; };
+		18422CE521A7D6830061D8B0 /* RealGoodsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18422CE321A7D6830061D8B0 /* RealGoodsWebViewController.m */; };
+		18422CE621A7D6830061D8B0 /* RealGoodsWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18422CE421A7D6830061D8B0 /* RealGoodsWebViewController.xib */; };
+		18422CEA21A819FB0061D8B0 /* RealGoodsOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18422CE821A819FB0061D8B0 /* RealGoodsOrderDetailViewController.m */; };
+		18422CEB21A819FB0061D8B0 /* RealGoodsOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18422CE921A819FB0061D8B0 /* RealGoodsOrderDetailViewController.xib */; };
 		18436F3A215C724000086DA6 /* UseableShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436F38215C724000086DA6 /* UseableShopViewController.m */; };
 		18436F3B215C724000086DA6 /* UseableShopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18436F39215C724000086DA6 /* UseableShopViewController.xib */; };
 		18436F3F215CB50A00086DA6 /* ChooseAuthorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436F3D215CB50A00086DA6 /* ChooseAuthorViewController.m */; };
@@ -382,6 +384,8 @@
 		184F50601F5D023B004B2517 /* EaseBlankPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F50581F5D023B004B2517 /* EaseBlankPageView.m */; };
 		184F50611F5D023B004B2517 /* UIView+EaseBlankPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F505A1F5D023B004B2517 /* UIView+EaseBlankPage.m */; };
 		184F50631F5D025E004B2517 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184F50621F5D025E004B2517 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		1851450521AB79C0009B5017 /* RealGoodsWaitPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1851450321AB79C0009B5017 /* RealGoodsWaitPayViewController.m */; };
+		1851450621AB79C0009B5017 /* RealGoodsWaitPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1851450421AB79C0009B5017 /* RealGoodsWaitPayViewController.xib */; };
 		185338E71F28288100CE7800 /* YYHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 185338E61F28288100CE7800 /* YYHud.m */; };
 		185339041F29C66300CE7800 /* smallCube.gif in Resources */ = {isa = PBXBuildFile; fileRef = 185339031F29C66300CE7800 /* smallCube.gif */; };
 		1855F16521194EAF00AD809C /* MainExclusiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1855F16321194EAF00AD809C /* MainExclusiveTableViewCell.m */; };
@@ -740,6 +744,8 @@
 		18665D962047E38E00EEEAED /* UIView+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665D942047E38E00EEEAED /* UIView+Add.m */; };
 		18673CD6208DAE6E00476CAD /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18673CD5208DAE6D00476CAD /* libsqlite3.0.tbd */; };
 		1867800B20297D3B001275D8 /* UIView+YYCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867800A20297D3B001275D8 /* UIView+YYCore.m */; };
+		18681C6921A3AD790065B3FC /* DiscountsPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18681C6721A3AD790065B3FC /* DiscountsPayViewController.m */; };
+		18681C6A21A3AD790065B3FC /* DiscountsPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18681C6821A3AD790065B3FC /* DiscountsPayViewController.xib */; };
 		186901A020536E4000594F03 /* MyPulishedWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1869019E20536E4000594F03 /* MyPulishedWorkViewController.m */; };
 		186901A120536E4000594F03 /* MyPulishedWorkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1869019F20536E4000594F03 /* MyPulishedWorkViewController.xib */; };
 		186901A5205388C700594F03 /* ChangeUserDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186901A3205388C600594F03 /* ChangeUserDataViewController.m */; };
@@ -789,6 +795,15 @@
 		18722B3A2051269300DFEC24 /* AlredyOrderListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18722B382051269300DFEC24 /* AlredyOrderListViewController.xib */; };
 		18722B79206498930066DF0F /* AuthorWorkListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18722B77206498930066DF0F /* AuthorWorkListsViewController.m */; };
 		18722B7A206498930066DF0F /* AuthorWorkListsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18722B78206498930066DF0F /* AuthorWorkListsViewController.xib */; };
+		18731E0C21A259B100D95A72 /* CardsDoubleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18731E0A21A259B100D95A72 /* CardsDoubleTableViewCell.m */; };
+		18731E0D21A259B100D95A72 /* CardsDoubleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18731E0B21A259B100D95A72 /* CardsDoubleTableViewCell.xib */; };
+		18731E1021A269F000D95A72 /* CALayer+QQCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 18731E0F21A269F000D95A72 /* CALayer+QQCorner.m */; };
+		18731E1321A2897000D95A72 /* UIImage+QQCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 18731E1221A2896F00D95A72 /* UIImage+QQCorner.m */; };
+		18731E1621A28A5500D95A72 /* QQCornerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18731E1421A28A5500D95A72 /* QQCornerModel.m */; };
+		18731E1F21A2995600D95A72 /* FindPSWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18731E1D21A2995500D95A72 /* FindPSWViewController.m */; };
+		18731E2021A2995600D95A72 /* FindPSWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18731E1E21A2995600D95A72 /* FindPSWViewController.xib */; };
+		18731E2521A2A22B00D95A72 /* ValueCardsPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18731E2321A2A22B00D95A72 /* ValueCardsPayViewController.m */; };
+		18731E2621A2A22B00D95A72 /* ValueCardsPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18731E2421A2A22B00D95A72 /* ValueCardsPayViewController.xib */; };
 		187DFE18204A46EA008E9C90 /* MainOrderStatusAlready.m in Sources */ = {isa = PBXBuildFile; fileRef = 187DFE17204A46EA008E9C90 /* MainOrderStatusAlready.m */; };
 		187DFE1B204A498E008E9C90 /* MainOrderStatusWait.m in Sources */ = {isa = PBXBuildFile; fileRef = 187DFE1A204A498E008E9C90 /* MainOrderStatusWait.m */; };
 		187DFE1F204A7348008E9C90 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187DFE1D204A7348008E9C90 /* MineViewController.m */; };
@@ -835,8 +850,6 @@
 		188CF75F20A6825A009508CF /* ShopLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188CF75D20A6825A009508CF /* ShopLocationViewController.xib */; };
 		188D7CE0204FDF5700C3EC05 /* CommentOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 188D7CDE204FDF5700C3EC05 /* CommentOrderTableViewCell.m */; };
 		188D7CE1204FDF5700C3EC05 /* CommentOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188D7CDF204FDF5700C3EC05 /* CommentOrderTableViewCell.xib */; };
-		188E3D11205CA7AA00F4FB1D /* FindPSWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E3D0C205CA7A900F4FB1D /* FindPSWViewController.m */; };
-		188E3D13205CA7AA00F4FB1D /* FindPSWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188E3D0F205CA7A900F4FB1D /* FindPSWViewController.xib */; };
 		188E3D18205CAF6800F4FB1D /* ChangePSWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E3D15205CAF6700F4FB1D /* ChangePSWViewController.m */; };
 		188E3D19205CAF6800F4FB1D /* ChangePSWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188E3D16205CAF6700F4FB1D /* ChangePSWViewController.xib */; };
 		189390362022AE98008B8177 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189390352022AE98008B8177 /* CameraViewController.m */; };
@@ -1476,9 +1489,6 @@
 		182D5EDB20BEC4310089C371 /* AUthorsListsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUthorsListsViewController.h; sourceTree = "<group>"; };
 		182D5EDC20BEC4310089C371 /* AUthorsListsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AUthorsListsViewController.m; sourceTree = "<group>"; };
 		182D5EDD20BEC4310089C371 /* AUthorsListsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AUthorsListsViewController.xib; sourceTree = "<group>"; };
-		182D7ABA20F88DB800C1C8FF /* ActivityWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityWebViewController.h; sourceTree = "<group>"; };
-		182D7ABB20F88DB800C1C8FF /* ActivityWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityWebViewController.m; sourceTree = "<group>"; };
-		182D7ABC20F88DB800C1C8FF /* ActivityWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityWebViewController.xib; sourceTree = "<group>"; };
 		182EBE4220DCF2AF004C3418 /* WeiOrderWaitUseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeiOrderWaitUseViewController.h; sourceTree = "<group>"; };
 		182EBE4320DCF2AF004C3418 /* WeiOrderWaitUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiOrderWaitUseViewController.m; sourceTree = "<group>"; };
 		182EBE4420DCF2AF004C3418 /* WeiOrderWaitUseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeiOrderWaitUseViewController.xib; sourceTree = "<group>"; };
@@ -1614,6 +1624,12 @@
 		1841D0C520AAD1CA005D8DD2 /* ActivityOrdersDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityOrdersDetailViewController.h; sourceTree = "<group>"; };
 		1841D0C620AAD1CA005D8DD2 /* ActivityOrdersDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityOrdersDetailViewController.m; sourceTree = "<group>"; };
 		1841D0C720AAD1CA005D8DD2 /* ActivityOrdersDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityOrdersDetailViewController.xib; sourceTree = "<group>"; };
+		18422CE221A7D6830061D8B0 /* RealGoodsWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealGoodsWebViewController.h; sourceTree = "<group>"; };
+		18422CE321A7D6830061D8B0 /* RealGoodsWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealGoodsWebViewController.m; sourceTree = "<group>"; };
+		18422CE421A7D6830061D8B0 /* RealGoodsWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealGoodsWebViewController.xib; sourceTree = "<group>"; };
+		18422CE721A819FB0061D8B0 /* RealGoodsOrderDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealGoodsOrderDetailViewController.h; sourceTree = "<group>"; };
+		18422CE821A819FB0061D8B0 /* RealGoodsOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealGoodsOrderDetailViewController.m; sourceTree = "<group>"; };
+		18422CE921A819FB0061D8B0 /* RealGoodsOrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealGoodsOrderDetailViewController.xib; sourceTree = "<group>"; };
 		18436F37215C724000086DA6 /* UseableShopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseableShopViewController.h; sourceTree = "<group>"; };
 		18436F38215C724000086DA6 /* UseableShopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UseableShopViewController.m; sourceTree = "<group>"; };
 		18436F39215C724000086DA6 /* UseableShopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UseableShopViewController.xib; sourceTree = "<group>"; };
@@ -1784,6 +1800,9 @@
 		184F50591F5D023B004B2517 /* UIView+EaseBlankPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EaseBlankPage.h"; sourceTree = "<group>"; };
 		184F505A1F5D023B004B2517 /* UIView+EaseBlankPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EaseBlankPage.m"; sourceTree = "<group>"; };
 		184F50621F5D025E004B2517 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		1851450221AB79C0009B5017 /* RealGoodsWaitPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RealGoodsWaitPayViewController.h; sourceTree = "<group>"; };
+		1851450321AB79C0009B5017 /* RealGoodsWaitPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealGoodsWaitPayViewController.m; sourceTree = "<group>"; };
+		1851450421AB79C0009B5017 /* RealGoodsWaitPayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealGoodsWaitPayViewController.xib; sourceTree = "<group>"; };
 		185338E51F28288100CE7800 /* YYHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHud.h; sourceTree = "<group>"; };
 		185338E61F28288100CE7800 /* YYHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYHud.m; sourceTree = "<group>"; };
 		185339031F29C66300CE7800 /* smallCube.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = smallCube.gif; sourceTree = "<group>"; };
@@ -2494,6 +2513,9 @@
 		18673CD5208DAE6D00476CAD /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1867800920297D3B001275D8 /* UIView+YYCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YYCore.h"; sourceTree = "<group>"; };
 		1867800A20297D3B001275D8 /* UIView+YYCore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYCore.m"; sourceTree = "<group>"; };
+		18681C6621A3AD790065B3FC /* DiscountsPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscountsPayViewController.h; sourceTree = "<group>"; };
+		18681C6721A3AD790065B3FC /* DiscountsPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscountsPayViewController.m; sourceTree = "<group>"; };
+		18681C6821A3AD790065B3FC /* DiscountsPayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscountsPayViewController.xib; sourceTree = "<group>"; };
 		1869019D20536E4000594F03 /* MyPulishedWorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPulishedWorkViewController.h; sourceTree = "<group>"; };
 		1869019E20536E4000594F03 /* MyPulishedWorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPulishedWorkViewController.m; sourceTree = "<group>"; };
 		1869019F20536E4000594F03 /* MyPulishedWorkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPulishedWorkViewController.xib; sourceTree = "<group>"; };
@@ -2571,6 +2593,21 @@
 		18722B76206498930066DF0F /* AuthorWorkListsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthorWorkListsViewController.h; sourceTree = "<group>"; };
 		18722B77206498930066DF0F /* AuthorWorkListsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthorWorkListsViewController.m; sourceTree = "<group>"; };
 		18722B78206498930066DF0F /* AuthorWorkListsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorWorkListsViewController.xib; sourceTree = "<group>"; };
+		18731E0921A259B100D95A72 /* CardsDoubleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardsDoubleTableViewCell.h; sourceTree = "<group>"; };
+		18731E0A21A259B100D95A72 /* CardsDoubleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardsDoubleTableViewCell.m; sourceTree = "<group>"; };
+		18731E0B21A259B100D95A72 /* CardsDoubleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsDoubleTableViewCell.xib; sourceTree = "<group>"; };
+		18731E0E21A269F000D95A72 /* CALayer+QQCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+QQCorner.h"; sourceTree = "<group>"; };
+		18731E0F21A269F000D95A72 /* CALayer+QQCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+QQCorner.m"; sourceTree = "<group>"; };
+		18731E1121A2896F00D95A72 /* UIImage+QQCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QQCorner.h"; sourceTree = "<group>"; };
+		18731E1221A2896F00D95A72 /* UIImage+QQCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QQCorner.m"; sourceTree = "<group>"; };
+		18731E1421A28A5500D95A72 /* QQCornerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQCornerModel.m; sourceTree = "<group>"; };
+		18731E1521A28A5500D95A72 /* QQCornerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQCornerModel.h; sourceTree = "<group>"; };
+		18731E1C21A2995500D95A72 /* FindPSWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindPSWViewController.h; path = ../FindPSWViewController.h; sourceTree = "<group>"; };
+		18731E1D21A2995500D95A72 /* FindPSWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindPSWViewController.m; path = ../FindPSWViewController.m; sourceTree = "<group>"; };
+		18731E1E21A2995600D95A72 /* FindPSWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FindPSWViewController.xib; path = ../FindPSWViewController.xib; sourceTree = "<group>"; };
+		18731E2221A2A22B00D95A72 /* ValueCardsPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValueCardsPayViewController.h; sourceTree = "<group>"; };
+		18731E2321A2A22B00D95A72 /* ValueCardsPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValueCardsPayViewController.m; sourceTree = "<group>"; };
+		18731E2421A2A22B00D95A72 /* ValueCardsPayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ValueCardsPayViewController.xib; sourceTree = "<group>"; };
 		187DFE16204A46EA008E9C90 /* MainOrderStatusAlready.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainOrderStatusAlready.h; sourceTree = "<group>"; };
 		187DFE17204A46EA008E9C90 /* MainOrderStatusAlready.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainOrderStatusAlready.m; sourceTree = "<group>"; };
 		187DFE19204A498E008E9C90 /* MainOrderStatusWait.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainOrderStatusWait.h; sourceTree = "<group>"; };
@@ -2643,9 +2680,6 @@
 		188D7CDD204FDF5700C3EC05 /* CommentOrderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentOrderTableViewCell.h; sourceTree = "<group>"; };
 		188D7CDE204FDF5700C3EC05 /* CommentOrderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentOrderTableViewCell.m; sourceTree = "<group>"; };
 		188D7CDF204FDF5700C3EC05 /* CommentOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentOrderTableViewCell.xib; sourceTree = "<group>"; };
-		188E3D0C205CA7A900F4FB1D /* FindPSWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPSWViewController.m; sourceTree = "<group>"; };
-		188E3D0D205CA7A900F4FB1D /* FindPSWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPSWViewController.h; sourceTree = "<group>"; };
-		188E3D0F205CA7A900F4FB1D /* FindPSWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindPSWViewController.xib; sourceTree = "<group>"; };
 		188E3D15205CAF6700F4FB1D /* ChangePSWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePSWViewController.m; sourceTree = "<group>"; };
 		188E3D16205CAF6700F4FB1D /* ChangePSWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePSWViewController.xib; sourceTree = "<group>"; };
 		188E3D17205CAF6700F4FB1D /* ChangePSWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePSWViewController.h; sourceTree = "<group>"; };
@@ -3721,6 +3755,12 @@
 		04E0ACB01EA99A650092CB00 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				18731E1521A28A5500D95A72 /* QQCornerModel.h */,
+				18731E1421A28A5500D95A72 /* QQCornerModel.m */,
+				18731E1121A2896F00D95A72 /* UIImage+QQCorner.h */,
+				18731E1221A2896F00D95A72 /* UIImage+QQCorner.m */,
+				18731E0E21A269F000D95A72 /* CALayer+QQCorner.h */,
+				18731E0F21A269F000D95A72 /* CALayer+QQCorner.m */,
 				1855F18621198E6600AD809C /* UIButton+Badge.h */,
 				1855F18721198E6700AD809C /* UIButton+Badge.m */,
 				18E667FF210C59FF003E29E1 /* FormatNumber */,
@@ -3987,9 +4027,9 @@
 				1809C12F20B7E68B00D5D583 /* NextFreeNewViewController.h */,
 				1809C13020B7E68B00D5D583 /* NextFreeNewViewController.m */,
 				1809C12E20B7E68B00D5D583 /* NextFreeNewViewController.xib */,
-				182D7ABA20F88DB800C1C8FF /* ActivityWebViewController.h */,
-				182D7ABB20F88DB800C1C8FF /* ActivityWebViewController.m */,
-				182D7ABC20F88DB800C1C8FF /* ActivityWebViewController.xib */,
+				18422CE221A7D6830061D8B0 /* RealGoodsWebViewController.h */,
+				18422CE321A7D6830061D8B0 /* RealGoodsWebViewController.m */,
+				18422CE421A7D6830061D8B0 /* RealGoodsWebViewController.xib */,
 			);
 			path = WEB;
 			sourceTree = "<group>";
@@ -4631,15 +4671,15 @@
 		184C08BC2044EDE5008CB45B /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				18731E1C21A2995500D95A72 /* FindPSWViewController.h */,
+				18731E1D21A2995500D95A72 /* FindPSWViewController.m */,
+				18731E1E21A2995600D95A72 /* FindPSWViewController.xib */,
 				186B0A53207B70BD00CBAEA1 /* ReportViewController.h */,
 				186B0A54207B70BE00CBAEA1 /* ReportViewController.m */,
 				186B0A55207B70BE00CBAEA1 /* ReportViewController.xib */,
 				188E3D17205CAF6700F4FB1D /* ChangePSWViewController.h */,
 				188E3D15205CAF6700F4FB1D /* ChangePSWViewController.m */,
 				188E3D16205CAF6700F4FB1D /* ChangePSWViewController.xib */,
-				188E3D0D205CA7A900F4FB1D /* FindPSWViewController.h */,
-				188E3D0C205CA7A900F4FB1D /* FindPSWViewController.m */,
-				188E3D0F205CA7A900F4FB1D /* FindPSWViewController.xib */,
 				18616B10202C3D910000FA04 /* RegistViewController.h */,
 				18616B0F202C3D910000FA04 /* RegistViewController.m */,
 				18616B11202C3D910000FA04 /* RegistViewController.xib */,
@@ -4870,6 +4910,7 @@
 		185D57E4201EC36500D49637 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				18731E0821A2597C00D95A72 /* MainDouble */,
 				188CF74B20A56EAC009508CF /* MainCoupon */,
 				18BB2EFE2046500B009B6DEF /* MainCell */,
 				185D581C201EFF2C00D49637 /* Content */,
@@ -5991,6 +6032,12 @@
 				186471D820DE1B7200F8CDB4 /* WeiOrderWaitOrMoneyViewController.h */,
 				186471D920DE1B7200F8CDB4 /* WeiOrderWaitOrMoneyViewController.m */,
 				186471DA20DE1B7200F8CDB4 /* WeiOrderWaitOrMoneyViewController.xib */,
+				18422CE721A819FB0061D8B0 /* RealGoodsOrderDetailViewController.h */,
+				18422CE821A819FB0061D8B0 /* RealGoodsOrderDetailViewController.m */,
+				18422CE921A819FB0061D8B0 /* RealGoodsOrderDetailViewController.xib */,
+				1851450221AB79C0009B5017 /* RealGoodsWaitPayViewController.h */,
+				1851450321AB79C0009B5017 /* RealGoodsWaitPayViewController.m */,
+				1851450421AB79C0009B5017 /* RealGoodsWaitPayViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -6029,6 +6076,29 @@
 				184D42972057ABE5002AF020 /* AuthorOrdersModel.m */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		18731E0821A2597C00D95A72 /* MainDouble */ = {
+			isa = PBXGroup;
+			children = (
+				18731E0921A259B100D95A72 /* CardsDoubleTableViewCell.h */,
+				18731E0A21A259B100D95A72 /* CardsDoubleTableViewCell.m */,
+				18731E0B21A259B100D95A72 /* CardsDoubleTableViewCell.xib */,
+			);
+			path = MainDouble;
+			sourceTree = "<group>";
+		};
+		18731E2121A2A1F500D95A72 /* CardOrderPay */ = {
+			isa = PBXGroup;
+			children = (
+				18731E2221A2A22B00D95A72 /* ValueCardsPayViewController.h */,
+				18731E2321A2A22B00D95A72 /* ValueCardsPayViewController.m */,
+				18731E2421A2A22B00D95A72 /* ValueCardsPayViewController.xib */,
+				18681C6621A3AD790065B3FC /* DiscountsPayViewController.h */,
+				18681C6721A3AD790065B3FC /* DiscountsPayViewController.m */,
+				18681C6821A3AD790065B3FC /* DiscountsPayViewController.xib */,
+			);
+			path = CardOrderPay;
 			sourceTree = "<group>";
 		};
 		187DFE14204A46B1008E9C90 /* Main */ = {
@@ -6696,6 +6766,7 @@
 		8A4C2654209EF3C8000880BF /* GroupPay */ = {
 			isa = PBXGroup;
 			children = (
+				18731E2121A2A1F500D95A72 /* CardOrderPay */,
 				183914A8209C44BF00411854 /* GoodsDetailViewController.h */,
 				183914A9209C44BF00411854 /* GoodsDetailViewController.m */,
 				183914AA209C44BF00411854 /* GoodsDetailViewController.xib */,
@@ -6932,6 +7003,7 @@
 				1809C14120BBCE5D00D5D583 /* MyJoinActivityViewController.xib in Resources */,
 				18963E3A20D36E90004E7053 /* guide_4.png in Resources */,
 				1865AA7A2175942B00F31D77 /* Info.plist in Resources */,
+				18731E2621A2A22B00D95A72 /* ValueCardsPayViewController.xib in Resources */,
 				18E33DE320A3FD4000B3269C /* OrderCommentTableViewCell.xib in Resources */,
 				18BB2F0E204660F9009B6DEF /* ShopViewController.xib in Resources */,
 				18E33DF320A43ABD00B3269C /* OrderMoneyBackViewController.xib in Resources */,
@@ -6946,6 +7018,7 @@
 				186B0A66207C804F00CBAEA1 /* SystemNotifyTableViewCell.xib in Resources */,
 				04BD07381EB30F26005155CB /* Assets.xcassets in Resources */,
 				180543B02005E82100EFA6C4 /* RCConfig.plist in Resources */,
+				18422CE621A7D6830061D8B0 /* RealGoodsWebViewController.xib in Resources */,
 				186E0E4020A2E14D00857E74 /* GroupWaitingForPayViewController.xib in Resources */,
 				186471DC20DE1B7200F8CDB4 /* WeiOrderWaitOrMoneyViewController.xib in Resources */,
 				184B8BAD20590D67006C1BB3 /* AuthorConfirmViewController.xib in Resources */,
@@ -6962,7 +7035,6 @@
 				185C2F6920A14D1E0002600A /* CouponAlertView.xib in Resources */,
 				182716671F67BE430061991F /* WeiboSDK.bundle in Resources */,
 				18436F3B215C724000086DA6 /* UseableShopViewController.xib in Resources */,
-				182D7ABE20F88DB800C1C8FF /* ActivityWebViewController.xib in Resources */,
 				8AE3E94D20A3503B00DFE372 /* OrderWaitUseViewController.xib in Resources */,
 				1807190620BD436E00E45D31 /* InviteFriendsListViewController.xib in Resources */,
 				8A6CD9CF2043E9730055811A /* UserShopTableViewCell.xib in Resources */,
@@ -7066,6 +7138,7 @@
 				18E33ECF20621C4500BDE6FE /* 动效0014.png in Resources */,
 				8A4C264E209ED961000880BF /* AuthorGoodsItemTableViewCell.xib in Resources */,
 				18E33ECB20621C4500BDE6FE /* 动效0010.png in Resources */,
+				18681C6A21A3AD790065B3FC /* DiscountsPayViewController.xib in Resources */,
 				1813570C20B5129E00E02A86 /* GroupGoodsListsViewController.xib in Resources */,
 				183C1FBD205A469300821247 /* MoneyBackViewController.xib in Resources */,
 				1893906820243B43008B8177 /* ChooseShopTableViewCell.xib in Resources */,
@@ -7126,6 +7199,8 @@
 				043112121EB85E3B00D174D6 /* MJRefresh.bundle in Resources */,
 				18722B7A206498930066DF0F /* AuthorWorkListsViewController.xib in Resources */,
 				1827165B1F67BE430061991F /* ShareSDKConfigFile.bundle in Resources */,
+				18731E0D21A259B100D95A72 /* CardsDoubleTableViewCell.xib in Resources */,
+				18422CEB21A819FB0061D8B0 /* RealGoodsOrderDetailViewController.xib in Resources */,
 				183914AC209C44BF00411854 /* GoodsDetailViewController.xib in Resources */,
 				18616B13202C3D910000FA04 /* RegistViewController.xib in Resources */,
 				1894B509217F0B6F004F3AFC /* icon_full@3x.png in Resources */,
@@ -7134,8 +7209,8 @@
 				18BB2F1420467C07009B6DEF /* PriceSelectView.xib in Resources */,
 				1847CE89202008A600652873 /* TZImagePickerController.bundle in Resources */,
 				18812870205281CD000CA14A /* MyFollowListViewController.xib in Resources */,
+				18731E2021A2995600D95A72 /* FindPSWViewController.xib in Resources */,
 				187F6987211EF33200A945CB /* SecKillOrderDetailViewController.xib in Resources */,
-				188E3D13205CA7AA00F4FB1D /* FindPSWViewController.xib in Resources */,
 				184572AE210ABACC00AFD43C /* FAQPageViewController.xib in Resources */,
 				1836A9FF215B22C300D8277E /* ShopCardsTableViewCell.xib in Resources */,
 				184D42952057A3E1002AF020 /* AuthorWaitTableViewCell.xib in Resources */,
@@ -7148,6 +7223,7 @@
 				187DFE20204A7348008E9C90 /* MineViewController.xib in Resources */,
 				18E33DEE20A4251200B3269C /* OrderCompletedViewController.xib in Resources */,
 				186B0A57207B70BE00CBAEA1 /* ReportViewController.xib in Resources */,
+				1851450621AB79C0009B5017 /* RealGoodsWaitPayViewController.xib in Resources */,
 				18FE3B1220A98417004B2352 /* AuthorMineViewController.xib in Resources */,
 				186B0A5C207C692700CBAEA1 /* AuthorSearchViewController.xib in Resources */,
 			);
@@ -7295,6 +7371,7 @@
 				185EF4A820849E1D00FC7542 /* ZXResultParser.m in Sources */,
 				185EF53E20849E1D00FC7542 /* ZXPDF417DetectorResult.m in Sources */,
 				1847CE86202008A600652873 /* TZGifPhotoPreviewController.m in Sources */,
+				18422CEA21A819FB0061D8B0 /* RealGoodsOrderDetailViewController.m in Sources */,
 				185EF48920849E1D00FC7542 /* ZXAztecDecoder.m in Sources */,
 				184C08C120450387008CB45B /* GBTagListView.m in Sources */,
 				18A5C4FE204E5DE200C3559D /* RightTableViewCell.m in Sources */,
@@ -7527,8 +7604,10 @@
 				183914C4209C71D400411854 /* RulesItem.m in Sources */,
 				187DFE18204A46EA008E9C90 /* MainOrderStatusAlready.m in Sources */,
 				185EF48B20849E1D00FC7542 /* ZXAztecBinaryShiftToken.m in Sources */,
+				1851450521AB79C0009B5017 /* RealGoodsWaitPayViewController.m in Sources */,
 				18470847202D6EF30082771D /* LWShareButton.m in Sources */,
 				1847CE87202008A600652873 /* TZImageCropManager.m in Sources */,
+				18731E0C21A259B100D95A72 /* CardsDoubleTableViewCell.m in Sources */,
 				185EF4BA20849E1D00FC7542 /* ZXCGImageLuminanceSource.m in Sources */,
 				8A6CD9D32043EB1E0055811A /* AuthorDetailViewController.m in Sources */,
 				185EF55620849E1D00FC7542 /* ZXQRCodeFinderPattern.m in Sources */,
@@ -7568,6 +7647,7 @@
 				185EF55E20849E1D00FC7542 /* ZXMultiDetector.m in Sources */,
 				1865AA742175942B00F31D77 /* CitiesDataTool.m in Sources */,
 				185EF52920849E1D00FC7542 /* ZXUPCAWriter.m in Sources */,
+				18731E2521A2A22B00D95A72 /* ValueCardsPayViewController.m in Sources */,
 				04E0ACEE1EA9B32E0092CB00 /* MKAnnotationView+WebCache.m in Sources */,
 				8A6CD9D720440E610055811A /* UserHeader.m in Sources */,
 				18A68D17202A95C90040CA16 /* UIImage+FMLClipRect.m in Sources */,
@@ -7667,6 +7747,7 @@
 				8AF4A0721F603FE200F21276 /* UIImage+XYGif.m in Sources */,
 				185EF4EA20849E1D00FC7542 /* ZXDataMatrixEncoderContext.m in Sources */,
 				185EF4F520849E1D00FC7542 /* ZXMaxiCodeDecoder.m in Sources */,
+				18731E1021A269F000D95A72 /* CALayer+QQCorner.m in Sources */,
 				185EF49A20849E1D00FC7542 /* ZXBookmarkDoCoMoResultParser.m in Sources */,
 				185EF4CB20849E1D00FC7542 /* ZXDetectorResult.m in Sources */,
 				1870701C204FC01800D063F5 /* AuthorDetailHead.m in Sources */,
@@ -7674,6 +7755,7 @@
 				185EF4A420849E1D00FC7542 /* ZXISBNResultParser.m in Sources */,
 				1809C13C20BBA1F100D5D583 /* KSGuaidViewManager.m in Sources */,
 				047911D11EC451C3008DFC59 /* MD5DataSigner.m in Sources */,
+				18731E1F21A2995600D95A72 /* FindPSWViewController.m in Sources */,
 				18BB2F0D204660F9009B6DEF /* ShopViewController.m in Sources */,
 				04FEEB871EF26C7400DCD300 /* NSDate+Calendar.m in Sources */,
 				185EF4AD20849E1D00FC7542 /* ZXTelParsedResult.m in Sources */,
@@ -7683,9 +7765,9 @@
 				185EF4D820849E1D00FC7542 /* ZXErrors.m in Sources */,
 				043112141EB85E3B00D174D6 /* NSBundle+MJRefresh.m in Sources */,
 				8A6CD9E5204424A00055811A /* PersonalTableViewCell.m in Sources */,
+				18422CE521A7D6830061D8B0 /* RealGoodsWebViewController.m in Sources */,
 				18FE3B0820A92FF4004B2352 /* WeiAdvertTableViewCell.m in Sources */,
 				185C2F6120A14C820002600A /* BasePresentationContentController.m in Sources */,
-				188E3D11205CA7AA00F4FB1D /* FindPSWViewController.m in Sources */,
 				185EF50720849E1D00FC7542 /* ZXRSSExpandedDecodedInformation.m in Sources */,
 				04BD41C41EA895C4002E9F30 /* ZYKeyboardUtil.m in Sources */,
 				18E33E272060FEF700BDE6FE /* AuthorViewController.m in Sources */,
@@ -7706,12 +7788,14 @@
 				185EF4CE20849E1D00FC7542 /* ZXHybridBinarizer.m in Sources */,
 				0427676A1EA7033100543B40 /* MASConstraintMaker.m in Sources */,
 				18E33DF220A43ABD00B3269C /* OrderMoneyBackViewController.m in Sources */,
+				18731E1621A28A5500D95A72 /* QQCornerModel.m in Sources */,
 				183914AB209C44BF00411854 /* GoodsDetailViewController.m in Sources */,
 				184F50611F5D023B004B2517 /* UIView+EaseBlankPage.m in Sources */,
 				18E33EF7206253F800BDE6FE /* CYLTabBarControllerConfig.m in Sources */,
 				182BAF67211A9AEC007F8D20 /* SearchFooterTableViewCell.m in Sources */,
 				185EF53920849E1D00FC7542 /* ZXPDF417DetectionResult.m in Sources */,
 				18436F44215CB7D200086DA6 /* ShopCardsCommentsViewController.m in Sources */,
+				18731E1321A2897000D95A72 /* UIImage+QQCorner.m in Sources */,
 				18665D932047E37F00EEEAED /* GWLCustomSliderNew.m in Sources */,
 				185EF4E120849E1D00FC7542 /* ZXDataMatrixDecodedBitStreamParser.m in Sources */,
 				185EF4DB20849E1D00FC7542 /* ZXPlanarYUVLuminanceSource.m in Sources */,
@@ -7835,6 +7919,7 @@
 				18E33EF02062531500BDE6FE /* CYLTabBarController.m in Sources */,
 				1862563120E355C80051C9FF /* UIView+TYAlertView.m in Sources */,
 				185EF56220849E1D00FC7542 /* ZXQRCodeWriter.m in Sources */,
+				18681C6921A3AD790065B3FC /* DiscountsPayViewController.m in Sources */,
 				189390472022AF4F008B8177 /* LLPreview.m in Sources */,
 				183914C8209D4F3A00411854 /* GroupPayViewController.m in Sources */,
 				185EF48F20849E1D00FC7542 /* ZXAztecSimpleToken.m in Sources */,
@@ -7893,7 +7978,6 @@
 				185EF4E920849E1D00FC7542 /* ZXDataMatrixEdifactEncoder.m in Sources */,
 				183C1FB2205A1B0B00821247 /* AlreadyPayOrderViewController.m in Sources */,
 				185EF4B520849E1D00FC7542 /* ZXVINParsedResult.m in Sources */,
-				182D7ABD20F88DB800C1C8FF /* ActivityWebViewController.m in Sources */,
 				1862563820E356720051C9FF /* TYAlertController+BlurEffects.m in Sources */,
 				1893905C202434CC008B8177 /* AllShopViewController.m in Sources */,
 				184F50601F5D023B004B2517 /* EaseBlankPageView.m in Sources */,

@@ -28,6 +28,8 @@
 #import "WeiOrderWaitUseViewController.h"
 #import "WeiOrderWaitOrMoneyViewController.h"
 #import "SecKillOrderDetailViewController.h"
+#import "RealGoodsOrderDetailViewController.h"
+#import "RealGoodsWaitPayViewController.h"
 
 @interface RecentOrderListsViewController ()<UITableViewDelegate, UITableViewDataSource,ThreeTypeOrderTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UIView *bgView;
@@ -304,7 +306,7 @@
                     break;
             }
             
-        }else{
+        }else if(type == 4){
             
             //            微信
             switch ([order.status integerValue]) {
@@ -344,6 +346,31 @@
                 default:
                     break;
             }
+            
+        }else{
+//            实物商品
+            switch ([order.status integerValue]) {
+                    //              0未支付，1已支付，未使用，2已使用，未评价，3已评价，4已过期
+                case 3:
+                {
+                    cell.realWaitPayOrder = order;
+                }
+                    break;
+                case 1:
+                {
+                    cell.realUseOrder = order;
+                }
+                    break;
+                    
+                case 2:
+                {
+                    cell.realAlreadyUse = order;
+                }
+                    break;
+                default:
+                    break;
+            }
+            
             
         }
         
@@ -800,6 +827,37 @@
                 }
                 
                 
+            }else if (type == 5 ){
+//实物商品
+                switch ([order.status integerValue]) {
+                        
+//                       1 待使用 2已使用 3 代付款
+                    case 3:
+                    {
+                        
+                        RealGoodsOrderDetailViewController *grVC = [[RealGoodsOrderDetailViewController alloc]init];
+                       
+                        grVC.ID = [self.orderDataAry[indexPath.section-1] objectForKey:@"order_number"];
+                        
+                        [self.navigationController pushViewController:grVC animated:YES];
+                        
+                    }
+                    break;
+                    case 1:
+                    {
+                        
+                        RealGoodsWaitPayViewController *grVC = [[RealGoodsWaitPayViewController alloc]init];
+                        grVC.ID = [self.orderDataAry[indexPath.section-1] objectForKey:@"order_number"];
+                        [self.navigationController pushViewController:grVC animated:YES];
+                        
+                    }
+                        break;
+                    
+                    default:
+                        break;
+                }
+                
+                
             }else{
                 
                 //            活动
@@ -887,6 +945,13 @@
                         break;
                     case 6:
                     {
+                        
+                        if ([order.is_secKill integerValue] == 1 ) {
+                            
+                            break;
+                            
+                        }
+                        
                         OrderMoneyBackViewController *grVC = [[OrderMoneyBackViewController alloc]init];
                         grVC.status = @"退款完成";
                         grVC.titleStr = @"新用户一元剪发";

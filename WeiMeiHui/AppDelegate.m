@@ -176,7 +176,7 @@ static NSInteger seq = 0;
                                         }];
 
     //高德地图
-    [AMapServices sharedServices].apiKey =@"9cf93344faee3ccac7c1284d6efc62e1";
+    [AMapServices sharedServices].apiKey =@"fe16b2829b910fde376936d332e8931c";
     
     //微信支付
     [WXApi registerApp:@"wxbb6becd4bf51596e"];

@@ -1000,7 +1000,7 @@
 //    AuthorConfirmViewController *confirmVC = [[AuthorConfirmViewController alloc]init];
 //    confirmVC.dataDic = dataAry[index];
 //    [self.navigationController pushViewController:confirmVC animated:YES];
-    
+//
 }
 
 @end

@@ -179,6 +179,9 @@
     titleLab.textColor = [UIColor colorWithWhite:0.229 alpha:1.000];
     titleLab.font = [UIFont systemFontOfSize:14];
     [headView addSubview:titleLab];
+    
+   
+    
     if (self.historyArr.count == 0) {
         titleLab.text = @"热门搜索";
     }
@@ -190,11 +193,24 @@
         else
         {
             titleLab.text = @"历史记录";
-            
+         
+            UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(kWidth-40-10, 10, 40, 35)];
+            [btn setImage:[UIImage imageNamed:@"清空"] forState:UIControlStateNormal];
+            [headView addSubview:btn];
+            [btn addTarget:self action:@selector(delAction:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
     return headView;
 }
+
+- (void)delAction:(UIButton *)sender{
+    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:WEIHISTORY];
+    [self.historyArr removeAllObjects];
+    [self.tableview reloadData];
+    
+}
+
 /** FooterView */
 -(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
@@ -236,7 +252,7 @@
         
     }else if(_historyArr.count < 12){
         
-        [_historyArr addObject:KeyWord];
+         [_historyArr insertObject:KeyWord atIndex:0];
         
     }else{
         
@@ -299,7 +315,7 @@
         
     }else if(_historyArr.count < 12){
         
-        [_historyArr addObject:str];
+         [_historyArr insertObject:str atIndex:0];
         
     }else{
         

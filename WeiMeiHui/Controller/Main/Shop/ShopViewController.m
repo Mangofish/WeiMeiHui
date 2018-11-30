@@ -29,8 +29,10 @@
 #import "PayStyleViewController.h"
 #import "FamousShopGoodsViewController.h"
 #import "NextFreeNewViewController.h"
+#import "CardsDoubleTableViewCell.h"
+#import "RealGoodsWebViewController.h"
 
-@interface ShopViewController ()<UITableViewDelegate,UITableViewDataSource,WeiContentCellDelegate,AuthorListTableViewCellDelegate,FamousShopTitleTableViewCellDelegate,SearchFooterDelegate>{
+@interface ShopViewController ()<UITableViewDelegate,UITableViewDataSource,WeiContentCellDelegate,AuthorListTableViewCellDelegate,FamousShopTitleTableViewCellDelegate,SearchFooterDelegate,CardsDoubleTableViewCellDelegate>{
     
     
 //    NSMutableDictionary *_heightDic;
@@ -52,6 +54,7 @@
 
 @property (copy, nonatomic) NSArray *authorData;
 @property (copy, nonatomic) NSArray *goodsData;
+@property (copy, nonatomic) NSArray *buyShopData;
 @property (assign, nonatomic) NSUInteger page;
 @property (copy, nonatomic) NSString *friendsCount;
 @property (copy, nonatomic) NSArray *shopErrorData;
@@ -137,7 +140,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 6;
+    return 7;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -146,13 +149,25 @@
         
         return 1;
     }
-//    卡
+    
+    //商品
     if (section == 1) {
         
-        return self.carddataAry.count;
+        return self.buyShopData.count;
     }
     
+//    卡
     if (section == 2) {
+        
+        
+        if (self.carddataAry.count) {
+            return 1;
+        }
+        
+        return 0;
+    }
+    
+    if (section == 3) {
         if (_authorData.count == 0) {
             return 0;
         }
@@ -160,7 +175,7 @@
         return 1;
     }
     
-    if (section == 3) {
+    if (section == 4) {
         if (_goodsData.count == 0) {
             return 0;
         }
@@ -168,7 +183,7 @@
         return _goodsData.count;
     }
     
-    if (section == 4) {
+    if (section == 5) {
         if (_orderdataAry.count == 0) {
             return 0;
         }
@@ -187,20 +202,42 @@
         cell.delegate = self;
         return cell;
         
-    }else if (indexPath.section == 1){//卡
+    }else if (indexPath.section == 1){//商品
         
-        ShopCardTableViewCell *cell = [ShopCardTableViewCell shopCardTableViewCell];
-        cell.card = [ShopCard shopCardWithDict:self.carddataAry[indexPath.row]];
+        FamousGoodsTableViewCell *cell = [FamousGoodsTableViewCell famousGoodsTableViewCellDetailShop];
+        cell.goodsShop = [AuthorGoods authorGoodsWithDict:self.buyShopData[indexPath.row]];
         return cell;
         
-    }else if (indexPath.section == 2){
+    }else if (indexPath.section == 2){//卡
+        
+        if (self.carddataAry.count == 1) {
+            
+            CardsDoubleTableViewCell *cell = [CardsDoubleTableViewCell cardsDoubleTableViewCellSingle];
+            cell.cardLeft = [ShopCard shopCardWithDict:self.carddataAry[0]];
+            return cell;
+            
+        }else{
+            
+            CardsDoubleTableViewCell *cell = [CardsDoubleTableViewCell cardsDoubleTableViewCellDouble];
+            cell.cardLeft = [ShopCard shopCardWithDict:self.carddataAry[0]];
+            cell.cardright = [ShopCard shopCardWithDict:self.carddataAry[1]];
+            cell.delegate = self;
+            return cell;
+            
+        }
+        
+//        ShopCardTableViewCell *cell = [ShopCardTableViewCell shopCardTableViewCell];
+//        cell.card = [ShopCard shopCardWithDict:self.carddataAry[indexPath.row]];
+//        return cell;
+        
+    }else if (indexPath.section == 3){
         
         AuthorListTableViewCell *cell = [[AuthorListTableViewCell  alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell1"];
         cell.author = _authorData;
         cell.delegate = self;
         return cell;
         
-    }else if (indexPath.section == 3){
+    }else if (indexPath.section == 4){
         
         FamousGoodsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"detailT"];
         
@@ -213,7 +250,7 @@
         
         return cell;
         
-    }else if (indexPath.section == 4){
+    }else if (indexPath.section == 5){
         
         CommentOrderTableViewCell *cell = [CommentOrderTableViewCell commentOrderTableViewCell];
         cell.comment = [OrderComment orderCommentWithDict:self.orderdataAry[indexPath.row]];
@@ -240,22 +277,35 @@
         return kWidth*200/375+80;
     }
     
-    if (indexPath.section == 1 && _carddataAry.count) {
-
+    if (indexPath.section == 1 && _buyShopData.count) {
+        
+        
         return 100;
-    
+        
     }
     
-    if (indexPath.section == 2 && _authorData.count) {
+    if (indexPath.section == 2 && _carddataAry.count == 2) {
+
+        
+        return 220*kWidth/750;
+    
+    }else if (indexPath.section == 2 && _carddataAry.count == 1) {
+        
+        
+        return 200*kWidth/750;
+        
+    }
+    
+    if (indexPath.section == 3 && _authorData.count) {
  
         return 174;
     }
     
-    if (indexPath.section == 3 && _goodsData.count) {
+    if (indexPath.section == 4 && _goodsData.count) {
         return 88;
     }
     
-    if (indexPath.section == 4 && _orderdataAry.count) {
+    if (indexPath.section == 5 && _orderdataAry.count) {
         
         return [_commentHeightDic[@(indexPath.row)] doubleValue];;
     }
@@ -270,11 +320,15 @@
         return Space;
     }
     
-    if (section == 4) {
+    if (section == 1 && self.buyShopData.count) {
+        return Space;
+    }
+    
+    if (section == 5) {
         return 54;
     }
     
-    if (section == 3 && self.goodsData.count) {
+    if (section == 4 && self.goodsData.count) {
         return 54;
     }
     
@@ -283,19 +337,23 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    if (section == 2 && _authorData.count) {
+    if (section == 1 && _buyShopData.count) {
         return 44;
     }
     
-    if (section == 3 && _goodsData.count) {
+    if (section == 3 && _authorData.count) {
+        return 44;
+    }
+    
+    if (section == 4 && _goodsData.count) {
         return 44+44+1;
     }
     
-    if (section == 4) {
+    if (section == 5) {
         return [_heightDic[@"head"] doubleValue];
     }
     
-    if (section == 5) {
+    if (section == 6) {
         return 54;
     }
     
@@ -304,7 +362,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     
-    if (section == 3) {
+    if (section == 4) {
         
         UIView *v = [[UIView alloc]init];
         v.backgroundColor =[UIColor groupTableViewBackgroundColor];
@@ -326,7 +384,7 @@
     }
     
     
-    if (section == 4 && self.orderdataAry.count) {
+    if (section == 5 && self.orderdataAry.count) {
         
             UIView *v = [UIView new];
             v.backgroundColor= [UIColor groupTableViewBackgroundColor];
@@ -369,7 +427,22 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
-    if (section == 2) {
+    if (section == 1 && self.buyShopData.count) {
+        UIView *v = [UIView new];
+        v.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kWidth, 44)];
+        lab.text = @"   会员福利";
+        lab.font = [UIFont systemFontOfSize:14];
+        lab.textColor = MJRefreshColor(51, 51, 51);
+        UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 43, kWidth, 1)];
+        line.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [v addSubview:line];
+        [v addSubview:lab];
+        
+        return v;
+    }
+    
+    if (section == 3 && self.authorData.count) {
         UIView *v = [UIView new];
         v.backgroundColor = [UIColor groupTableViewBackgroundColor];
         UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kWidth, 44)];
@@ -384,7 +457,7 @@
         return v;
     }
     
-    if (section == 3) {
+    if (section == 4 && self.goodsData.count) {
         UIView *v = [UIView new];
         v.backgroundColor = [UIColor whiteColor];
         UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, kWidth, 44)];
@@ -406,7 +479,7 @@
         return v;
     }
     
-    if (section == 4) {
+    if (section == 5) {
         
         UIView *v = [UIView new];
         self.head.frame = CGRectMake(0, 0, kWidth, [_heightDic[@"head"] doubleValue]);
@@ -415,7 +488,7 @@
     }
     
     
-    if (section == 5) {
+    if (section == 6) {
         
         UIView *v = [UIView new];
         //        NSArray *pics = headDic[@"user_pics"];
@@ -478,7 +551,7 @@
     NSString *lat = [[NSUserDefaults standardUserDefaults] valueForKey:WEILat];
     NSString *lng = [[NSUserDefaults standardUserDefaults] valueForKey:WEIlngi];
     
-    NSString *url = [PublicMethods dataTojsonString:@{@"uuid":uuid,@"id":_ID,@"lat":lat,@"lng":lng,@"order":@"",@"page":@(_page)}];
+    NSString *url = [PublicMethods dataTojsonString:@{@"uuid":uuid,@"id":self.ID,@"lat":lat,@"lng":lng,@"order":@"",@"page":@(_page)}];
     
     [YYNet POST:ShopDetail paramters:@{@"json":url} success:^(id responseObject) {
         
@@ -492,6 +565,8 @@
         self.commsCount = self->headDic[@"evaluate_count"];
         self.carddataAry = self->headDic[@"hair_data"];
         self.head.tagAry = self->headDic[@"service_tag"];
+        self.buyShopData = self->headDic[@"package_data"];
+        self.goodsData = self->headDic[@"group_data"];
         
         self.head.model = [ShopModel shopModeltWithDict:self->headDic];
         self.heightDic[@"head"] = @(self.head.cellHeight);
@@ -609,6 +684,7 @@
     
     if ([PublicMethods isLogIn]) {
         
+        sender.selected = !sender.selected;
         NSString *friendID = [[self.dataAry objectAtIndex:sender.tag] objectForKey:@"id"];
         
         NSString *uuid = [[[NSUserDefaults standardUserDefaults] valueForKey:@"user"] objectForKey:@"uuid"];
@@ -753,19 +829,30 @@
         return;
     }
     
-//    卡
+    //    实物商品
     if (indexPath.section == 1) {
+        
+        RealGoodsWebViewController *lists = [[RealGoodsWebViewController alloc]init];
+        lists.ID= self.buyShopData[indexPath.row][@"id"];
+        lists.name= self.buyShopData[indexPath.row][@"package_name"];
+        lists.shopID = self.dataDic[@"id"];
+        [self.navigationController pushViewController:lists animated:YES];
+        
+      
+    }
+    
+//    卡
+    if (indexPath.section == 2 && self.buyShopData.count == 1) {
         
         NextFreeNewViewController *lists = [[NextFreeNewViewController alloc]init];
         lists.url = self.carddataAry[indexPath.row][@"url"];
         [self.navigationController pushViewController:lists animated:YES];
-        
-//        [self payAction:self.carddataAry[indexPath.row][@"id"]];
+
     }
     
     
 //    商品
-    if (indexPath.section == 3) {
+    if (indexPath.section == 4) {
         
         NSString *temp = [_goodsData[indexPath.row] objectForKey:@"id"];
         
@@ -777,7 +864,7 @@
     }
     
 //
-    if (indexPath.section == 5) {
+    if (indexPath.section == 6) {
      
         NSString *friendID = [[_dataAry objectAtIndex:indexPath.row] objectForKey:@"id"];
         WeiFriendDetailViewController *weiVC  = [[WeiFriendDetailViewController alloc]init];
@@ -787,6 +874,18 @@
     }
     
    
+    
+}
+
+-(void)leftOrRightAtIndex:(NSUInteger)index andCellIndex:(NSUInteger)cellIndex{
+    
+    if (self.carddataAry.count == 2) {
+        
+        NextFreeNewViewController *lists = [[NextFreeNewViewController alloc]init];
+        lists.url = self.carddataAry[index][@"url"];
+        [self.navigationController pushViewController:lists animated:YES];
+        
+    }
     
 }
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AuthorGoods.h"
+#import "ZYLineProgressView.h"
 
 @interface FamousGoodsTableViewCell : UITableViewCell
 
@@ -23,11 +24,25 @@
 
 + (instancetype)famousGoodsTableViewCellDetailS;
 
++ (instancetype)famousGoodsTableViewCellDetailSn;
+
++ (instancetype)famousGoodsTableViewCellDetailOrder;
+
++ (instancetype)famousGoodsTableViewCellDetailMain;
+
++ (instancetype)famousGoodsTableViewCellDetailShop;
+
+
 @property(strong,nonatomic) AuthorGoods *goods;
 
 @property(strong,nonatomic) AuthorGoods *goodsSearch;
 
 @property(strong,nonatomic) AuthorGoods *goodsS;
 
+@property(strong,nonatomic) AuthorGoods *goodsO;
+@property(strong,nonatomic) AuthorGoods *goodsShop;
+
 @property (weak, nonatomic) IBOutlet UIView *redView;
+@property (strong, nonatomic)  ZYLineProgressView *progressView;
+
 @end

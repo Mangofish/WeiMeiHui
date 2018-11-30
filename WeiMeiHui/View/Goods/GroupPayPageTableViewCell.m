@@ -53,6 +53,45 @@
     return cell;
 }
 
++ (instancetype)groupPayPageTableViewCellSix{
+    
+    GroupPayPageTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"GroupPayPageTableViewCell" owner:nil options:nil][5];
+    
+    return cell;
+}
+
++ (instancetype)groupPayPageTableViewCellSeven{
+    
+    GroupPayPageTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"GroupPayPageTableViewCell" owner:nil options:nil][6];
+    cell.bgView7.layer.cornerRadius = 4;
+    cell.bgView7.layer.masksToBounds = YES;
+    return cell;
+}
+
++ (instancetype)groupPayPageTableViewCellEight{
+    
+    GroupPayPageTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"GroupPayPageTableViewCell" owner:nil options:nil][7];
+    cell.bgView7.layer.cornerRadius = 4;
+    cell.bgView7.layer.masksToBounds = YES;
+    return cell;
+}
+
++ (instancetype)groupPayPageTableViewCellNight{
+    
+    GroupPayPageTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"GroupPayPageTableViewCell" owner:nil options:nil][8];
+    cell.bgView7.layer.cornerRadius = 4;
+    cell.bgView7.layer.masksToBounds = YES;
+    return cell;
+}
+
++ (instancetype)groupPayPageTableViewCellTen{
+    
+    GroupPayPageTableViewCell *cell = [[NSBundle mainBundle] loadNibNamed:@"GroupPayPageTableViewCell" owner:nil options:nil][9];
+    cell.explainLab = [[TYAttributedLabel alloc]init];
+    [cell.contentView addSubview:cell.explainLab];
+    
+    return cell;
+}
 
 - (IBAction)leftAction:(UIButton *)sender {
     
@@ -77,6 +116,23 @@
     }
     
     [self.delegate didSelectedItemAtIndex:sender.tag];
+    
+}
+
+#pragma 计算高度
+-(TYTextContainer *)calculateHegihtAndAttributedStringMain:(NSString *)content andFontSize:(NSUInteger)size
+                                                     color:(UIColor *)color andWidth:(CGFloat )width andtextAlign:(NSUInteger )textAli{
+    
+    TYTextContainer * textContainer=[[TYTextContainer alloc]init];
+    textContainer.characterSpacing = 0;
+    textContainer.linesSpacing = 4;
+    textContainer.lineBreakMode = kCTLineBreakByWordWrapping;
+    textContainer.font = [UIFont systemFontOfSize:size];
+    textContainer.text = content;
+    textContainer.textColor = color;
+    textContainer.textAlignment = textAli;
+    
+    return  [textContainer createTextContainerWithTextWidth:width];
     
 }
 

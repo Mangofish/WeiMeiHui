@@ -31,6 +31,9 @@
 @property(strong,nonatomic) GoodsDetail *killorder;
 @property(strong,nonatomic) GoodsDetail *orderComment;
 //@property (weak, nonatomic) IBOutlet UIButton *imgBtn;
+
+@property(strong,nonatomic) GoodsDetail *realorder;
+
 @property (weak, nonatomic) IBOutlet UILabel *status;
 
 @end
